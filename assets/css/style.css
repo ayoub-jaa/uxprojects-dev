@@ -320,6 +320,30 @@
   .scroll-to-top:hover {
     background-color: #009fc6;
   }
+
+  .container-connect a{
+    color: white;
+    font-size: 25px;
+    text-align: center; /* Centre le contenu */
+      margin-right: 15px;
+  }
+
+  .container-connect i{
+    color: white;
+    font-size: 25px;
+    text-align: center; /* Centre le contenu */
+    display: inline-block; /* Assure que les icônes soient bien alignées */
+    vertical-align: middle;
+  }
+
+  .container-connect a:last-child {
+      margin-right: 0; /* Supprime le dernier espace */
+  }
+
+  .container-connect a:hover {
+    transition: color 0.3s ease; /* Ajoute une transition fluide */
+  }
+
   
   /* ===============================
      Responsive
