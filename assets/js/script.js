@@ -67,3 +67,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// Animation d'apparition de la photo de profil quand elle entre dans la vue
+const portrait = document.querySelector(".portrait");
+
+if (portrait) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        portrait.classList.add("visible");
+        observer.unobserve(portrait); // ne l'observe plus une fois visible
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(portrait);
+}
+
