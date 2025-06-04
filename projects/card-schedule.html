@@ -6,6 +6,7 @@
     <title>Calendrier Débit Différé – UX bancaire</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" href="../assets/img/favicon.png" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION STICKY -->
@@ -16,10 +17,11 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#simplyux">Simply UX</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
+            <li><button id="lang-toggle" class="lang-switcher">EN</button></li>
           </ul>
         </nav>
       </div>
@@ -27,61 +29,103 @@
 
     <main class="main-project">
       <div class="container">
-        <nav class="breadcrumb">
-          <a href="../index.html#projects">← Projets</a> / Calendrier Débit Différé
-        </nav>
+        <!-- FR -->
+        <div data-lang="fr">
+          <nav class="breadcrumb">
+            <a href="../index.html#projects">← Projets</a> / Calendrier Débit Différé
+          </nav>
 
-        <h1>Calendrier à Débit Différé</h1>
-        <p class="project-subtitle">Améliorer la lisibilité d’un outil bancaire interne utilisé par plusieurs profils</p>
+          <h1>Calendrier à Débit Différé</h1>
+          <p class="project-subtitle">Améliorer la lisibilité d’un outil bancaire interne utilisé par plusieurs profils</p>
 
-        <section class="project-section">
-          <h2>Problème</h2>
-          <p>
-            L’ancien calendrier était présenté sous forme de tableau difficilement lisible, notamment sur mobile. Les
-            utilisateurs (salariés, retraités, étudiants…) avaient du mal à anticiper les dates de débit, ce qui créait
-            confusion et erreurs.
-          </p>
-        </section>
+          <section class="project-section">
+            <h2>Problème</h2>
+            <p>L’ancien calendrier était présenté sous forme de tableau difficilement lisible, notamment sur mobile. Les utilisateurs (salariés, retraités, étudiants…) avaient du mal à anticiper les dates de débit, ce qui créait confusion et erreurs.</p>
+          </section>
 
-        <section class="project-section">
-          <h2>Solution</h2>
-          <p>
-            Refonte de l’outil sous forme de carrousel responsive :
-          </p>
-          <ul>
-            <li>Affichage mensuel simplifié</li>
-            <li>Visualisation immédiate des dates de débit et prélèvement</li>
-            <li>Adaptation mobile fluide</li>
-          </ul>
-        </section>
+          <section class="project-section">
+            <h2>Solution</h2>
+            <p>Refonte de l’outil sous forme de carrousel responsive :</p>
+            <ul>
+              <li>Affichage mensuel simplifié</li>
+              <li>Visualisation immédiate des dates de débit et prélèvement</li>
+              <li>Adaptation mobile fluide</li>
+            </ul>
+          </section>
 
-        <section class="project-section">
-          <h2>Ma contribution</h2>
-          <p>
-            J’ai été responsable de toute la partie UX/UI : analyse des usages, création du wireflow, design du carrousel,
-            prototypage haute fidélité, et transmission au développement. Le projet a été testé avec un panel varié
-            d’utilisateurs.
-          </p>
-        </section>
+          <section class="project-section">
+            <h2>Ma contribution</h2>
+            <p>J’ai été responsable de toute la partie UX/UI : analyse des usages, création du wireflow, design du carrousel, prototypage haute fidélité, et transmission au développement. Le projet a été testé avec un panel varié d’utilisateurs.</p>
+          </section>
 
-        <section class="project-section">
-          <h2>Résultat</h2>
-          <ul>
-            <li>Accès plus rapide à l’information clé</li>
-            <li>Compatibilité parfaite sur mobile et desktop</li>
-            <li>Interface plus accessible et intuitive</li>
-          </ul>
-        </section>
+          <section class="project-section">
+            <h2>Résultat</h2>
+            <ul>
+              <li>Accès plus rapide à l’information clé</li>
+              <li>Compatibilité parfaite sur mobile et desktop</li>
+              <li>Interface plus accessible et intuitive</li>
+            </ul>
+          </section>
 
-        <section class="carousel">
-          <h2>Interface avant / après</h2>
-          <div class="carousel-container">
-            <img src="../assets/img/schedule-1.jpg" alt="Ancien calendrier sous forme de tableau" />
-            <img src="../assets/img/schedule-2.jpg" alt="Nouvelle interface avec carrousel" />
-          </div>
-        </section>
+          <section class="carousel">
+            <h2>Interface avant / après</h2>
+            <div class="carousel-container">
+              <img src="../assets/img/schedule-1.jpg" alt="Ancien calendrier sous forme de tableau" />
+              <img src="../assets/img/schedule-2.jpg" alt="Nouvelle interface avec carrousel" />
+            </div>
+          </section>
 
-        <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+          <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+        </div>
+
+        <!-- EN -->
+        <div data-lang="en" style="display:none">
+          <nav class="breadcrumb">
+            <a href="../index.html#projects">← Projects</a> / Deferred Debit Calendar
+          </nav>
+
+          <h1>Deferred Debit Calendar</h1>
+          <p class="project-subtitle">Improving clarity of an internal banking tool used by multiple user profiles</p>
+
+          <section class="project-section">
+            <h2>Problem</h2>
+            <p>The previous calendar was displayed in a table format, which was hard to read, especially on mobile. Users (employees, retirees, students...) struggled to anticipate debit dates, causing confusion and mistakes.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Solution</h2>
+            <p>Redesign of the tool as a responsive carousel:</p>
+            <ul>
+              <li>Simplified monthly view</li>
+              <li>Immediate visibility of debit and withdrawal dates</li>
+              <li>Fluid mobile adaptation</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>My Contribution</h2>
+            <p>I handled the entire UX/UI part: user analysis, wireflow creation, carousel design, high-fidelity prototyping, and developer handoff. The project was tested with a diverse panel of users.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Result</h2>
+            <ul>
+              <li>Faster access to key information</li>
+              <li>Perfect compatibility on mobile and desktop</li>
+              <li>More accessible and intuitive interface</li>
+            </ul>
+          </section>
+
+          <section class="carousel">
+            <h2>Before / After Interface</h2>
+            <div class="carousel-container">
+              <img src="../assets/img/schedule-1.jpg" alt="Old calendar in table format" />
+              <img src="../assets/img/schedule-2.jpg" alt="New interface with carousel" />
+            </div>
+          </section>
+
+          <a class="back-button" href="../index.html#projects">← Back to projects</a>
+        </div>
       </div>
     </main>
 
