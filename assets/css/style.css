@@ -78,6 +78,62 @@
     color: #00b5e2;
   }
   
+  .lang-switch {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch input {
+  display: none;
+}
+
+.lang-switch label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 60px;
+  height: 28px;
+  transition: background 0.3s;
+  padding: 0 6px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.lang-switch .slider {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.lang-switch input:checked + label .slider {
+  transform: translateX(32px);
+}
+
+.lang-switch .lang {
+  z-index: 2;
+  font-weight: bold;
+  width: 24px;
+  text-align: center;
+}
+
+.lang-switch .fr {
+  color: #1a1a1a;
+}
+
+.lang-switch .en {
+  color: #1a1a1a;
+}
+
+
+
   /* ===============================
      Hero sections
   ================================= */

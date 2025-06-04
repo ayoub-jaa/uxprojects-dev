@@ -38,21 +38,32 @@ function setActiveLink() {
 window.addEventListener("scroll", setActiveLink);
 
 // -------------------------
-// Gestion de la langue FR/EN via data-lang
+// Gestion de la langue FR/EN avec switch animé
 // -------------------------
-const langToggle = document.getElementById("lang-toggle");
-let currentLang = "fr";
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("lang-toggle");
+  const langElements = document.querySelectorAll("[data-lang]");
 
-langToggle?.addEventListener("click", () => {
-  currentLang = currentLang === "fr" ? "en" : "fr";
-  langToggle.textContent = currentLang === "fr" ? "EN" : "FR";
+  // Détection de la langue stockée
+  const storedLang = localStorage.getItem("lang");
+  const isEnglish = storedLang === "en";
 
-  const allElements = document.querySelectorAll("[data-lang]");
-  allElements.forEach((el) => {
-    if (el.getAttribute("data-lang") === currentLang) {
-      el.style.display = "";
-    } else {
-      el.style.display = "none";
-    }
-  });
+  if (toggle) {
+    toggle.checked = isEnglish;
+    updateLanguage(isEnglish ? "en" : "fr");
+
+    toggle.addEventListener("change", () => {
+      const lang = toggle.checked ? "en" : "fr";
+      updateLanguage(lang);
+      localStorage.setItem("lang", lang);
+    });
+  }
+
+  function updateLanguage(lang) {
+    langElements.forEach((el) => {
+      el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
+    });
+    document.documentElement.setAttribute("lang", lang);
+  }
 });
+

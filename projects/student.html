@@ -6,6 +6,7 @@
     <title>Projets Étudiants UX</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" href="../assets/img/favicon.png" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION STICKY -->
@@ -16,10 +17,11 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#simplyux">Simply UX</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
+            <li><button id="lang-toggle" class="lang-switcher">EN</button></li>
           </ul>
         </nav>
       </div>
@@ -27,50 +29,103 @@
 
     <main class="main-project">
       <div class="container">
-        <nav class="breadcrumb">
-          <a href="../index.html#projects">← Projets</a> / Projets Étudiants UX
-        </nav>
 
-        <h1>Projets Étudiants UX</h1>
-        <p class="project-subtitle">
-          Une sélection de projets réalisés durant mon Master en Human-Computer Interaction (HCI)
-        </p>
+        <!-- VERSION FR -->
+        <div data-lang="fr">
+          <nav class="breadcrumb">
+            <a href="../index.html#projects">← Projets</a> / Projets Étudiants UX
+          </nav>
 
-        <section class="project-section">
-          <h2>Contexte</h2>
-          <p>
-            Pendant mon Master HCI à l’Université Paris-Saclay, j’ai travaillé sur divers projets UX en équipe et en autonomie. Ces projets m’ont permis de maîtriser les différentes étapes de la démarche UX.
+          <h1>Projets Étudiants UX</h1>
+          <p class="project-subtitle">
+            Une sélection de projets réalisés durant mon Master en Human-Computer Interaction (HCI)
           </p>
-        </section>
 
-        <section class="project-section">
-          <h2>Objectifs</h2>
-          <ul>
-            <li>Comprendre les utilisateurs à travers des recherches qualitatives et quantitatives</li>
-            <li>Structurer une interface à partir des besoins identifiés</li>
-            <li>Prototyper rapidement et itérer selon les retours</li>
-            <li>Tester et valider les solutions avec de vrais utilisateurs</li>
-          </ul>
-        </section>
+          <section class="project-section">
+            <h2>Contexte</h2>
+            <p>
+              Pendant mon Master HCI à l’Université Paris-Saclay, j’ai travaillé sur divers projets UX en équipe et en autonomie. Ces projets m’ont permis de maîtriser les différentes étapes de la démarche UX.
+            </p>
+          </section>
 
-        <section class="carousel">
-          <h2>Extraits de projets</h2>
-          <div class="carousel-container">
-            <img src="../assets/img/student-1.jpg" alt="Extrait d’un prototype étudiant" />
-            <img src="../assets/img/student-2.jpg" alt="Présentation d’un projet UX en classe" />
-          </div>
-        </section>
+          <section class="project-section">
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre les utilisateurs à travers des recherches qualitatives et quantitatives</li>
+              <li>Structurer une interface à partir des besoins identifiés</li>
+              <li>Prototyper rapidement et itérer selon les retours</li>
+              <li>Tester et valider les solutions avec de vrais utilisateurs</li>
+            </ul>
+          </section>
 
-        <section class="project-section">
-          <h2>Ce que j’ai appris</h2>
-          <ul>
-            <li>Adopter une démarche centrée utilisateur dans un cadre académique</li>
-            <li>Travailler en équipe multidisciplinaire (UX, dev, marketing)</li>
-            <li>Adapter mes livrables selon les contraintes de temps et de moyens</li>
-          </ul>
-        </section>
+          <section class="carousel">
+            <h2>Extraits de projets</h2>
+            <div class="carousel-container">
+              <img src="../assets/img/student-1.jpg" alt="Extrait d’un prototype étudiant" />
+              <img src="../assets/img/student-2.jpg" alt="Présentation d’un projet UX en classe" />
+            </div>
+          </section>
 
-        <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+          <section class="project-section">
+            <h2>Ce que j’ai appris</h2>
+            <ul>
+              <li>Adopter une démarche centrée utilisateur dans un cadre académique</li>
+              <li>Travailler en équipe multidisciplinaire (UX, dev, marketing)</li>
+              <li>Adapter mes livrables selon les contraintes de temps et de moyens</li>
+            </ul>
+          </section>
+
+          <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+        </div>
+
+        <!-- VERSION EN -->
+        <div data-lang="en" style="display:none">
+          <nav class="breadcrumb">
+            <a href="../index.html#projects">← Projects</a> / Student UX Projects
+          </nav>
+
+          <h1>Student UX Projects</h1>
+          <p class="project-subtitle">
+            A selection of projects completed during my Master’s in Human-Computer Interaction (HCI)
+          </p>
+
+          <section class="project-section">
+            <h2>Context</h2>
+            <p>
+              During my HCI Master’s at Université Paris-Saclay, I worked on various UX projects both in teams and independently. These projects helped me master all key steps of the UX process.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Objectives</h2>
+            <ul>
+              <li>Understand users through qualitative and quantitative research</li>
+              <li>Structure interfaces based on identified needs</li>
+              <li>Quickly prototype and iterate from feedback</li>
+              <li>Test and validate solutions with real users</li>
+            </ul>
+          </section>
+
+          <section class="carousel">
+            <h2>Project snapshots</h2>
+            <div class="carousel-container">
+              <img src="../assets/img/student-1.jpg" alt="Student project prototype" />
+              <img src="../assets/img/student-2.jpg" alt="UX project presentation in class" />
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>What I learned</h2>
+            <ul>
+              <li>Apply user-centered design in an academic context</li>
+              <li>Work in multidisciplinary teams (UX, dev, marketing)</li>
+              <li>Adapt deliverables based on time and resource constraints</li>
+            </ul>
+          </section>
+
+          <a class="back-button" href="../index.html#projects">← Back to projects</a>
+        </div>
+
       </div>
     </main>
 

@@ -6,58 +6,83 @@
     <title>Contact – Ayoub J.</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
-        <div class="container">
-          <div class="logo">
-            <a href="index.html"><img src="assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
-          </div>
-          <nav class="nav">
-            <ul>
-              <li><a href="#projects">Projets</a></li>
-              <li><a href="#simplyux">Simply UX</a></li>
-              <li><a href="#about">À propos</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-      </header>
+        <nav class="nav">
+          <ul>
+            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
+            <li><button id="lang-toggle" class="lang-switcher">EN</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
-      <section class="hero-contact">
+      <!-- VERSION FR -->
+      <section class="hero-contact" data-lang="fr">
         <div class="container">
           <h1>Contact</h1>
           <p>Vous avez une question, une idée ou une opportunité ? Parlons-en.</p>
         </div>
       </section>
 
-      <section class="contact-content">
+      <section class="contact-content" data-lang="fr">
         <div class="container">
           <div class="contact-methods">
             <div class="method">
               <img src="../assets/img/icon-mail.svg" alt="Email" />
               <h3>Email</h3>
-              <p>
-                <a href="mailto:ayoub.jaa11@gmail.com">ayoub.jaa11@gmail.com</a>
-              </p>
+              <p><a href="mailto:ayoub.jaa11@gmail.com">ayoub.jaa11@gmail.com</a></p>
             </div>
-
             <div class="method">
               <img src="../assets/img/icon-linkedin.svg" alt="LinkedIn" />
               <h3>LinkedIn</h3>
-              <p>
-                <a href="https://www.linkedin.com/in/ayoub-j" target="_blank">www.linkedin.com/in/ayoub-j</a>
-              </p>
+              <p><a href="https://www.linkedin.com/in/ayoub-j" target="_blank">www.linkedin.com/in/ayoub-j</a></p>
             </div>
-
             <div class="method">
               <img src="../assets/img/icon-github.svg" alt="GitHub" />
               <h3>GitHub</h3>
-              <p>
-                <a href="https://github.com/ayoub-jaa" target="_blank">github.com/ayoub-jaa</a>
-              </p>
+              <p><a href="https://github.com/ayoub-jaa" target="_blank">github.com/ayoub-jaa</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERSION EN -->
+      <section class="hero-contact" data-lang="en" style="display:none">
+        <div class="container">
+          <h1>Contact</h1>
+          <p>Have a question, an idea, or an opportunity? Let’s talk.</p>
+        </div>
+      </section>
+
+      <section class="contact-content" data-lang="en" style="display:none">
+        <div class="container">
+          <div class="contact-methods">
+            <div class="method">
+              <img src="../assets/img/icon-mail.svg" alt="Email" />
+              <h3>Email</h3>
+              <p><a href="mailto:ayoub.jaa11@gmail.com">ayoub.jaa11@gmail.com</a></p>
+            </div>
+            <div class="method">
+              <img src="../assets/img/icon-linkedin.svg" alt="LinkedIn" />
+              <h3>LinkedIn</h3>
+              <p><a href="https://www.linkedin.com/in/ayoub-j" target="_blank">www.linkedin.com/in/ayoub-j</a></p>
+            </div>
+            <div class="method">
+              <img src="../assets/img/icon-github.svg" alt="GitHub" />
+              <h3>GitHub</h3>
+              <p><a href="https://github.com/ayoub-jaa" target="_blank">github.com/ayoub-jaa</a></p>
             </div>
           </div>
         </div>
@@ -77,14 +102,14 @@
             <img src="../assets/img/icon-mail.svg" alt="Mail" />
           </a>
         </div>
-        <p>© 2025 Ayoub J. – Tous droits réservés</p>
+        <p data-lang="fr">© 2025 Ayoub J. – Tous droits réservés</p>
+        <p data-lang="en" style="display:none">© 2025 Ayoub J. – All rights reserved</p>
       </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
-        <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
-      </button>
-    <script src="../assets/js/script.js"></script>
+      <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
+    </button>
   </body>
 </html>

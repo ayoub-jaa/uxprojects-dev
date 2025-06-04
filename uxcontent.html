@@ -6,34 +6,37 @@
     <title>Simply UX – Ayoub J.</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
-        <div class="container">
-          <div class="logo">
-            <a href="index.html"><img src="assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
-          </div>
-          <nav class="nav">
-            <ul>
-              <li><a href="#projects">Projets</a></li>
-              <li><a href="#simplyux">Simply UX</a></li>
-              <li><a href="#about">À propos</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-      </header>
+        <nav class="nav">
+          <ul>
+            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
+            <li><button id="lang-toggle" class="lang-switcher">EN</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
-      <section class="hero-project">
+      <!-- VERSION FR -->
+      <section class="hero-project" data-lang="fr">
         <div class="container">
           <h1>Simply UX</h1>
           <p>Une série de publications pour partager l'UX avec passion.</p>
         </div>
       </section>
 
-      <section class="project-content">
+      <section class="project-content" data-lang="fr">
         <div class="container">
           <h2>📘 Vulgar’UX</h2>
           <p>
@@ -42,8 +45,7 @@
           </p>
           <div class="iframe-container">
             <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7310263737817452545?collapsed=1"
-              height="671" width="504" frameborder="0" allowfullscreen="" title="Vulgar’UX - Post LinkedIn">
-            </iframe>
+              height="671" width="504" frameborder="0" allowfullscreen="" title="Vulgar’UX - Post LinkedIn"></iframe>
           </div>
 
           <h2>🎮 Jeux Vidéo & UX</h2>
@@ -52,11 +54,39 @@
             des titres emblématiques (Zelda, Ghost of Tsushima...).
           </p>
           <div class="iframe-container">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7335058628237795328?collapsed=1"
-              height="671" width="504" frameborder="0" allowfullscreen="" title="Les jeUX vidéos - Post LinkedIn">
-            </iframe>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7335058628237795328?collapsed=1"
+              height="671" width="504" frameborder="0" allowfullscreen="" title="Les jeUX vidéos - Post LinkedIn"></iframe>
           </div>
-          
+        </div>
+      </section>
+
+      <!-- VERSION EN -->
+      <section class="hero-project" data-lang="en" style="display: none">
+        <div class="container">
+          <h1>Simply UX</h1>
+          <p>A series of publications to share the love of UX design.</p>
+        </div>
+      </section>
+
+      <section class="project-content" data-lang="en" style="display: none">
+        <div class="container">
+          <h2>📘 Vulgar’UX</h2>
+          <p>
+            A weekly series of LinkedIn carousels to make UX concepts simple and accessible to all.
+          </p>
+          <div class="iframe-container">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7310263737817452545?collapsed=1"
+              height="671" width="504" frameborder="0" allowfullscreen="" title="Vulgar’UX - LinkedIn Post"></iframe>
+          </div>
+
+          <h2>🎮 Video Games & UX</h2>
+          <p>
+            A series of posts exploring UX in iconic games (Zelda, Ghost of Tsushima...).
+          </p>
+          <div class="iframe-container">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7335058628237795328?collapsed=1"
+              height="671" width="504" frameborder="0" allowfullscreen="" title="Game UX - LinkedIn Post"></iframe>
+          </div>
         </div>
       </section>
     </main>
@@ -74,14 +104,14 @@
             <img src="../assets/img/icon-mail.svg" alt="Mail" />
           </a>
         </div>
-        <p>© 2025 Ayoub J. – Tous droits réservés</p>
+        <p data-lang="fr">© 2025 Ayoub J. – Tous droits réservés</p>
+        <p data-lang="en" style="display:none">© 2025 Ayoub J. – All rights reserved</p>
       </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
-        <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
-      </button>
-    <script src="../assets/js/script.js"></script>
+      <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
+    </button>
   </body>
 </html>
