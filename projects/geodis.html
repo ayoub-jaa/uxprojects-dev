@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Provisioning Automatisé – GEODIS</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="../assets/img/favicon.png" />
+    <link rel="icon" href="assets/img/logo-ajux.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
-        <div class="container">
-          <div class="logo">
-            <a href="index.html"><img src="assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
-          </div>
-          <nav class="nav">
-            <ul>
-              <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
-              <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
-              <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
-              <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
-              <li><button id="lang-toggle" class="lang-switcher">EN</button></li>
-            </ul>
-          </nav>
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-      </header>
+        <nav class="nav">
+          <ul>
+            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
+            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
+            <div class="lang-switch">
+              <input type="checkbox" id="lang-toggle" />
+              <label for="lang-toggle">
+                <span class="lang fr">FR</span>
+                <span class="slider"></span>
+                <span class="lang en">EN</span>
+              </label>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main class="main-project">
       <div class="container">
@@ -247,14 +256,17 @@
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
-        <p>© 2025 Ayoub J. – UX/Product Designer</p>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/ayoub-j" target="_blank">LinkedIn</a>
-          <a href="https://github.com/ayoub-jaa" target="_blank">GitHub</a>
-          <a href="mailto:ayoub.jaa11@gmail.com">Email</a>
+      <div class="container-connect">
+            <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i></a> 
+            <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
+            <i class="fas fa-envelope"></i></a>
         </div>
+      <div class="container">
+        <p data-lang="fr">&copy; 2025 Ayoub J. – Tous droits réservés.</p>
+        <p data-lang="en" style="display:none">&copy; 2025 Ayoub J. – All rights reserved.</p>
       </div>
     </footer>
 
