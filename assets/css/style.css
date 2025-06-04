@@ -17,6 +17,7 @@
     line-height: 1.6;
     color: #fff;
     background-color: #111;
+    background: linear-gradient(to bottom right, #111 60%, #0a2c3c 100%);
   }
   
   /* ===============================
@@ -148,6 +149,14 @@
     font-size: 2.2rem;
     color: #00b5e2;
   }
+
+  .buttons-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
   
   /* ===============================
      Sections génériques
@@ -287,15 +296,17 @@
     color: #00b5e2;
     border: 2px solid #00b5e2;
     padding: 0.6rem 1.2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.2s, color 0.2s;
+    transition: all 0.3s ease;
+    font-weight: 500;
   }
-  
+
   .btn-secondary:hover {
     background-color: #00b5e2;
     color: #111;
   }
+
   
   /* ===============================
      Scroll to top
@@ -343,6 +354,12 @@
   .container-connect a:hover {
     transition: color 0.3s ease; /* Ajoute une transition fluide */
   }
+
+  .container-connect a:hover i {
+    color: #00b5e2;
+    transition: color 0.3s ease;
+  }
+
 
   .about-content {
     display: flex;
@@ -413,11 +430,16 @@
   }
 
   @media (max-width: 600px) {
-    .about-content {
+    .buttons-hero {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
+    }
+
+    .buttons-hero a {
+      width: 100%;
       text-align: center;
     }
   }
+
 
   
