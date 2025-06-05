@@ -142,6 +142,7 @@
 .recommendations h2 {
   color: #00b5e2;
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 
@@ -166,6 +167,30 @@
     gap: 1rem;
     margin-top: 1.5rem;
   }
+
+  .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #00b5e211,
+    #00b5e211 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
   
   /* ===============================
