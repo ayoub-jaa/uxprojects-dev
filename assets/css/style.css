@@ -133,6 +133,17 @@
   color: #1a1a1a;
 }
 
+.recommendations {
+  background-color: #0d0d0d; /* un bleu foncé ou gris foncé */
+  padding: 3rem 0;
+  border-top: 1px solid #222;
+}
+
+.recommendations h2 {
+  text-align: center;
+  color: #00b5e2;
+  margin-bottom: 2rem;
+}
 
 
   /* ===============================
