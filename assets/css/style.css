@@ -470,7 +470,11 @@
     .nav {
       z-index: 999;
     }
-    
+
+     .logo {
+      margin-right: auto;
+    }
+
     .nav ul {
       flex-wrap: wrap;
       justify-content: center;
