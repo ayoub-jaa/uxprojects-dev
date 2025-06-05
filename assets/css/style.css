@@ -510,4 +510,79 @@
   }
 
 
-  
+  /* ======= Burger Menu (Mobile) ======= */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  background-color: white;
+  height: 3px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    border-top: 1px solid #333;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .nav a {
+    width: 100%;
+    color: white;
+    padding: 0.5rem 0;
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .lang-mobile {
+    margin-top: 1rem;
+  }
+}
+
+/* Animate burger icon when open */
+.burger-menu.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.burger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}

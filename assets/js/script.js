@@ -86,3 +86,15 @@ if (portrait) {
   observer.observe(portrait);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burgerMenu");
+  const nav = document.getElementById("navMenu");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+    nav.classList.toggle("open");
+
+    const isOpen = burger.classList.contains("open");
+    burger.setAttribute("aria-expanded", isOpen);
+  });
+});
