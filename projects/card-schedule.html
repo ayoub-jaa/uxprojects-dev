@@ -11,26 +11,36 @@
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
+    
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
       <div class="container">
         <div class="logo">
-          <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
+          <a href="index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-        <nav class="nav">
+
+        <!-- Burger Menu Icon (Mobile Only) -->
+      <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+        <nav class="nav" id="navMenu">
           <ul>
-            <li><a href="#projects" data-lang="fr">Projets</a><a href="#projects" data-lang="en" style="display:none">Projects</a></li>
-            <li><a href="#simplyux" data-lang="fr">Simply UX</a><a href="#simplyux" data-lang="en" style="display:none">Simply UX</a></li>
-            <li><a href="#about" data-lang="fr">À propos</a><a href="#about" data-lang="en" style="display:none">About</a></li>
-            <li><a href="#contact" data-lang="fr">Contact</a><a href="#contact" data-lang="en" style="display:none">Contact</a></li>
-            <div class="lang-switch">
-              <input type="checkbox" id="lang-toggle" />
-              <label for="lang-toggle">
-                <span class="lang fr">FR</span>
-                <span class="slider"></span>
-                <span class="lang en">EN</span>
-              </label>
-            </div>
+            <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="../uxcontent.html" data-lang="fr">Simply UX</a><a href="../uxcontent.html" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="../about.html" data-lang="fr">À propos</a><a href="../about.html" data-lang="en" style="display:none">About</a></li>
+            <li class="lang-mobile">
+              <div class="lang-switch">
+                <input type="checkbox" id="lang-toggle" />
+                <label for="lang-toggle">
+                  <span class="lang fr">FR</span>
+                  <span class="slider"></span>
+                  <span class="lang en">EN</span>
+                </label>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
