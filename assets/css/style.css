@@ -286,6 +286,14 @@
   .footer-social a img:hover {
     opacity: 1;
   }
+
+  .footer a {
+    text-decoration: none;
+  }
+
+  .footer .container-connect a {
+    text-decoration: none;
+  }
   
   /* ===============================
      Buttons
