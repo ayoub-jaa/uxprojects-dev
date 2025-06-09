@@ -220,6 +220,7 @@
     gap: 2rem;
   }
   
+  
   .project-card {
     background: #1a1a1a;
     padding: 1rem;
@@ -241,6 +242,15 @@
   .project-card h3 {
     margin-top: 0.75rem;
     color: #00b5e2;
+  }
+
+  /* ===============================
+     Simply UX cards
+  ================================= */
+  .simplyux .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
   }
   
   /* ===============================
