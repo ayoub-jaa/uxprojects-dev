@@ -193,18 +193,6 @@
     z-index: 1;
   }
 
-  .hero-project .breadcrumb {
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-project .container {
-    text-align: center;
-  }
-
-  .hero-project h1 {
-    margin-bottom: 0.5rem;
-  }
 
   
   /* ===============================
@@ -256,20 +244,6 @@
     margin-top: 0.75rem;
     color: #00b5e2;
   }
-
-  .project-content h2 {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .project-content p {
-    margin-bottom: 1.5rem;
-  }
-
-  .iframe-container {
-    margin-bottom: 3rem;
-  }
-
 
   /* ===============================
      Simply UX cards
@@ -537,14 +511,6 @@
   
     .projects .grid {
       grid-template-columns: 1fr;
-    }
-
-    .hero-project {
-      padding: 2rem 1rem 1rem;
-    }
-
-    .project-content .container {
-      padding: 0 1rem;
     }
 
     .simplyux .grid {
