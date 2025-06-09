@@ -511,6 +511,10 @@
     .projects .grid {
       grid-template-columns: 1fr;
     }
+
+    .simplyux .grid {
+      grid-template-columns: 1fr;
+    }
   
     .carousel-container img {
       height: 200px;
