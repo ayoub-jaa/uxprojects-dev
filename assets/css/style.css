@@ -286,6 +286,43 @@
     height: 300px;
     border-radius: 8px;
   }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    width: 260px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    border-radius: 4px;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-item .caption {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
   
   /* ===============================
      Contact & social
