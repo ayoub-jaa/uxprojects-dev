@@ -98,3 +98,30 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.setAttribute("aria-expanded", isOpen);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeModal = document.getElementById("closeModal");
+
+  // Clic sur image du carrousel
+  document.querySelectorAll(".carousel-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  // Fermeture de la modale
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Clic à l'extérieur de l'image = fermer
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
