@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Provisioning Automatisé – GEODIS</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="assets/img/logo-ajux.svg" type="image/svg+xml" />
+    <link rel="icon" href="../assets/img/logo-ajux.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
@@ -16,16 +16,13 @@
     <header class="header sticky">
       <div class="container">
         <div class="logo">
-          <a href="index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
+          <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-
-        <!-- Burger Menu Icon (Mobile Only) -->
-      <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+        <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav class="nav" id="navMenu">
           <ul>
             <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
@@ -59,98 +56,77 @@
           <p class="project-subtitle">Centraliser la création de comptes à partir des données RH</p>
 
           <section class="project-section">
-            <h2>Problème</h2>
-            <p>
-              GEODIS gérait deux comptes distincts pour chaque employé : un compte RH et un compte IT.
-              Résultat ? Des erreurs fréquentes, des coûts O365 inutiles (licences actives après départ), et une lourde charge manuelle pour les équipes IT.
-            </p>
-            <img src="../assets/img/AD-admin-former-ui.jpg" alt="Previous Admin Interface">
+            <h2>Contexte & Enjeux</h2>
+            <p>Chez GEODIS, la création de comptes IT et RH était dissociée, générant des erreurs fréquentes, des doublons et un surcoût en licences O365.</p>
+            <p>Chaque arrivée ou départ nécessitait une double saisie, chronophage pour les RH et sources d'erreurs pour les équipes IT.</p>
           </section>
 
           <section class="project-section">
-            <h2>Solution</h2>
-            <p>
-              Une application métier permettant de créer les comptes IT automatiquement à partir des données RH,
-              avec synchronisation, provisioning, et libération des licences à la sortie des employés.
-            </p>
+            <h2>Objectifs du projet</h2>
             <ul>
-              <li>Connexion RH → IT en un clic</li>
-              <li>Qualité de données unifiée</li>
-              <li>Gain de temps & réduction d’erreurs</li>
+              <li>✅ Réduire les erreurs humaines</li>
+              <li>✅ Gagner du temps côté RH et IT</li>
+              <li>✅ Optimiser l’usage des licences Office 365</li>
+              <li>✅ Proposer une interface claire et unifiée</li>
             </ul>
-            <div class="prototype">
-              <h3>Prototype interactif</h3>
-              <p>Découvrez le prototype interactif réalisé avec Adobe XD, simulant l’ensemble du parcours de gestion de compte et de validation.</p>
-              <div class="container about-content2" style="margin-top: 15px;">
-                <a href="https://xd.adobe.com/view/47f39484-de12-4e5d-7c76-66a317c9a9ae-31c2" target="_blank" class="btn-secondary">
-                  Voir le prototype Adobe XD
-                  <i class="fa-solid fa-pen-nib" style="font-size: 18px; margin-left: 6px;"></i>
-                </a>
+          </section>
+
+          <section class="project-section">
+            <h2>Processus UX</h2>
+            <p>J’ai mené des <strong>entretiens utilisateurs</strong> avec RH, IT et managers locaux pour comprendre les parcours existants et identifier les irritants majeurs.</p>
+            <p>Des <strong>ateliers de co-conception</strong> ont permis d’imaginer une solution réaliste, compatible avec l’infrastructure IT existante.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Idéation & Prototypage</h2>
+            <p>J’ai conçu des wireframes et un prototype haute fidélité sur Adobe XD.</p>
+            <p>Chaque écran a été pensé pour simplifier la tâche des RH, IT et managers, tout en respectant les contraintes de sécurité et conformité.</p>
+            <a href="https://xd.adobe.com/view/47f39484-de12-4e5d-7c76-66a317c9a9ae-31c2" target="_blank" class="btn-secondary">Voir le prototype Adobe XD</a>
+            <p style="margin-top: 10px; font-size: 14px;"><strong>Mot de passe :</strong> Ghpa2020</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Design final</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/images/10- UX Design.png" alt="Menu principal">
+                <div class="caption">Menu principal</div>
               </div>
-              <p style="margin-top: 10px; font-size: 14px;"><strong>Mot de passe :</strong> Ghpa2020</p>
+              <div class="carousel-item">
+                <img src="../assets/images/11- UX Design copie.png" alt="Mon équipe">
+                <div class="caption">Mon équipe</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/images/12- UX Design copie 2.png" alt="Création interne">
+                <div class="caption">Création interne</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/images/13- UX Design copie 3.png" alt="Suppression">
+                <div class="caption">Suppression</div>
+              </div>
             </div>
           </section>
 
           <section class="project-section">
-            <h2>Ma contribution</h2>
-            <p>
-              En tant qu’unique UX Designer sur la mission, j’ai mené des interviews, ateliers, wireframes, prototypes,
-              tests utilisateurs et le suivi post-design avec les développeurs.
-            </p>
-            <p>
-              Mon expérience précédente en tant qu’analyste IT RH/IAM m’a permis de concevoir une interface parfaitement
-              adaptée aux métiers RH, IT, et managers locaux.
-            </p>
-          </section>
-
-          <section class="project-section">
-            <h2>Résultats</h2>
+            <h2>Impact</h2>
             <ul>
-              <li>✅ Zéro erreur de saisie</li>
-              <li>✅ Gain de temps pour les équipes IT</li>
-              <li>✅ Amélioration drastique de la qualité des données</li>
-              <li>✅ Optimisation des coûts Office 365</li>
+              <li>✔️ Aucune erreur de saisie depuis la mise en service</li>
+              <li>✔️ Données à jour automatiquement entre RH et IT</li>
+              <li>✔️ Réduction des délais de traitement</li>
+              <li>✔️ Forte adoption par les RH locales</li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>Feedbacks</h2>
-            <p>“Une révolution pour nos équipes” – Responsable IT local</p>
-            <p>“Plus besoin de faire deux fois la saisie, c’est top” – Assistante RH</p>
+            <h2>Mon rôle</h2>
+            <p>En tant qu’UX Designer dédié, j’ai mené les interviews, co-animé les ateliers, réalisé les wireframes, prototypé les parcours, et assuré le lien avec les développeurs.</p>
+            <p>Mon expertise IT/RH m’a permis de mieux parler aux parties prenantes et de proposer une solution adaptée au terrain.</p>
           </section>
 
-          <section class="carousel">
-            <h2>Aperçu de l’interface</h2>
-            <div class="carousel">
-              <div class="carousel-item">
-                <img src="../assets/images/10- UX Design.png" alt="Main Menu" />
-                <div class="caption">Menu principal</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/11- UX Design copie.png" alt="My Team" />
-                <div class="caption">Mon équipe</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/12- UX Design copie 2.png" alt="Internal creation recap" />
-                <div class="caption">Récap création interne</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/13- UX Design copie 3.png" alt="Deletion screen" />
-                <div class="caption">Suppression</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/14- UX Design copie 4.png" alt="Generic or shared creation" />
-                <div class="caption">Création générique ou partagée</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/15- UX Design copie 5.png" alt="Warning validation" />
-                <div class="caption">Validation avertissement</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/16- UX Design copie 6.png" alt="Validation feedback" />
-                <div class="caption">Confirmation de validation</div>
-              </div>
-            </div>          
+          <section class="project-section">
+            <h2>Témoignages</h2>
+            <blockquote>“Une révolution pour nos équipes” – Responsable IT</blockquote>
+            <blockquote>“Plus besoin de tout ressaisir manuellement, c’est un gain de temps énorme” – Assistante RH</blockquote>
           </section>
 
           <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
@@ -163,132 +139,107 @@
           </nav>
 
           <h1>Automated Provisioning</h1>
-          <p class="project-subtitle">Centralizing account creation from HR data</p>
+          <p class="project-subtitle">Centralizing IT account creation from HR data</p>
 
           <section class="project-section">
-            <h2>Problem</h2>
-            <p>
-              GEODIS managed two separate accounts for each employee: one HR and one IT.
-              The result? Frequent errors, unnecessary O365 costs (licenses still active after departure), and heavy manual workload for IT teams.
-            </p>
-            <img src="../assets/img/AD-admin-former-ui.jpg" alt="Previous Admin Interface">
+            <h2>Context & Challenges</h2>
+            <p>At GEODIS, HR and IT accounts were managed separately, causing frequent errors, duplicates, and unnecessary O365 costs.</p>
+            <p>Each employee lifecycle event required double entry, wasting time and risking misalignment between teams.</p>
           </section>
 
           <section class="project-section">
-            <h2>Solution</h2>
-            <p>
-              A business application allowing IT accounts to be automatically created from HR data,
-              with synchronization, provisioning, and license release upon employee departure.
-            </p>
+            <h2>Project Goals</h2>
             <ul>
-              <li>HR → IT connection in one click</li>
-              <li>Unified data quality</li>
-              <li>Time saving & error reduction</li>
+              <li>✅ Reduce human errors</li>
+              <li>✅ Save time for HR and IT teams</li>
+              <li>✅ Optimize Office 365 licenses</li>
+              <li>✅ Provide a unified and clear interface</li>
             </ul>
-            <div class="prototype">
-              <h3>Interactive prototype</h3>
-              <p>Explore the interactive prototype created with Adobe XD, simulating the entire account management and validation process.</p>
-              <div class="container about-content2" style="margin-top: 15px;">
-                <a href="https://xd.adobe.com/view/47f39484-de12-4e5d-7c76-66a317c9a9ae-31c2" target="_blank" class="btn-secondary">
-                  View the Adobe XD prototype
-                  <i class="fa-solid fa-pen-nib" style="font-size: 18px; margin-left: 6px;"></i>
-                </a>
+          </section>
+
+          <section class="project-section">
+            <h2>UX Process</h2>
+            <p>I conducted <strong>user interviews</strong> with HR, IT, and local managers to understand workflows and pinpoint major pain points.</p>
+            <p><strong>Co-design workshops</strong> helped shape a viable solution fitting existing systems.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Ideation & Prototyping</h2>
+            <p>I created wireframes and a high-fidelity prototype using Adobe XD.</p>
+            <p>Each screen was tailored for HR, IT, and managers, respecting compliance and security needs.</p>
+            <a href="https://xd.adobe.com/view/47f39484-de12-4e5d-7c76-66a317c9a9ae-31c2" target="_blank" class="btn-secondary">View the Adobe XD prototype</a>
+            <p style="margin-top: 10px; font-size: 14px;"><strong>Password:</strong> Ghpa2020</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Final design</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/images/10- UX Design.png" alt="Main Menu">
+                <div class="caption">Main Menu</div>
               </div>
-              <p style="margin-top: 10px; font-size: 14px;"><strong>Password:</strong> Ghpa2020</p>
+              <div class="carousel-item">
+                <img src="../assets/images/11- UX Design copie.png" alt="My Team">
+                <div class="caption">My Team</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/images/12- UX Design copie 2.png" alt="Internal Creation">
+                <div class="caption">Internal Creation</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/images/13- UX Design copie 3.png" alt="Deletion">
+                <div class="caption">Deletion</div>
+              </div>
             </div>
           </section>
 
           <section class="project-section">
-            <h2>My contribution</h2>
-            <p>
-              As the only UX Designer on the mission, I conducted interviews, workshops, wireframes, prototypes,
-              user testing and post-design follow-up with developers.
-            </p>
-            <p>
-              My previous experience as an HR/IT analyst enabled me to design an interface perfectly
-              suited for HR, IT and local managers.
-            </p>
-          </section>
-
-          <section class="project-section">
-            <h2>Results</h2>
+            <h2>Impact</h2>
             <ul>
-              <li>✅ Zero data entry error</li>
-              <li>✅ Time saving for IT teams</li>
-              <li>✅ Drastic improvement in data quality</li>
-              <li>✅ O365 cost optimization</li>
+              <li>✔️ Zero entry errors since launch</li>
+              <li>✔️ Real-time sync between HR & IT</li>
+              <li>✔️ Faster processing for newcomers & leavers</li>
+              <li>✔️ High adoption from HR teams</li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>Feedbacks</h2>
-            <p>“A revolution for our teams” – Local IT Manager</p>
-            <p>“No more double entry, that’s great” – HR Assistant</p>
+            <h2>My Role</h2>
+            <p>As the sole UX Designer, I led interviews, co-hosted workshops, crafted wireframes and prototypes, and supported developers throughout the build.</p>
+            <p>My background in IT and HR helped me build trust with stakeholders and design a grounded, efficient solution.</p>
           </section>
 
-          <section class="carousel">
-            <h2>Interface preview</h2>
-            <div class="carousel">
-              <div class="carousel-item">
-                <img src="../assets/images/10- UX Design.png" alt="Main Menu" />
-                <div class="caption">Main Menu</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/11- UX Design copie.png" alt="My Team" />
-                <div class="caption">My Team</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/12- UX Design copie 2.png" alt="Internal creation recap" />
-                <div class="caption">Internal creation recap</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/13- UX Design copie 3.png" alt="Deletion screen" />
-                <div class="caption">Deletion screen</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/14- UX Design copie 4.png" alt="Generic or shared creation" />
-                <div class="caption">Generic or shared creation</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/15- UX Design copie 5.png" alt="Warning validation" />
-                <div class="caption">Warning validation</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/images/16- UX Design copie 6.png" alt="Validation feedback" />
-                <div class="caption">Validation feedback</div>
-              </div>
-            </div>          
+          <section class="project-section">
+            <h2>Testimonials</h2>
+            <blockquote>“A revolution for our teams” – IT Manager</blockquote>
+            <blockquote>“No more double input, huge time saver” – HR Assistant</blockquote>
           </section>
 
           <a class="back-button" href="../index.html#projects">← Back to projects</a>
         </div>
-
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container-connect">
-            <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a> 
-            <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a> 
+        <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
       <div class="container">
         <p data-lang="fr">&copy; 2025 Ayoub J. – Tous droits réservés.</p>
         <p data-lang="en" style="display:none">&copy; 2025 Ayoub J. – All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="../assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-
   </body>
 </html>
