@@ -1,175 +1,220 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Calendrier Débit Différé – UX bancaire</title>
+    <meta name="description" content="Étude de cas UX chez BoursoBank : refonte du calendrier à débit différé pour une meilleure lisibilité. Réalisé par Ayoub J., UX Designer.">
+    <title>Calendrier Débit Différé – BoursoBank</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="assets/img/logo-ajux.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/img/logo-ajux.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
-    
-    <!-- NAVIGATION STICKY -->
     <header class="header sticky">
       <div class="container">
         <div class="logo">
           <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-
-          <!-- Burger Menu Icon (Mobile Only) -->
         <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
-          <nav class="nav" id="navMenu">
-            <ul>
-              <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
-              <li><a href="../uxcontent.html" data-lang="fr">Simply UX</a><a href="../uxcontent.html" data-lang="en" style="display:none">Simply UX</a></li>
-              <li><a href="../about.html" data-lang="fr">À propos</a><a href="../about.html" data-lang="en" style="display:none">About</a></li>
-              <li class="lang-mobile">
-                <div class="lang-switch">
-                  <input type="checkbox" id="lang-toggle" />
-                  <label for="lang-toggle">
-                    <span class="lang fr">FR</span>
-                    <span class="slider"></span>
-                    <span class="lang en">EN</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </nav>
+        <nav class="nav" id="navMenu">
+          <ul>
+            <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="../uxcontent.html" data-lang="fr">Simply UX</a><a href="../uxcontent.html" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="../about.html" data-lang="fr">À propos</a><a href="../about.html" data-lang="en" style="display:none">About</a></li>
+            <li class="lang-mobile">
+              <div class="lang-switch">
+                <input type="checkbox" id="lang-toggle" />
+                <label for="lang-toggle"><span class="lang fr">FR</span><span class="slider"></span><span class="lang en">EN</span></label>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main class="main-project">
       <div class="container">
-        <!-- FR -->
+        <!-- VERSION FR -->
         <div data-lang="fr">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projets</a> / Calendrier Débit Différé
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projets</a> / Calendrier Débit Différé
           </nav>
 
-          <h1>Calendrier à Débit Différé</h1>
-          <p class="project-subtitle">Améliorer la lisibilité d’un outil bancaire interne utilisé par plusieurs profils</p>
+          <section class="project-hero" style="background-image: url('../assets/img/cbdiff-mockup-pc.png');" data-lang="fr">
+            <h1>Calendrier à Débit Différé</h1>
+          </section>
+
+          <p class="project-subtitle">Améliorer la lisibilité d’un outil bancaire utilisé par des millions de clients</p>
 
           <section class="project-section">
             <h2>Problème</h2>
-            <p>L’ancien calendrier était présenté sous forme de tableau difficilement lisible, notamment sur mobile. Les utilisateurs (salariés, retraités, étudiants…) avaient du mal à anticiper les dates de débit, ce qui créait confusion et erreurs.</p>
+            <p>Le calendrier à débit différé affichait des informations clés dans un tableau peu lisible, notamment sur mobile. Résultat : incompréhension des dates de débit, confusion pour les clients, et surcharge du service client.</p>
           </section>
 
           <section class="project-section">
             <h2>Solution</h2>
-            <p>Refonte de l’outil sous forme de carrousel responsive :</p>
+            <p>Nous avons repensé l’outil sous forme de carrousel dynamique :</p>
             <ul>
-              <li>Affichage mensuel simplifié</li>
-              <li>Visualisation immédiate des dates de débit et prélèvement</li>
-              <li>Adaptation mobile fluide</li>
+              <li>✅ Vue mensuelle épurée</li>
+              <li>✅ Dates de prélèvement et de débit mises en évidence</li>
+              <li>✅ Affichage responsive optimisé pour mobile</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>Ma contribution</h2>
-            <p>J’ai été responsable de toute la partie UX/UI : analyse des usages, création du wireflow, design du carrousel, prototypage haute fidélité, et transmission au développement. Le projet a été testé avec un panel varié d’utilisateurs.</p>
+            <p>J’ai mené l’analyse des retours clients, audité l’existant, conçu l’architecture et le wireflow, réalisé les maquettes responsive (Axure), puis livré un prototype interactif accompagné d’un design system. Le tout validé avec des tests utilisateurs (salariés, retraités, étudiants).</p>
           </section>
 
           <section class="project-section">
-            <h2>Résultat</h2>
+            <h2>Liens vers les maquettes</h2>
             <ul>
-              <li>Accès plus rapide à l’information clé</li>
-              <li>Compatibilité parfaite sur mobile et desktop</li>
-              <li>Interface plus accessible et intuitive</li>
+              <li><a href="https://5x5cib.axshare.com/?hi=1&id=69i7jp" target="_blank">💻 Version desktop</a></li>
+              <li><a href="https://5x5cib.axshare.com/?g=1&hi=1&id=hyc783" target="_blank">📱 Version mobile</a></li>
             </ul>
           </section>
 
-          <section class="carousel">
-            <h2>Interface avant / après</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/schedule-1.jpg" alt="Ancien calendrier sous forme de tableau" />
-              <img src="../assets/img/schedule-2.jpg" alt="Nouvelle interface avec carrousel" />
+          <section class="project-section">
+            <h2>Design final</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-pc.png" alt="Mockup PC">
+                <div class="caption">Version PC – Aperçu</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-mobile.png" alt="Mockup mobile">
+                <div class="caption">Version mobile – Aperçu</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design1.png" alt="Design 1">
+                <div class="caption">Vue mensuelle avec surlignage</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design2.png" alt="Design 2">
+                <div class="caption">Calendrier interactif – détail</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design3.png" alt="Design 3">
+                <div class="caption">Navigation intuitive mobile</div>
+              </div>
             </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Résultats</h2>
+            <ul>
+              <li>✔️ +20% de satisfaction client après mise en ligne</li>
+              <li>✔️ 60% des utilisateurs interagissent davantage avec le carrousel mobile</li>
+              <li>✔️ Gains d’efficacité pour les équipes marketing : déploiement plus rapide des campagnes</li>
+            </ul>
           </section>
 
           <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
         </div>
 
-        <!-- EN -->
-        <div data-lang="en" style="display:none">
+        <!-- VERSION EN -->
+        <div data-lang="en" style="display: none;">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projects</a> / Deferred Debit Calendar
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projects</a> / Deferred Debit Calendar
           </nav>
 
-          <h1>Deferred Debit Calendar</h1>
-          <p class="project-subtitle">Improving clarity of an internal banking tool used by multiple user profiles</p>
+          <section class="project-hero" style="background-image: url('../assets/img/cbdiff-mockup-pc.png'); display:none;" data-lang="en">
+            <h1>Deferred Debit Calendar</h1>
+          </section>
+
+          <p class="project-subtitle">Improving the clarity of a banking tool used by millions of customers</p>
 
           <section class="project-section">
             <h2>Problem</h2>
-            <p>The previous calendar was displayed in a table format, which was hard to read, especially on mobile. Users (employees, retirees, students...) struggled to anticipate debit dates, causing confusion and mistakes.</p>
+            <p>The original calendar displayed key dates in a dense table, especially hard to read on mobile. Customers couldn’t anticipate debit dates, which led to confusion and increased support calls.</p>
           </section>
 
           <section class="project-section">
             <h2>Solution</h2>
-            <p>Redesign of the tool as a responsive carousel:</p>
+            <p>We redesigned it as a swipeable carousel:</p>
             <ul>
-              <li>Simplified monthly view</li>
-              <li>Immediate visibility of debit and withdrawal dates</li>
-              <li>Fluid mobile adaptation</li>
+              <li>✅ Clear monthly view</li>
+              <li>✅ Highlighted debit and withdrawal dates</li>
+              <li>✅ Mobile-first responsive layout</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>My Contribution</h2>
-            <p>I handled the entire UX/UI part: user analysis, wireflow creation, carousel design, high-fidelity prototyping, and developer handoff. The project was tested with a diverse panel of users.</p>
+            <p>I led the UX analysis, customer feedback review, architecture and wireflow creation, Axure mockups, and interactive prototype delivery. Everything was validated through user testing with different profiles.</p>
           </section>
 
           <section class="project-section">
-            <h2>Result</h2>
+            <h2>Mockups</h2>
             <ul>
-              <li>Faster access to key information</li>
-              <li>Perfect compatibility on mobile and desktop</li>
-              <li>More accessible and intuitive interface</li>
+              <li><a href="https://5x5cib.axshare.com/?hi=1&id=69i7jp" target="_blank">💻 Desktop version</a></li>
+              <li><a href="https://5x5cib.axshare.com/?g=1&hi=1&id=hyc783" target="_blank">📱 Mobile version</a></li>
             </ul>
           </section>
-
-          <section class="carousel">
-            <h2>Before / After Interface</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/schedule-1.jpg" alt="Old calendar in table format" />
-              <img src="../assets/img/schedule-2.jpg" alt="New interface with carousel" />
+          
+          <section class="project-section">
+            <h2>Final design</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-pc.png" alt="Mockup PC">
+                <div class="caption">Web version – Overview</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-mobile.png" alt="Mobile mockup">
+                <div class="caption">Mobile version – Overview</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design1.png" alt="Design 1">
+                <div class="caption">Highlighted monthly view</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design2.png" alt="Design 2">
+                <div class="caption">Interactive calendar – detail</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-ux-design3.png" alt="Design 3">
+                <div class="caption">Smooth mobile navigation</div>
+              </div>
             </div>
           </section>
 
-          <a class="back-button" href="../index.html#projects">← Back to projects</a>
+          <section class="project-section">
+            <h2>Impact</h2>
+            <ul>
+              <li>✔️ User satisfaction rose by 20% after implementation, reaching a 90% approval rate</li>
+              <li>✔️ 60% of users now spend more time engaging with the mobile carousel</li>
+              <li>✔️ Marketing teams can now launch promotional campaigns faster and at scale</li>
+            </ul>
+          </section>
+
+          <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container-connect">
-            <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a> 
-            <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin"><i class="fa-brands fa-linkedin"></i></a> 
+        <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/ayoub-jaa" class="icon-github"><i class="fab fa-github"></i></a>
+      </div>
       <div class="container">
         <p data-lang="fr">&copy; 2025 Ayoub J. – Tous droits réservés.</p>
         <p data-lang="en" style="display:none">&copy; 2025 Ayoub J. – All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="../assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-    <script src="../assets/js/main.js"></script>
+
+    <div id="imageModal" class="modal" style="display:none;">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img class="modal-content" id="modalImg" alt="">
+    </div>
   </body>
 </html>
