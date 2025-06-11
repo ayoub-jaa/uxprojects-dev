@@ -3,29 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Étude de cas UX humanitaire : application terrain Hassanates pour le suivi des dons en Afrique Centrale. Réalisé par Ayoub J., UX Designer.">
     <title>Application humanitaire – Hassanates</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="assets/img/logo-ajux.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/img/logo-ajux.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
-    
-    <!-- NAVIGATION STICKY -->
     <header class="header sticky">
       <div class="container">
         <div class="logo">
-          <a href="index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
+          <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-
-        <!-- Burger Menu Icon (Mobile Only) -->
-      <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+        <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </div>
         <nav class="nav" id="navMenu">
           <ul>
             <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
@@ -48,14 +41,16 @@
 
     <main class="main-project">
       <div class="container">
-
         <!-- VERSION FR -->
         <div data-lang="fr">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projets</a> / Hassanates
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projets</a> / Hassanates
           </nav>
 
-          <h1>Application terrain humanitaire</h1>
+          <section class="project-hero" style="background-image: url('../assets/img/thumb-hassanates.jpg');" data-lang="fr">
+            <h1>hassanates.fr App&Web</h1>
+          </section>
+
           <p class="project-subtitle">Suivi des dons de moutons en temps réel pour l’Afrique Centrale</p>
 
           <section class="project-section">
@@ -64,126 +59,181 @@
           </section>
 
           <section class="project-section">
+            <h2>Contexte</h2>
+            <p>Ce projet a été conçu pour un contexte humanitaire atypique : bénévoles sur le terrain, zones rurales, très faible connectivité, et utilisateurs non technophiles. La conception devait être à la fois simple, fiable et hors réseau.</p>
+          </section>
+
+          <section class="project-section">
             <h2>Solution</h2>
             <p>Création d’une application mobile légère destinée aux bénévoles terrain :</p>
             <ul>
-              <li>Envoi de la localisation GPS</li>
-              <li>Prise de photo du mouton donné</li>
-              <li>Génération automatique d’un email de suivi pour le donateur</li>
+              <li>📷 Prise de photo du mouton donné</li>
+              <li>📩 Génération automatique d’un email de suivi pour le donateur</li>
+            </ul>
+            <p>Création d’une application web simple destinée aux bénévoles managers :</p>
+            <ul>
+              <li>📊 Suivi en temps réel de l'activité sur place</li>
+              <li>📩 Génération automatique des QR Code de suivi du bétail</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>Ma contribution</h2>
             <p>J’ai mené tout le cycle UX : recueil des besoins (France & Afrique), analyse terrain, wireframes, prototype haute-fidélité, tests avec bénévoles, et suivi de développement.</p>
-            <p>Le projet m’a permis de concevoir une expérience simple et fiable, dans un contexte de faible connectivité et d’usage en extérieur, avec des utilisateurs très peu technophiles.</p>
+            <p>Le projet m’a permis de concevoir une expérience accessible et robuste dans des conditions extrêmes.</p>
           </section>
 
           <section class="project-section">
-            <h2>Résultat</h2>
+            <h2>Idéation & Prototypage</h2>
+            <p>J’ai conçu des wireframes et un prototype haute fidélité sur Figma.</p>
+            <p>Chaque écran a été pensé pour simplifier la tâche des bénévoles, sur place et à distance.</p>
+            </br>
+             </br><a href="https://www.figma.com/proto/xiUz3qaqyhWWgQZeATjMAp/Maquette-App-%26-Web---hassanates.fr?page-id=96%3A3409&node-id=96-4436&p=f&viewport=135%2C329%2C0.09&t=qaRm3QWLYKvKhsS2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=172%3A4255&show-proto-sidebar=1" target="_blank" class="btn-secondary">📱 Version mobile (Photographer)</a>
+            </br><a href="https://www.figma.com/proto/xiUz3qaqyhWWgQZeATjMAp/Maquette-App-%26-Web---hassanates.fr?page-id=0%3A1&node-id=82-2662&p=f&viewport=135%2C329%2C0.09&t=21kIyfOAM6LA2xz6-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=82%3A2662" target="_blank" class="btn-secondary">💻 Version desktop (Manager)</a>
+          </section>
+
+          <section class="project-section">
+            <h2>Résultats</h2>
             <ul>
-              <li>Projet déployé en Afrique Centrale</li>
-              <li>Premiers dons suivis en temps réel dès juin</li>
-              <li>Retour utilisateurs prévu fin juin – début juillet</li>
+              <li>🌍 Projet déployé en Afrique Centrale</li>
+              <li>📦 Premiers dons suivis en temps réel dès juin</li>
+              <li>📣 Retour utilisateurs prévu fin aout – début septembre</li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>Ce que j’en retiens</h2>
-            <p>Concevoir pour un contexte humanitaire demande une attention maximale à l’accessibilité, à la simplicité d’usage, et à la fiabilité hors réseau. C’était un challenge passionnant à relever.</p>
-          </section>
-
-          <section class="carousel">
-            <h2>Interface terrain</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/hassanates-1.jpg" alt="Aperçu Hassanates 1" />
-              <img src="../assets/img/hassanates-2.jpg" alt="Aperçu Hassanates 2" />
+            <h2>Design final</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <video controls>
+                  <source src="../assets/videos/hassanates.fr-manager.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <div class="caption">Vue Manager – Interface web</div>
+              </div>
+              <div class="carousel-item">
+                <video controls>
+                  <source src="../assets/videos/hassanates.fr-Assigner-Photographer.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <div class="caption">Vue terrain – Assignation bénévole</div>
+              </div>
             </div>
           </section>
 
-          <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+          <a class="btn-secondary" href="../index.html#projects">← Retour aux projets</a>
         </div>
 
         <!-- VERSION EN -->
-        <div data-lang="en" style="display:none">
+        <div data-lang="en" style="display:none;">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projects</a> / Hassanates
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projects</a> / Hassanates
           </nav>
 
-          <h1>Humanitarian Field App</h1>
+          <section class="project-hero" style="background-image: url('../assets/img/thumb-hassanates.jpg'); display:none;" data-lang="en">
+            <h1>Humanitarian Field App</h1>
+          </section>
+
           <p class="project-subtitle">Real-time tracking of sheep donations in Central Africa</p>
 
           <section class="project-section">
             <h2>Problem</h2>
-            <p>The association was receiving donations without any tracking or transparency regarding resource use. Donors received no clear or visual information about the impact of their gesture.</p>
+            <p>The association received donations without any tracking or transparency. Donors lacked clear or visual feedback on the impact of their gesture.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Context</h2>
+            <p>This project was designed for a unique humanitarian context: rural volunteers, poor connectivity, outdoor usage, and low digital literacy. We aimed for simplicity, reliability and full offline usability.</p>
           </section>
 
           <section class="project-section">
             <h2>Solution</h2>
-            <p>Creation of a lightweight mobile app for field volunteers:</p>
+            <p>We created a lightweight mobile app for field volunteers:</p>
             <ul>
-              <li>GPS location sharing</li>
-              <li>Photo capture of the donated sheep</li>
-              <li>Automatic follow-up email sent to the donor</li>
+              <li>📷 Picture of the donated sheep</li>
+              <li>📩 Automatic follow-up email sent to the donor</li>
+            </ul>
+            <p>We also created a website for manager volunteers :</p>
+            <ul>
+              <li>📊 Real-time follow-up of the activity in the field</li>
+              <li>📩 Automatic QR Code generation to follow the livestock</li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>My Contribution</h2>
-            <p>I led the entire UX cycle: needs gathering (France & Africa), field analysis, wireframes, high-fidelity prototype, testing with volunteers, and development follow-up.</p>
-            <p>The project allowed me to design a simple and reliable experience, in a context of low connectivity and outdoor use, with users who were not tech-savvy.</p>
+            <h2>My Role</h2>
+            <p>I led the full UX cycle: need gathering (France & Africa), field research, wireframes, hi-fi prototype, volunteer testing, and development support.</p>
+            <p>This project taught me how to design for harsh conditions with low tech expectations.</p>
           </section>
 
           <section class="project-section">
-            <h2>Result</h2>
+            <h2>Ideation & Prototyping</h2>
+            <p>I created wireframes and a high-fidelity prototype using Figma.</p>
+            <p>Each screen was tailored for volunteers depending on their tasks, in the field and remotely.</p>
+            </br>
+             </br><a href="https://www.figma.com/proto/xiUz3qaqyhWWgQZeATjMAp/Maquette-App-%26-Web---hassanates.fr?page-id=96%3A3409&node-id=96-4436&p=f&viewport=135%2C329%2C0.09&t=qaRm3QWLYKvKhsS2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=172%3A4255&show-proto-sidebar=1" target="_blank" class="btn-secondary">📱 Version mobile (Photographer)</a>
+            </br><a href="https://www.figma.com/proto/xiUz3qaqyhWWgQZeATjMAp/Maquette-App-%26-Web---hassanates.fr?page-id=0%3A1&node-id=82-2662&p=f&viewport=135%2C329%2C0.09&t=21kIyfOAM6LA2xz6-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=82%3A2662" target="_blank" class="btn-secondary">💻 Version desktop (Manager)</a>
+          </section>
+
+          <section class="project-section">
+            <h2>Results</h2>
             <ul>
-              <li>Project deployed in Central Africa</li>
-              <li>First donations tracked in real-time starting June</li>
-              <li>User feedback expected end of June – early July</li>
+              <li>🌍 Project deployed in Central Africa</li>
+              <li>📦 First real-time tracked donations in June</li>
+              <li>📣 Feedback expected late August / early September</li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>Key Takeaway</h2>
-            <p>Designing for a humanitarian context requires extreme attention to accessibility, ease of use, and offline reliability. It was a fascinating challenge to tackle.</p>
-          </section>
-
-          <section class="carousel">
-            <h2>Field Interface</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/hassanates-1.jpg" alt="Hassanates interface preview 1" />
-              <img src="../assets/img/hassanates-2.jpg" alt="Hassanates interface preview 2" />
+            <h2>Final design</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <video controls>
+                  <source src="../assets/videos/hassanates.fr-manager.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption">Manager view – Web interface</div>
+              </div>
+              <div class="carousel-item">
+                <video controls>
+                  <source src="../assets/videos/hassanates.fr-Assigner-Photographer.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="caption">Field view – Assigning volunteer</div>
+              </div>
             </div>
           </section>
 
-          <a class="back-button" href="../index.html#projects">← Back to projects</a>
+          <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
-
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container-connect">
-            <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a> 
-            <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
       <div class="container">
         <p data-lang="fr">&copy; 2025 Ayoub J. – Tous droits réservés.</p>
         <p data-lang="en" style="display:none">&copy; 2025 Ayoub J. – All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="../assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
+
+    <div id="imageModal" class="modal" style="display:none;">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img class="modal-content" id="modalImg" alt="">
+    </div>
   </body>
 </html>
