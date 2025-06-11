@@ -3,46 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Projets Étudiants UX</title>
+    <meta name="description" content="Projet UX - Migrant Simulator : un jeu sérieux pour sensibiliser au parcours migratoire. Réalisé par Ayoub J., UX Designer.">
+    <title>Migrant Simulator – UX Project</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="assets/img/logo-ajux.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/img/logo-ajux.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../assets/js/script.js" defer></script>
   </head>
   <body>
-    
+
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
       <div class="container">
         <div class="logo">
           <a href="../index.html"><img src="../assets/img/logo-ajux.svg" alt="Logo Ayoub J." /></a>
         </div>
-
-        <!-- Burger Menu Icon (Mobile Only) -->
         <div class="burger-menu" id="burgerMenu" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </div>
-
-          <nav class="nav" id="navMenu">
-            <ul>
-              <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
-              <li><a href="../uxcontent.html" data-lang="fr">Simply UX</a><a href="../uxcontent.html" data-lang="en" style="display:none">Simply UX</a></li>
-              <li><a href="../about.html" data-lang="fr">À propos</a><a href="../about.html" data-lang="en" style="display:none">About</a></li>
-              <li class="lang-mobile">
-                <div class="lang-switch">
-                  <input type="checkbox" id="lang-toggle" />
-                  <label for="lang-toggle">
-                    <span class="lang fr">FR</span>
-                    <span class="slider"></span>
-                    <span class="lang en">EN</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </nav>
+        <nav class="nav" id="navMenu">
+          <ul>
+            <li><a href="../index.html#projects" data-lang="fr">Projets</a><a href="../index.html#projects" data-lang="en" style="display:none">Projects</a></li>
+            <li><a href="../uxcontent.html" data-lang="fr">Simply UX</a><a href="../uxcontent.html" data-lang="en" style="display:none">Simply UX</a></li>
+            <li><a href="../about.html" data-lang="fr">À propos</a><a href="../about.html" data-lang="en" style="display:none">About</a></li>
+            <li class="lang-mobile">
+              <div class="lang-switch">
+                <input type="checkbox" id="lang-toggle" />
+                <label for="lang-toggle">
+                  <span class="lang fr">FR</span>
+                  <span class="slider"></span>
+                  <span class="lang en">EN</span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -52,132 +49,156 @@
         <!-- VERSION FR -->
         <div data-lang="fr">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projets</a> / Projets Étudiants UX
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projets</a> / Migrant Simulator
           </nav>
 
-          <!-- HERO BANNER -->
-          <section class="project-hero" style="background-image: url('../assets/img/Migrant-Simulator.jpg');">
-            <h1>Migrant Simulator – Une simulation sérieuse pour mettre dans la peau d'un migrant</h1>
+          <!-- HERO -->
+          <section class="project-hero" style="background-image: url('../assets/img/Migrant-Simulator.jpg');" data-lang="fr">
+            <h1>Migrant Simulator – Un jeu sérieux pour se mettre dans la peau d’un migrant</h1>
           </section>
 
-          <p class="project-subtitle">
-            Une sélection de projets réalisés durant mon Master en Human-Computer Interaction (HCI)
-          </p>
+          <p class="project-subtitle">Un projet étudiant alliant UX, éthique et sensibilisation sociale</p>
 
           <section class="project-section">
-            <h2>Contexte</h2>
-            <p>
-              Pendant mon Master HCI à l’Université Paris-Saclay, j’ai travaillé sur divers projets UX en équipe et en autonomie. Ces projets m’ont permis de maîtriser les différentes étapes de la démarche UX.
-            </p>
+            <h2>Contexte & Enjeux</h2>
+            <p>Dans un monde où les réalités migratoires sont souvent déformées par les médias, notre objectif était de créer un serious game qui sensibilise à l’expérience humaine des personnes migrantes.</p>
+            <p>Nous devions équilibrer empathie, pédagogie et interactions numériques, tout en restant respectueux des situations vécues.</p>
           </section>
 
           <section class="project-section">
-            <h2>Objectifs</h2>
+            <h2>Objectifs du projet</h2>
             <ul>
-              <li>Comprendre les utilisateurs à travers des recherches qualitatives et quantitatives</li>
-              <li>Structurer une interface à partir des besoins identifiés</li>
-              <li>Prototyper rapidement et itérer selon les retours</li>
-              <li>Tester et valider les solutions avec de vrais utilisateurs</li>
+              <li>✅ Créer une expérience interactive et immersive</li>
+              <li>✅ Favoriser la prise de conscience via le design</li>
+              <li>✅ Stimuler l’empathie sans stigmatisation</li>
+              <li>✅ Tester l’impact émotionnel de l’interface</li>
             </ul>
           </section>
 
-          <section class="carousel">
-            <h2>Extraits de projets</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/student-1.jpg" alt="Extrait d’un prototype étudiant" />
-              <img src="../assets/img/student-2.jpg" alt="Présentation d’un projet UX en classe" />
+          <section class="project-section">
+            <h2>Mon rôle</h2>
+            <p>J’ai mené les recherches utilisateurs, conçu le parcours narratif, réalisé les wireframes, animé les tests utilisateurs et produit la maquette interactive sur Axure.</p>
+            <p>J'ai également répondu à un journaliste qui a participé à l'expérience sur notre stand, voici l'<i class="fa-solid fa-newspaper"></i><a href="https://epa-paris-saclay.fr/actualites-et-decryptages/toutes-nos-publications/dans-la-peau-dun-migrant-rencontre-avec-ayoub-ifthihar-et-abdelkrim/" class="btn project-btn"> article</a></p>
+          </section>
+
+          <section class="project-section">
+            <h2>Processus UX</h2>
+            <p>Nous avons débuté par une phase de benchmark éthique et culturel. Ensuite, nous avons mené des entretiens qualitatifs pour comprendre les perceptions et préjugés.</p>
+            <p>Enfin, des tests utilisateurs ont été réalisés pour mesurer la clarté, l’impact émotionnel et la navigation globale.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Idéation & Prototypage</h2>
+            <p>Le prototype Axure a été pensé pour simuler des prises de décisions critiques, avec des conséquences illustrées en temps réel.</p>
+            <a href="https://ksjvx9.axshare.com/?id=za15t4" target="_blank" class="btn-secondary">Voir le prototype Axure</a>
+          </section>
+
+          <section class="project-section">
+            <h2>Design final</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/mig-1.PNG" alt="Écran 1" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-2.PNG" alt="Écran 2" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-3.PNG" alt="Écran 3" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-4.PNG" alt="Écran 4" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-5.PNG" alt="Écran 5" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-6.PNG" alt="Écran 6" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-7.PNG" alt="Écran 7" /></div>
             </div>
           </section>
 
-          <section class="project-section">
-            <h2>Ce que j’ai appris</h2>
-            <ul>
-              <li>Adopter une démarche centrée utilisateur dans un cadre académique</li>
-              <li>Travailler en équipe multidisciplinaire (UX, dev, marketing)</li>
-              <li>Adapter mes livrables selon les contraintes de temps et de moyens</li>
-            </ul>
-          </section>
-
-          <a class="back-button" href="../index.html#projects">← Retour aux projets</a>
+          <a class="btn-secondary" href="../index.html#projects">← Retour aux projets</a>
         </div>
 
         <!-- VERSION EN -->
-        <div data-lang="en" style="display:none">
+        <div data-lang="en" style="display: none;">
           <nav class="breadcrumb">
-            <a href="../index.html#projects">← Projects</a> / Student UX Projects
+            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projects</a> / Migrant Simulator
           </nav>
 
-          <!-- HERO BANNER -->
-          <section class="project-hero" style="background-image: url('../assets/img/Migrant-Simulator.jpg');">
-            <h1>Migrant Simulator – A Serious game to feel what a migrant could feels</h1>
+          <!-- HERO -->
+          <section class="project-hero" style="background-image: url('../assets/img/Migrant-Simulator.jpg');" data-lang="en">
+            <h1>Migrant Simulator – A serious game to step into a migrant's shoes</h1>
           </section>
-          <p class="project-subtitle">
-            A selection of projects completed during my Master’s in Human-Computer Interaction (HCI)
-          </p>
+
+          <p class="project-subtitle">A student project combining UX, ethics and social awareness</p>
 
           <section class="project-section">
-            <h2>Context</h2>
-            <p>
-              During my HCI Master’s at Université Paris-Saclay, I worked on various UX projects both in teams and independently. These projects helped me master all key steps of the UX process.
-            </p>
+            <h2>Context & Challenges</h2>
+            <p>In a world where migrant realities are distorted by media, we aimed to design a serious game that raises awareness of the human experience of migration.</p>
+            <p>Our challenge: balancing empathy, pedagogy, and digital storytelling without falling into caricature or trauma porn.</p>
           </section>
 
           <section class="project-section">
-            <h2>Objectives</h2>
+            <h2>Project Goals</h2>
             <ul>
-              <li>Understand users through qualitative and quantitative research</li>
-              <li>Structure interfaces based on identified needs</li>
-              <li>Quickly prototype and iterate from feedback</li>
-              <li>Test and validate solutions with real users</li>
+              <li>✅ Design an immersive, interactive journey</li>
+              <li>✅ Raise awareness through user experience</li>
+              <li>✅ Promote empathy without stigmatization</li>
+              <li>✅ Evaluate the emotional impact of the interface</li>
             </ul>
           </section>
 
-          <section class="carousel">
-            <h2>Project snapshots</h2>
-            <div class="carousel-container">
-              <img src="../assets/img/student-1.jpg" alt="Student project prototype" />
-              <img src="../assets/img/student-2.jpg" alt="UX project presentation in class" />
+          <section class="project-section">
+            <h2>My Role</h2>
+            <p>I led user research, narrative flow design, wireframes, user testing, and prototyping with Axure.</p>
+            <p>I also spoke with a journalist who took part in the experience at our booth, here’s the <i class="fa-solid fa-newspaper"></i><a href="https://epa-paris-saclay.fr/actualites-et-decryptages/toutes-nos-publications/dans-la-peau-dun-migrant-rencontre-avec-ayoub-ifthihar-et-abdelkrim/" class="btn project-btn"> article (in french)</a></p>
+          </section>
+
+          <section class="project-section">
+            <h2>UX Process</h2>
+            <p>We started with ethical/cultural benchmarks and conducted qualitative interviews to explore perceptions and biases.</p>
+            <p>User testing measured emotional resonance, clarity, and decision-making impact across screens.</p>
+          </section>
+
+          <section class="project-section">
+            <h2>Ideation & Prototyping</h2>
+            <p>The Axure prototype simulates critical decision points with illustrated consequences based on user choices.</p>
+            <a href="https://ksjvx9.axshare.com/?id=za15t4" target="_blank" class="btn-secondary">View Axure prototype</a>
+          </section>
+
+          <section class="project-section">
+            <h2>Final design</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/mig-1.PNG" alt="Screen 1" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-2.PNG" alt="Screen 2" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-3.PNG" alt="Screen 3" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-4.PNG" alt="Screen 4" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-5.PNG" alt="Screen 5" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-6.PNG" alt="Screen 6" /></div>
+              <div class="carousel-item"><img src="../assets/img/mig-7.PNG" alt="Screen 7" /></div>
             </div>
           </section>
 
-          <section class="project-section">
-            <h2>What I learned</h2>
-            <ul>
-              <li>Apply user-centered design in an academic context</li>
-              <li>Work in multidisciplinary teams (UX, dev, marketing)</li>
-              <li>Adapt deliverables based on time and resource constraints</li>
-            </ul>
-          </section>
-
-          <a class="back-button" href="../index.html#projects">← Back to projects</a>
+          <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
-
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container-connect">
-            <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a> 
-            <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <a href="https://www.linkedin.com/in/ayoub-j/" class="icon-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="mailto:ayoub.jaa11@gmail.com" class="icon-mail" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/ayoub-jaa" class="icon-github" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
       <div class="container">
         <p data-lang="fr">&copy; 2025 Ayoub J. – Tous droits réservés.</p>
         <p data-lang="en" style="display:none">&copy; 2025 Ayoub J. – All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- SCROLL TO TOP -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="../assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-    <script src="../assets/js/main.js"></script>
+
+    <div id="imageModal" class="modal" style="display:none;">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img class="modal-content" id="modalImg" alt="">
+    </div>
   </body>
 </html>
