@@ -125,3 +125,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.querySelectorAll('.video-thumbnail').forEach(item => {
+  item.addEventListener('click', () => {
+    const videoSrc = item.getAttribute('data-video');
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    modalVideo.src = videoSrc;
+    modal.style.display = 'block';
+  });
+});
+
+document.getElementById('closeVideoModal').addEventListener('click', () => {
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  modal.style.display = 'none';
+  modalVideo.pause();
+  modalVideo.currentTime = 0;
+  modalVideo.src = ''; // Nettoyer pour éviter son résiduel
+});
+
