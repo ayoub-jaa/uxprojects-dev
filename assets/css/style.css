@@ -449,6 +449,27 @@
     color: #fff;
   }
 
+  /* ===============================
+     Video
+  ================================= */
+
+  .video-thumbnail img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .video-thumbnail:hover img {
+    transform: scale(1.05);
+  }
+
+  #videoModal .modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
 
   /* ===============================
      Footer

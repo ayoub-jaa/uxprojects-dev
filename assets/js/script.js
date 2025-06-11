@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Vidéo Lightbox
 document.querySelectorAll('.video-thumbnail').forEach(item => {
   item.addEventListener('click', () => {
     const videoSrc = item.getAttribute('data-video');
@@ -142,6 +143,7 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modal.style.display = 'none';
   modalVideo.pause();
   modalVideo.currentTime = 0;
-  modalVideo.src = ''; // Nettoyer pour éviter son résiduel
+  modalVideo.src = ''; // reset
 });
+
 
