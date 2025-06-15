@@ -160,6 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ✅ Appel différé garanti après que tout soit prêt
+window.addEventListener("load", () => {
+  setTimeout(setupFullStudyPanel, 100); // léger délai pour que tout le DOM soit bien prêt
+});
+
 // Vidéo Lightbox
 document.querySelectorAll('.video-thumbnail').forEach(item => {
   item.addEventListener('click', () => {
@@ -179,12 +184,5 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.currentTime = 0;
   modalVideo.src = ''; // reset
 });
-
-// ✅ Appel différé garanti après que tout soit prêt
-window.addEventListener("load", () => {
-  setTimeout(setupFullStudyPanel, 100); // léger délai pour que tout le DOM soit bien prêt
-});
-
-
 
 
