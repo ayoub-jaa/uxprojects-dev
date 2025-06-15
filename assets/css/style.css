@@ -732,7 +732,7 @@
   padding: 2rem 0;
   margin-top: 2rem;
   border-top: 2px dashed #00b5e2;
-  animation: fadeInSection 0.6s ease-out forwards;
+  animation: fadeInSection 0.3s ease-out forwards;
 }
 
 @keyframes fadeInSection {

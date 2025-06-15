@@ -147,20 +147,14 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Boutons d'ouverture
   const toggleBtnFr = document.getElementById("toggle-full-study-fr");
   const toggleBtnEn = document.getElementById("toggle-full-study-en");
-
-  // Section à afficher/cacher
   const studySection = document.getElementById("full-study-panel");
-
-  // Bouton de fermeture
   const closeBtn = document.getElementById("close-full-study");
 
   function openPanel() {
     if (studySection.hasAttribute("hidden")) {
       studySection.removeAttribute("hidden");
-      // Forcer le repaint pour que l'animation s'applique
       requestAnimationFrame(() => {
         studySection.classList.add("visible");
       });
@@ -169,14 +163,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closePanel() {
     studySection.classList.remove("visible");
-    studySection.addEventListener("transitionend", () => {
-      studySection.setAttribute("hidden", "");
-    }, { once: true });
+    studySection.addEventListener(
+      "transitionend",
+      () => {
+        studySection.setAttribute("hidden", "");
+      },
+      { once: true }
+    );
   }
 
   if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
   if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
 });
+
 
 
