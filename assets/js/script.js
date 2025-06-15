@@ -146,4 +146,26 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = ''; // reset
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-full-study");
+  const closeBtn = document.getElementById("close-full-study");
+  const studyPanel = document.getElementById("full-study-panel");
+
+  if (toggleBtn && studyPanel && closeBtn) {
+    toggleBtn.addEventListener("click", () => {
+      studyPanel.hidden = false;
+      // for smoother animation when unhiding
+      requestAnimationFrame(() => {
+        studyPanel.classList.add("open");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      studyPanel.classList.remove("open");
+      studyPanel.addEventListener("transitionend", () => {
+        studyPanel.hidden = true;
+      }, { once: true });
+    });
+  }
+});
 
