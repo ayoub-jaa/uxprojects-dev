@@ -147,38 +147,6 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtnFr = document.getElementById("toggle-full-study-fr");
-  const toggleBtnEn = document.getElementById("toggle-full-study-en");
-  const closeBtn = document.getElementById("close-full-study");
-  const studySection = document.getElementById("full-study-panel");
-
-  const openSection = () => {
-    if (studySection.hidden) {
-      studySection.hidden = false;
-      // Force reflow pour permettre l’animation
-      void studySection.offsetWidth;
-      studySection.classList.add("visible");
-    }
-  };
-
-  const closeSection = () => {
-    studySection.classList.remove("visible");
-    studySection.addEventListener(
-      "transitionend",
-      () => {
-        studySection.hidden = true;
-      },
-      { once: true }
-    );
-  };
-
-  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openSection);
-  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openSection);
-  if (closeBtn) closeBtn.addEventListener("click", closeSection);
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll('.fade-in-section');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
