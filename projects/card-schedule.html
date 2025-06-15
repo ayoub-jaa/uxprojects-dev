@@ -38,82 +38,7 @@
 
     <main class="main-project">
       <div class="container">
-        <!-- VERSION FR -->
-        <div data-lang="fr">
-          <nav class="breadcrumb">
-            <a href="../index.html#projects"><i class="fas fa-arrow-left"></i> Projets</a> / Calendrier Débit Différé
-          </nav>
-
-          <section class="project-hero" style="background-image: url('../assets/img/banniere-cbdiff.png');" data-lang="fr">
-            <h1>Calendrier à Débit Différé</h1>
-          </section>
-
-          <p class="project-subtitle">Améliorer la lisibilité d’un outil bancaire utilisé par des millions de clients</p>
-
-          <section class="project-section">
-            <h2>Problème</h2>
-            <p>Le calendrier à débit différé affichait des informations clés dans un tableau peu lisible, notamment sur mobile. Résultat : incompréhension des dates de débit, confusion pour les clients, et surcharge du service client.</p>
-          </section>
-
-          <section class="project-section">
-            <h2>Solution</h2>
-            <p>Nous avons repensé l’outil sous forme de carrousel dynamique :</p>
-            <ul>
-              <li>✅ Vue mensuelle épurée</li>
-              <li>✅ Dates de prélèvement et de débit mises en évidence</li>
-              <li>✅ Affichage responsive optimisé pour mobile</li>
-            </ul>
-          </section>
-
-          <section class="project-section">
-            <h2>Ma contribution</h2>
-            <p>J’ai mené l’analyse des retours clients, audité l’existant, conçu l’architecture et le wireflow, réalisé les maquettes responsive (Axure), puis livré un prototype interactif accompagné d’un design system. Le tout validé avec des tests utilisateurs (salariés, retraités, étudiants).</p>
-          </section>
-
-          <section class="project-section">
-            <h2>Idéation & Prototypage</h2>
-            <p>Liens vers les maquettes Axure : </p>
-            </br><a href="https://5x5cib.axshare.com/?hi=1&id=69i7jp" target="_blank" class="btn-secondary">💻 Version desktop</a>
-            </br><a href="https://5x5cib.axshare.com/?g=1&hi=1&id=hyc783" target="_blank" class="btn-secondary">📱 Version mobile</a>
-          </section>
-
-          <section class="project-section">
-            <h2>Design final</h2>
-            <div class="carousel">
-              <div class="carousel-item">
-                <img src="../assets/img/cbdiff-mockup-pc.png" alt="Mockup PC">
-                <div class="caption">Version PC – Aperçu</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/cbdiff-mockup-mobile.png" alt="Mockup mobile">
-                <div class="caption">Version mobile – Aperçu</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/cbdiff-ux-design1.png" alt="Design 1">
-                <div class="caption">Vue mensuelle avec surlignage</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/cbdiff-ux-design2.png" alt="Design 2">
-                <div class="caption">Calendrier interactif – détail</div>
-              </div>
-              <div class="carousel-item">
-                <img src="../assets/img/cbdiff-ux-design3.png" alt="Design 3">
-                <div class="caption">Navigation intuitive mobile</div>
-              </div>
-            </div>
-          </section>
-
-          <section class="project-section">
-            <h2>Résultats</h2>
-            <ul>
-              <li>✔️ +20% de satisfaction client après mise en ligne</li>
-              <li>✔️ 60% des utilisateurs interagissent davantage avec le carrousel mobile</li>
-              <li>✔️ Gains d’efficacité pour les équipes marketing : déploiement plus rapide des campagnes</li>
-            </ul>
-          </section>
-
-          <a class="btn-secondary" href="../index.html#projects">← Retour aux projets</a>
-        </div>
+        
 
         <!-- VERSION EN -->
         <div data-lang="en" style="display: none;">
@@ -191,6 +116,434 @@
 
           <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
+
+        <!-- BOUTONS DE DÉPLOIEMENT FR/EN -->
+        <button id="toggle-full-study-fr" class="btn-secondary" data-lang="fr">Consulter l’étude UX au complet</button>
+        <button id="toggle-full-study-en" class="btn-secondary" data-lang="en" style="display:none">View full UX case study</button>
+
+        <!-- ÉTUDE UX COMPLÈTE INLINE, MASQUÉE PAR DÉFAUT -->
+        <section id="full-study-panel" class="full-study-section" hidden>
+          <button id="close-full-study" class="btn-close" aria-label="Fermer">&times;</button>
+
+          <!-- VERSION FR -->
+          <div class="full-study-content fade-in-section" data-lang="fr" style="display:none">
+            <h2>Mon rôle dans ce projet et ressenti global</h2>
+            <p>
+              En tant que Designer UX stagiaire chez BoursoBank, j'ai eu l'opportunité de travailler avec deux équipes distinctes :
+            </p>
+            <ul>
+              <li><strong>✅ En tant que Designer UX Principal (pendant 6 mois)</strong> pour le Service Client : mon stage a permis à BoursoBank d’allouer une ressource dédiée au Service Client (avant cela, l'équipe d'infographie était presque exclusivement mobilisée par le département Marketing).</li>
+              <li><strong>✅ En tant que Designer UX (pendant 1 mois)</strong> dans l'équipe UX du département Marketing : j'ai travaillé sur 2 à 3 projets à la fin de mon stage.</li>
+            </ul>
+            <p>
+              Mes deux principaux défis : comprendre le domaine bancaire et les besoins utilisateurs, et appliquer mes compétences acquises en UX après mon Master. Heureusement, j’ai été bien accompagné, et ce stage a été un vrai succès.
+            </p>
+
+            <h2>Problématique</h2>
+            <p>
+              Après quelques semaines dans l'équipe du Service Client, j’ai identifié plusieurs pistes d’amélioration. L'une des premières concernait l’affichage du calendrier de débit différé des cartes bancaires. Il se présentait sous forme de tableau statique, très peu adapté au responsive design. J’ai proposé une nouvelle version plus claire, basée sur des recherches utilisateurs, des entretiens et l'expérience d’un collègue. J’étais Designer UX Principal sur ce projet.
+            </p>
+            <div class="problem-screenshot">
+              <img src="/assets/images/old-display-calendar.png" alt="Ancien affichage du calendrier" />
+            </div>
+
+            <h2>Contexte et Enjeux</h2>
+            <p>
+              L’ancien affichage du calendrier posait de nombreux problèmes : tableau figé, absence de hiérarchie visuelle, difficultés de lecture sur mobile. Trouver la ligne correspondant au mois en cours était laborieux, surtout sur smartphone avec les scrolls horizontaux et verticaux. Cette mauvaise expérience dégradait la satisfaction client et compliquait les échanges avec les équipes.
+            </p>
+
+            <h2>Recherche Utilisateur</h2>
+            <p>
+              Pour concevoir une solution centrée utilisateur, nous avons mené une série d’entretiens et d’analyses avec :
+            </p>
+            <ul>
+              <li>✅ <strong>Entretiens utilisateurs :</strong> Étudiants, retraités, salariés – pour mieux comprendre leurs frustrations face au tableau et au concept de débit différé.</li>
+              <li>✅ <strong>Ateliers de feedback :</strong> Sessions réunissant équipes métier et designers pour discuter des priorités et problèmes majeurs.</li>
+              <li>✅ <strong>Sondages :</strong> Pour valider certains besoins sur l’affichage et les préférences liées aux dates.</li>
+              <li>✅ <strong>Audit du processus :</strong> Mise en évidence des limites techniques et fonctionnelles du tableau, notamment sur mobile.</li>
+            </ul>
+            <p>
+              J’ai également pris en compte des principes d’ergonomie visuelle, notamment le chemin parcouru naturellement par l’œil humain :
+            </p>
+            <div class="problem-screenshot">
+              <img src="/assets/images/user-research.png" alt="Parcours de l'œil humain" />
+            </div>
+
+            <h2>Ce que nous avons appris</h2>
+            <ul>
+              <li>✅ <strong>Confusion autour du débit différé :</strong> Peu d’utilisateurs comprennent bien ce concept, nécessitant un accompagnement pédagogique.</li>
+              <li>✅ <strong>Problèmes d’accessibilité mobile :</strong> Le tableau était illisible sur mobile, entraînant frustration et abandon.</li>
+              <li>✅ <strong>Préférence pour la simplicité :</strong> Les utilisateurs veulent une vue claire, directe, sans effort superflu.</li>
+              <li>✅ <strong>Besoin de contenus explicatifs :</strong> Appréciés s’ils sont optionnels et discrets.</li>
+            </ul>
+
+            <h2>Personas</h2>
+            <p>Pour cerner les différents profils, nous avons établi plusieurs personas :</p>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/persona-student.png" alt="Étudiant"><div class="caption">Client étudiant</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-senior.png" alt="Client senior"><div class="caption">Client senior</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-cc.png" alt="Support client"><div class="caption">Support client</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-bankexp.png" alt="Responsable expérimenté"><div class="caption">Responsable bancaire</div></div>
+            </div>
+
+            <h2>Parcours Utilisateur</h2>
+            <h3>Hafid – Étudiant</h3>
+            <h4>Phase : Consulter la date</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😟 Confus, 😠 Frustré</li>
+              <li><strong>Douleurs :</strong> Difficile de trouver le bon mois ou de lire sur mobile</li>
+              <li><strong>Opportunités :</strong> ✅ Calendrier centré sur le mois en cours, navigation fluide</li>
+            </ul>
+            <h4>Phase : Comprendre les avantages</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😒 Agacé, 🙂 Rassuré</li>
+              <li><strong>Douleurs :</strong> Le débit différé n’est pas clair</li>
+              <li><strong>Opportunités :</strong> ✅ Infobulle ou guide intégré directement dans l’interface</li>
+            </ul>
+
+            <h3>Fatima – Senior</h3>
+            <h4>Phase : Consulter la date</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😟 Submergée, 😒 Agacée</li>
+              <li><strong>Douleurs :</strong> Texte trop petit, trop de scroll</li>
+              <li><strong>Opportunités :</strong> ✅ Affichage épuré avec texte lisible</li>
+            </ul>
+            <h4>Phase : Demander de l’aide</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😕 Inquiète, 🙂 Rassurée</li>
+              <li><strong>Douleurs :</strong> Ne comprend pas bien le mécanisme</li>
+              <li><strong>Opportunités :</strong> ✅ Section d’aide accessible et claire</li>
+            </ul>
+
+            <h3>Jamal – Support client</h3>
+            <h4>Phase : Aider les clients</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😤 Frustré, 😌 Satisfait</li>
+              <li><strong>Douleurs :</strong> Beaucoup de questions similaires</li>
+              <li><strong>Opportunités :</strong> ✅ Interface claire pour réduire les demandes</li>
+            </ul>
+            <h4>Phase : Suivre les cas</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😒 Fatigué, 🙂 Efficace</li>
+              <li><strong>Douleurs :</strong> Perte de temps à réexpliquer</li>
+              <li><strong>Opportunités :</strong> ✅ Démo visuelle pour accompagner les clients</li>
+            </ul>
+
+            <h3>Jamila – Responsable bancaire</h3>
+            <h4>Phase : Suivre la performance</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😟 Inquiète, 🙂 Dynamique</li>
+              <li><strong>Douleurs :</strong> Peu de vision sur l’usage réel</li>
+              <li><strong>Opportunités :</strong> ✅ Suivi analytique des interactions</li>
+            </ul>
+            <h4>Phase : Préparer la stratégie</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😠 Sous pression, 🙂 Organisée</li>
+              <li><strong>Douleurs :</strong> Difficile d’adapter le calendrier aux futurs besoins</li>
+              <li><strong>Opportunités :</strong> ✅ Design modulaire et évolutif</li>
+            </ul>
+
+            <h3>Parcours utilisateur - Desktop</h3>
+            <img src="/assets/images/client-user-path-pc.jpg" alt="Parcours desktop">
+            <p>Le parcours d’un client utilisant le calendrier différé sur PC</p>
+
+            <h3>Parcours utilisateur - Mobile</h3>
+            <img src="/assets/images/client-user-path-mobile.jpg" alt="Parcours mobile">
+            <p>Adoption immédiate de la maquette mobile par les utilisateurs</p>
+
+            <h2>Solution & Fonctionnalités</h2>
+            <ul>
+              <li>✅ <strong>Affichage dynamique :</strong> Le mois actuel est affiché automatiquement</li>
+              <li>✅ <strong>Menu déroulant :</strong> Pour naviguer rapidement entre les mois</li>
+              <li>✅ <strong>Optimisation mobile :</strong> Affichage fluide, sans surcharge</li>
+              <li>✅ <strong>Aide pédagogique :</strong> Infobulle explicative discrète</li>
+            </ul>
+
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/cbdiff-mockup-pc.png" alt="Sketch PC"><div class="caption">Sketch PC</div></div>
+              <div class="carousel-item"><img src="../assets/img/cbdiff-mockup-mobile.png" alt="Sketch Mobile"><div class="caption">Sketch Mobile</div></div>
+            </div>
+
+            <h2>Idéation & Prototypage</h2>
+            <p>Maquettes conçues avec Adobe XD et prototypage interactif avec Axure :</p>
+            <a href="https://5x5cib.axshare.com/?hi=1&id=69i7jp" target="_blank" class="btn-secondary">Prototype Web (Axure)</a><br>
+            <a href="https://5x5cib.axshare.com/?g=1&hi=1&id=hyc783" target="_blank" class="btn-secondary">Prototype Mobile (Axure)</a>
+
+            <h2>Mockups UI</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design1.png" alt="UX 1"><div class="caption">UX 1</div></div>
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design2.png" alt="UX 2"><div class="caption">UX 2</div></div>
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design3.png" alt="UX 3"><div class="caption">UX 3</div></div>
+            </div>
+
+            <h2>Tests, Impact & Résultats</h2>
+            <p>Le nouveau calendrier améliore nettement l’accessibilité, la lisibilité et la satisfaction. Il est désormais utilisable sur tous supports.</p>
+
+            <h3>Méthodologie</h3>
+            <p>Tests basés sur des scénarios réels liés aux personas. Feedback recueilli via entretiens et ateliers.</p>
+            <div class="user-path">
+              <h3>Résultats</h3>
+              <img src="/assets/img/cbdiff-result.png" alt="Résultat test">
+              <p>Extrait d’un des tests utilisateurs</p>
+            </div>
+
+            <h3>Retour utilisateurs</h3>
+            <p>
+              Appréciation générale pour la clarté et l’ergonomie. Forte adoption mobile. Les équipes métier ont gagné en autonomie et efficacité.
+            </p>
+
+            <h3>Défis rencontrés</h3>
+            <p>
+              Besoin de pédagogie sur le débit différé → résolu via une infobulle. Besoin de rassurer les équipes marketing → fait avec accompagnement dédié.
+            </p>
+
+            <h3>Améliorations clés</h3>
+            <p>
+              Navigation fluide, design responsive, éléments simplifiés pour tous les publics.
+            </p>
+
+            <h3>Impact</h3>
+            <ul>
+              <li>✅ Satisfaction utilisateur : +45 %, taux d’adhésion à 85 %</li>
+              <li>✅ Engagement mobile : +60 % d’interactions</li>
+            </ul>
+
+            <h2>Outils utilisés</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot)</li>
+              <li>✅ Balsamiq / Photoshop</li>
+              <li>✅ Axure RP / Adobe XD</li>
+              <li>✅ Jira / Forms / Teams / Whiteboard</li>
+            </ul>
+          </div>
+
+
+          <!-- VERSION EN -->
+          <div class="full-study-content fade-in-section" data-lang="en" style="display:none">
+            <h2>About my role in this project and my global feeling</h2>
+            <p>
+              As Intern UX Designer at BoursoBank, I had opportunity to work with 2 distinct teams :
+            </p>
+            <ul>
+              <li><strong>✅ As Principal UX Designer (for 6 months) </strong>for the Customer Service : my intership allow Bourso Bank to recruit a resource for the customer service (until my arrival, the Infography team were almost totally allocated to the Marketing Department only.</li>
+              <li>
+                <strong>✅ As UX Designer (for 1 month) </strong>
+                in the UX Team of the Marketing Dept. : at the end of my internship, I worked on 2-3 project. 
+                <strong><br /></strong>
+              </li>
+            </ul>
+            <p>
+              I had 2 challenges here : undestand the bank domain and users' needs &amp; apply my UX skills after my Master's Degree. Fortunately, I had a great team and my internship was a success.
+            </p>
+
+            <h2>Problem Statement</h2>
+            <p>
+              After some weeks in the Customer Service team, I noticed some improvements. One on my first improvement was the display of the calendar for differed credit card. It was only a table, that is terribly not responsive design. I have proposed a new way to display the calendar based on studies, interviews and experience of one of my teammates. For this case, I was the Principal UX Designer.
+            </p>
+            <p>
+              &nbsp;
+            </p>
+            <!-- Capture d'écran de l'ancien outil -->
+            <div class="problem-screenshot">
+              <img src="/assets/images/old-display-calendar.png" alt="Previous Boursoshop display" />
+            </div>
+
+            <h2>Challenges and Context</h2>
+            <p>
+              Previously, the calendar feature was displayed as a static table, which created significant frustrations. Users had to manually locate the current month's row, a cumbersome process that was especially problematic on mobile due to the lack of responsive design. Scrolling horizontally and vertically on small screens was inconvenient and impractical. These issues severely impacted usability and customer satisfaction, prompting a complete redesign of the feature.
+            </p>
+            <h2>User Research and Needs Gathering</h2>
+            <p>
+              To design a tool that truly meets user needs, we conducted a series of research activities to understand the frustrations and expectations of clients. Our process included discussions with two team members of BoursoBank, one Customer Service member, one experienced bank manager, and two clients to gain comprehensive insights.
+            </p>
+            <p>
+              To create a user-centered design, we conducted in-depth research to understand the pain points and needs of both users and stakeholders. Here's how we approached it:
+            </p>
+            <ul>
+              <li>✅ <strong>User Interviews:</strong> Engaged with diverse clients, including students, retirees, and working professionals, to understand their struggles with the previous tabular design and deferred debit concepts.</li>
+              <li>✅ <strong>Feedback Workshops:</strong> Organized sessions with banking and design teams to identify usability challenges and align on solutions.</li>
+              <li>✅ <strong>Surveys:</strong> Collected data to validate assumptions about deferred debit clarity and date display preferences.</li>
+              <li>✅ <strong>Process Audit:</strong> Evaluated the limitations of the existing display, identifying how it hindered scalability and user satisfaction, especially on mobile platforms.</li>
+            </ul>
+            <p>
+              My study also take in consideration the way that the eye read information, the following picture show how a human being consult an information.
+            </p>
+            <div class="problem-screenshot">
+              <img src="/assets/images/user-research.png" alt="Eyes' path" />
+            </div>
+            <h2>What We Learned</h2>
+            <p>
+              Through this research, several recurring issues emerged:
+            </p>
+            <ul>
+              <li>✅ <strong>Deferred Debit Confusion:</strong> Many users struggled with understanding the concept of deferred debit, highlighting the need for educational content.</li>
+              <li>✅ <strong>Mobile Usability Issues:</strong> The old table format was difficult to navigate, especially on mobile devices, where horizontal and vertical scrolling frustrated users.</li>
+              <li>✅ <strong>Preference for Simplicity:</strong> Users wanted a clean, straightforward display that shows relevant information (e.g., current month&rsquo;s debit date) without requiring extra effort to find it.</li>
+              <li>✅ <strong>Need for Educational Support:</strong> Users appreciated the option to access explanatory content when needed, but preferred it to be unobtrusive.</li>
+            </ul>
+
+            <h2>User Personas</h2>
+            <p>
+              To better understand the different types of users, we created personas. These profiles allowed us to define the specific needs and goals of each user group and tailor the tool to their objectives.
+            </p>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/persona-student.png" alt="Student client"><div class="caption">Student client</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-senior.png" alt="Senior client"><div class="caption">Senior client</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-cc.png" alt="Banking Customer Service Representative"><div class="caption">Banking Customer Service Representative</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-bankexp.png" alt="Experienced Banking Manager"><div class="caption">Experienced Banking Manager</div></div>
+            </div>
+
+            <h2>Parcours Utilisateur</h2>
+            <h3>Hafid - Student client</h3>
+            <h4>Phase: Want to consult date</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😟 Confused, 😠 Frustrated</li>
+              <li><strong>Pain points:</strong> Difficulty finding the correct month and information, especially on mobile.</li>
+              <li><strong>Opportunities:</strong> ✅ Mobile-optimized calendar, displaying the current month&rsquo;s date and offering easy navigation to other months.</li>
+            </ul>
+            <h4>Phase: Need to understand benefits</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😒 Annoyed, 🙂 Reassured</li>
+              <li><strong>Pain points:</strong> Confusion about the deferred debit system.</li>
+              <li><strong>Opportunities:</strong> ✅ Clear, accessible explanations directly within the calendar interface.</li>
+            </ul>
+
+            <h3>Fatima - Senion client</h3>
+            <h4>Phase: Want to consult date</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😟 Overwhelmed, 😒 Impatient</li>
+              <li><strong>Pain points:</strong> Difficulty reading the information on mobile due to small text or excessive scrolling.</li>
+              <li><strong>Opportunities:</strong> ✅ Simplified display with minimal scrolling and clear fonts, especially on mobile.</li>
+            </ul>
+            <h4>Phase: Need assistance</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😕 Anxious, 🙂 Reassured</li>
+              <li><strong>Pain points:</strong> Difficulty understanding delayed debit mechanics.</li>
+              <li><strong>Opportunities:</strong> ✅ A help section easily accessible from the calendar interface, explaining the key concepts.</li>
+            </ul>
+
+            <h3>Jamal - Banking Customer Service Representative</h3>
+            <h4>Phase: Need to support customers</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😤 Frustrated, 😌 Satisfied</li>
+              <li><strong>Pain points:</strong> Receiving multiple customer inquiries about dates or calendar functionalities.</li>
+              <li><strong>Opportunities:</strong> ✅ A clear, easy-to-use calendar that minimizes confusion, reducing support queries.</li>
+            </ul>
+            <h4>Phase: Follow-up on issues</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😒 Tired, 🙂 Accomplished</li>
+              <li><strong>Pain points:</strong> Repeatedly explaining calendar and offer details to users.</li>
+              <li><strong>Opportunities:</strong> ✅ A demo feature to help customer service representatives guide clients effectively.</li>
+            </ul>
+
+            <h3>Jamila - Experienced Banking Manager</h3>
+            <h4>Phase: Monitor product performance</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😟 Concerned, 🙂 Motivated</li>
+              <li><strong>Pain points:</strong> Lack of insight into how customers interact with the calendar feature.</li>
+              <li><strong>Opportunities:</strong> ✅ Analytics tools to track user engagement and improve the product based on insights.</li>
+            </ul>
+            <h4>Phase: Strategic planning</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😠 Pressured, 🙂 Empowered</li>
+              <li><strong>Pain points:</strong> Difficulties in adapting the calendar for future user segments and business needs.</li>
+              <li><strong>Opportunities:</strong> ✅ A flexible calendar design that can scale according to evolving business goals.</li>
+            </ul>
+
+            <h3>Client Path - Desktop</h3>
+            <img src="/assets/images/client-user-path-pc.jpg" alt="Client User Path PC">
+            <p>This diagram illustrates the journey of the cleint using the feature to consult date of deffered credit card calendar with PC.</p>
+          
+          
+            <!-- User Path for Client Mobile -->
+            <h3>Client Path - Mobile</h3>
+            <img src="/assets/images/client-user-path-mobile.jpg" alt="Client User Path Mobile">
+            <p>Here, we see the difference. This design had been adopted directly by users only with the sketch.</p>
+          
+
+            <h2>Solution & Features</h2>
+            <p>
+              The revamped calendar offers a clean, user-friendly design focused on displaying essential information while maintaining a seamless mobile experience.
+            </p>
+            <ul>
+              <li>✅ <strong>Dynamic Date Display</strong>: Automatically shows the debit date for the current month (e.g., November shows November&rsquo;s date by default), streamlining navigation for users.</li>
+              <li>✅ <strong>Dropdown Menu for Other Dates</strong>: Allows users to quickly access dates for other months without overwhelming the interface. </li>
+              <li>✅ <strong>Mobile-Optimized Layout</strong>: Ensures an intuitive, clutter-free experience on small screens. </li>
+              <li>✅ <strong>Educational Tooltip</strong>: An optional, collapsible guide explaining the concept of deferred debit, addressing a common pain point highlighted during interviews. </li>
+            </ul>
+            <p>
+              This solution simplifies access, enhances comprehension, and significantly improves usability, particularly for mobile users.
+            </p>
+            
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-pc.png" alt="Sketch PC" />
+                <div class="caption">Sketch PC</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/cbdiff-mockup-mobile.png" alt="Sketch Mobile" />
+                <div class="caption">Sketch Mobile</div>
+              </div>
+            </div>
+
+            <h2>Ideation & Prototyping</h2>
+            <p>I created wireframes and a high-fidelity prototype using Adobe XD.</p>
+            <p>Explore the interactive prototype created with Axure, which simulates the full user journey of date for deffered Credit Card consultation.</p>
+            </br><a href="https://5x5cib.axshare.com/?hi=1&id=69i7jp" target="_blank" class="btn-secondary">View the Adobe XD prototype (Web)</a>
+            </br><a href="https://5x5cib.axshare.com/?g=1&hi=1&id=hyc783" target="_blank" class="btn-secondary">View the Adobe XD prototype (Mobile)</a>
+
+            <h2>UI Mockups</h2>
+            <p>
+              Below are the mockups of the key screens in the application, demonstrating how the user interface supports the workflows of date consultation.
+            </p>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design1.png" alt="CC Deffered 1"><div class="caption">CC Deffered 1</div></div>
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design2.png" alt="CC Deffered 2"><div class="caption">CC Deffered 2</div></div>
+              <div class="carousel-item"><img src="../assets/img/cbdiff-ux-design3.png" alt="CC Deffered 3"><div class="caption">CC Deffered 3</div></div>
+            </div>
+
+            <h2>Test, Impact and Results</h2>
+            <p>
+              The new calendar solution significantly improved user engagement, offering a more accessible and intuitive display, particularly on mobile devices. It addressed prior navigation issues, especially for older clients, and made the process of consulting the payment dates more streamlined. Marketing teams appreciated the flexibility for content management and prioritization.
+            </p>
+            <h3>Test Methodology</h3>
+            <p>
+              The design was evaluated using real-world scenarios tailored to different user personas, ensuring usability across demographics. Feedback was gathered through interviews and workshops, refining features to meet both user and marketing needs.
+            </p>
+            <div class="user-path">
+              <h3>Result after tests</h3>
+              <img src="/assets/img/cbdiff-result.png" alt="Result">
+              <p>This table recap one of the test we made with users</p>
+            </div>
+            <h3>User Feedback</h3>
+            <p>
+              Users appreciated the clarity of the new calendar, especially its mobile-friendly design. The enhanced user interface made it easier to find and view the correct dates without frustration. Marketing teams valued the new dynamic controls, enabling quicker and more effective campaign adjustments.
+            </p>
+            <h3>Challenges</h3>
+            <p>
+              There was initial confusion regarding the calendar&rsquo;s presentation, particularly about deferred debit. This was resolved by simplifying the design and integrating helpful explanations directly within the interface. Marketing teams needed additional support to visualize the scalability of the calendar, which was addressed through detailed training and updates.
+            </p>
+            <h3>Key Improvements</h3>
+            <p>
+              The calendar now features dynamic navigation with a clear, mobile-optimized display. UI elements were redesigned to minimize cognitive load, making it simpler for users of all ages to access relevant information. Marketing teams now have tools to easily manage and prioritize offers, improving their flexibility.
+            </p>
+            <h3>Impact</h3>
+            <ul>
+              <li>✅ User satisfaction rose by 45%, reaching a 85% approval rate.</li>
+              <li>✅ Mobile engagement increased, with 60% of users interacting more with the calendar.</li>
+            </ul>
+
+            <h2>Outils Utilisés</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot) for personas design.</li>
+              <li>✅ Balsamiq Mockups for quick wireframing.</li>
+              <li>✅ Photoshop for screen design and branding adherence.</li>
+              <li>✅ Axure for interactive prototyping and design.</li>
+              <li>✅ Jira for ticketing management.</li>
+              <li>✅ Microsoft tools for tests/reflection (Forms, Teams, Whiteboard).</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </main>
 
