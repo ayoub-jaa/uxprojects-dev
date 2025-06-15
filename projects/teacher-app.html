@@ -45,7 +45,6 @@
 
     <main class="main-project">
       <div class="container">
-
         <!-- VERSION FR -->
         <div data-lang="fr">
           <nav class="breadcrumb">
@@ -239,6 +238,326 @@
 
           <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
+
+        <!-- BOUTONS DE DÉPLOIEMENT FR/EN -->
+        <button id="toggle-full-study-fr" class="btn-secondary" data-lang="fr">Consulter l’étude UX au complet</button>
+        <button id="toggle-full-study-en" class="btn-secondary" data-lang="en" style="display:none">View full UX case study</button>
+
+        <!-- ÉTUDE UX COMPLÈTE INLINE, MASQUÉE PAR DÉFAUT -->
+        <section id="full-study-panel" class="full-study-section" hidden>
+          <button id="close-full-study" class="btn-close" aria-label="Fermer">&times;</button>
+
+          <!-- VERSION FR -->
+          <div class="full-study-content fade-in-section" data-lang="fr">
+            <h2>À propos du projet & de mon rôle</h2>
+            <p>
+              En tant que Designer Produit bénévole, j’ai rejoint ce projet initié par l’Institut Malik Ibn Anas. L’objectif était de faciliter la communication entre parents et enseignants dans une école coranique. Le besoin est né d’une douleur terrain concrète : les professeurs perdaient énormément de temps à contacter les parents individuellement par WhatsApp, ce qui nuisait à leur concentration et à leur gestion de classe.
+            </p>
+            <ul>
+              <li><strong>✅ Contexte réel :</strong> enseignants bénévoles, parents très impliqués, école sans budget tech.</li>
+              <li><strong>✅ Conception de A à Z :</strong> ateliers, wireframes, prototypes, tests.</li>
+              <li><strong>✅ Projet en production :</strong> l’app est utilisée depuis mars 2025.</li>
+            </ul>
+
+            <h2>Problème</h2>
+            <p>
+              L’école utilisait WhatsApp et des tableaux Excel pour transmettre les informations : retards, absences, devoirs… mais cela générait des oublis, des confusions et un surmenage côté enseignants. Les parents étaient aussi frustrés par le manque de visibilité. Il fallait centraliser la communication dans une interface simple, claire, et adaptée à tous les profils.
+            </p>
+
+            <h2>Enjeux & Contraintes</h2>
+            <p>
+              Le contexte bénévole et associatif impliquait :
+            </p>
+            <ul>
+              <li>✅ Aucun budget, donc outils gratuits (Figma, Notion, Google Sheets...)</li>
+              <li>✅ Professeurs non technophiles, donc interface ultra-intuitive</li>
+              <li>✅ Pas d’application mobile native, donc version web responsive</li>
+            </ul>
+
+            <h2>Recherche utilisateur</h2>
+            <p>
+              Nous avons réalisé :
+            </p>
+            <ul>
+              <li>✅ Des entretiens avec les enseignants et les responsables pédagogiques</li>
+              <li>✅ Un benchmark de solutions existantes (apps de classe, gestion scolaire…)</li>
+              <li>✅ Une priorisation des besoins selon la méthode MoSCoW</li>
+            </ul>
+
+            <h2>Personas</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/persona-teacher-parent.png" alt="Enseignant">
+                <div class="caption">Enseignant bénévole</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/persona-parent.png" alt="Parent">
+                <div class="caption">Parent d’élève</div>
+              </div>
+            </div>
+
+            <h2>Parcours Utilisateur</h2>
+            <h3>Mamadou – Enseignant</h3>
+            <h4>Phase : Connexion pour gérer ses classes</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Concentré, 😌 Rassuré</li>
+              <li><strong>Douleurs :</strong> lenteur du dashboard, navigation complexe.</li>
+              <li><strong>Opportunités :</strong> ✅ Dashboard rapide avec résumé clair des classes.</li>
+            </ul>
+            <h4>Phase : Ajouter un devoir pour une classe</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Productif, 😎 Confiant</li>
+              <li><strong>Douleurs :</strong> trop d'étapes pour ajouter un devoir, ajout de pièce jointe difficile.</li>
+              <li><strong>Opportunités :</strong> ✅ Process simplifié, ajout de fichier + date intuitive.</li>
+            </ul>
+            <h4>Phase : Vérification de présence</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Organisé, 😌 Détendu</li>
+              <li><strong>Douleurs :</strong> erreurs ou crash lors de la mise à jour des présences.</li>
+              <li><strong>Opportunités :</strong> ✅ Marquage de présence simple avec auto-sauvegarde.</li>
+            </ul>
+
+
+            <h3>Hamza – Parent</h3>
+            <h4>Phase : Consultation des devoirs</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Curieux, 😌 Rassuré</li>
+              <li><strong>Douleurs :</strong> navigation difficile vers les devoirs, peu de lisibilité.</li>
+              <li><strong>Opportunités :</strong> ✅ Accès simple avec distinction clair entre devoirs à venir / faits.</li>
+            </ul>
+            <h4>Phase : Signature d’un document</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Efficace, 😎 Serein</li>
+              <li><strong>Douleurs :</strong> processus de signature numérique peu fiable.</li>
+              <li><strong>Opportunités :</strong> ✅ Signature fluide et sécurisée avec confirmation.</li>
+            </ul>
+            <h4>Phase : Voir les notes et présences</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😊 Informé, 😌 Satisfait</li>
+              <li><strong>Douleurs :</strong> données trop denses ou mal organisées.</li>
+              <li><strong>Opportunités :</strong> ✅ Résumé clair et visuel des notes et présences.</li>
+            </ul>
+
+            <h2>Processus de Design</h2>
+            <p>
+              J’ai accompagné le client sur tout le cycle UX :
+            </p>
+            <ul>
+              <li>✅ Définition des MVP (absences, devoirs, messages)</li>
+              <li>✅ Maquettes sur Figma, feedbacks réguliers</li>
+              <li>✅ Tests utilisateurs avec les enseignants</li>
+            </ul>
+            <img src="../assets/img/teacher-user-flow.png" alt="Parcours utilisateur enseignant"/>
+            <img src="../assets/img/parent-path.jpg" alt="Parcours utilisateur parent" />
+
+            <h2>Idéation & Prototypage</h2>
+            <p>J’ai conçu des wireframes et un prototype haute fidélité sur Figma.</p>
+            <p>Chaque écran a été pensé pour simplifier la tâche des parents et des enseignants.</p>
+            </br><a href="https://www.figma.com/proto/ugSslnbKDkZlEnHUF2pMqr/Maquette-Portail-Institut?page-id=1%3A2&amp;node-id=1-3858&amp;p=f&amp;viewport=26%2C437%2C0.04&amp;t=jW9YHlDsOjOCgN3A-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=1%3A3858&amp;show-proto-sidebar=1" target="_blank" class="btn-secondary">Voir le prototype Figma</a>
+
+            <h2>Mockups & Interface</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/1- Connexion.png" alt="Connexion"><div class="caption">Connexion</div></div>
+              <div class="carousel-item"><img src="../assets/img/2- Salle de Classe-t.png" alt="Salle de Classe"><div class="caption">Salle de Classe</div></div>
+              <div class="carousel-item"><img src="../assets/img/3- Devoir-t.png" alt="Devoir"><div class="caption">Devoir</div></div>
+              <div class="carousel-item"><img src="../assets/img/4- Piece jointe-t.png" alt="Piece jointe"><div class="caption">Piece jointe</div></div>
+              <div class="carousel-item"><img src="../assets/img/5- Devoir Arabe-p.png" alt="Devoir Arabe"><div class="caption">Devoir Arabe</div></div>
+              <div class="carousel-item"><img src="../assets/img/6- Absences-t.png" alt="Absences"><div class="caption">Absences</div></div>
+              <div class="carousel-item"><img src="../assets/img/7- Bilan-t.png" alt="Bilan"><div class="caption">Bilan</div></div>
+              <div class="carousel-item"><img src="../assets/img/8- Résultat-p.png" alt="Résultat"><div class="caption">Résultat</div></div>
+              <div class="carousel-item"><img src="../assets/img/9- Devoir en cours-p.png" alt="Devoir en cours"><div class="caption">Devoir en cours</div></div>
+              <div class="carousel-item"><img src="../assets/img/10- Liste élève-t.png" alt="Liste élève"><div class="caption">Liste élève</div></div>
+            </div>
+
+            <h2>Résultats & Retours</h2>
+            <h3>Méthodologie</h3>
+            <ul>
+              <li><strong>✅ Scénarios réels :</strong> tests sur des cas quotidiens.</li>
+              <li><strong>✅ Feedback itératif :</strong> améliorations basées sur les retours enseignants / parents.</li>
+            </ul>
+
+            <h3>Retour des utilisateurs</h3>
+            <p>
+              Interface intuitive et gain de temps plébiscité des deux côtés. Les parents adorent la centralisation, les enseignants la simplicité de saisie.
+            </p>
+
+            <h3>Problèmes rencontrés</h3>
+            <ul>
+              <li><strong>✅ Onboarding :</strong> garantir l'accessibilité aux utilisateurs peu à l’aise avec le numérique.</li>
+              <li><strong>✅ Compatibilité :</strong> adapter le design à d’anciens appareils.</li>
+            </ul>
+
+            <h3>Impact</h3>
+            <ul>
+              <li>✅ Moins de malentendus entre profs et familles.</li>
+              <li>✅ Gain de temps pour les enseignants.</li>
+              <li>✅ Fin des outils dispersés ou papiers inutiles.</li>
+            </ul>
+
+            <h2>Outils utilisés</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot) pour les personas.</li>
+              <li>✅ Photoshop pour les écrans.</li>
+              <li>✅ Figma pour les prototypes.</li>
+              <li>✅ Trello pour la gestion agile.</li>
+              <li>✅ Microsoft (Forms, Teams, Whiteboard) pour les tests et brainstormings.</li>
+            </ul>
+            <a class="btn-secondary" href="../index.html#projects">← Retour aux projets</a>
+          </div>
+
+          <!-- VERSION EN -->
+          <div class="full-study-content fade-in-section" data-lang="en" style="display:none">
+            <h2>About the project & my role</h2>
+            <p>
+              As a volunteer Product Designer, I joined this project initiated by the Malik Ibn Anas Institute. The goal was to facilitate communication between parents and teachers in a Quranic school. The need came from a very concrete pain point: teachers were wasting a lot of time contacting parents one by one via WhatsApp, which disrupted their focus and class management.
+            </p>
+            <ul>
+              <li><strong>✅ Real context:</strong> volunteer teachers, highly involved parents, no tech budget.</li>
+              <li><strong>✅ End-to-end design:</strong> workshops, wireframes, prototypes, user testing.</li>
+              <li><strong>✅ Live project:</strong> the app has been used since March 2025.</li>
+            </ul>
+
+            <h2>Problem</h2>
+            <p>
+              The school was using WhatsApp and Excel sheets to share information: lateness, absences, homework... but this led to oversights, confusion, and overload for teachers. Parents were also frustrated with the lack of visibility. The need was to centralize communication in a simple, clear interface that works for everyone.
+            </p>
+
+            <h2>Challenges & Constraints</h2>
+            <p>
+              The nonprofit context brought the following constraints:
+            </p>
+            <ul>
+              <li>✅ Zero budget → free tools (Figma, Notion, Google Sheets...)</li>
+              <li>✅ Non-tech-savvy teachers → ultra-intuitive interface</li>
+              <li>✅ No native mobile app → responsive web version</li>
+            </ul>
+
+            <h2>User Research</h2>
+            <p>We conducted:</p>
+            <ul>
+              <li>✅ Interviews with teachers and educational staff</li>
+              <li>✅ A benchmark of existing tools (classroom apps, school management platforms…)</li>
+              <li>✅ Prioritization using the MoSCoW method</li>
+            </ul>
+
+            <h2>User Personas</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/persona-teacher-parent.png" alt="Teacher">
+                <div class="caption">Volunteer Teacher</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/persona-parent.png" alt="Parent">
+                <div class="caption">Parent</div>
+              </div>
+            </div>
+
+            <h2>User Journey</h2>
+            <h3>Mamadou – Teacher</h3>
+            <h4>Phase: Logging in to manage classes</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Focused, 😌 Reassured</li>
+              <li><strong>Pain points:</strong> dashboard slow to load, navigation not intuitive.</li>
+              <li><strong>Opportunities:</strong> ✅ Fast dashboard with a clear class summary.</li>
+            </ul>
+            <h4>Phase: Adding homework</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Productive, 😎 Confident</li>
+              <li><strong>Pain points:</strong> too many steps to add homework, attachment upload difficult.</li>
+              <li><strong>Opportunities:</strong> ✅ Streamlined process, intuitive file upload and due date.</li>
+            </ul>
+            <h4>Phase: Attendance check</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Organized, 😌 Calm</li>
+              <li><strong>Pain points:</strong> errors or crashes when saving updates.</li>
+              <li><strong>Opportunities:</strong> ✅ Simple attendance marking with autosave.</li>
+            </ul>
+
+            <h3>Hamza – Parent</h3>
+            <h4>Phase: Viewing homework</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Curious, 😌 Reassured</li>
+              <li><strong>Pain points:</strong> difficult navigation, unclear layout.</li>
+              <li><strong>Opportunities:</strong> ✅ Easy access with clear separation between upcoming and completed tasks.</li>
+            </ul>
+            <h4>Phase: Signing a document</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Efficient, 😎 Confident</li>
+              <li><strong>Pain points:</strong> unreliable digital signature process.</li>
+              <li><strong>Opportunities:</strong> ✅ Smooth and secure signature with confirmation.</li>
+            </ul>
+            <h4>Phase: Checking grades and attendance</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😊 Informed, 😌 Satisfied</li>
+              <li><strong>Pain points:</strong> data too dense or poorly organized.</li>
+              <li><strong>Opportunities:</strong> ✅ Clear and visual summary of performance and attendance.</li>
+            </ul>
+
+            <h2>Design Process</h2>
+            <p>I supported the client through the entire UX cycle:</p>
+            <ul>
+              <li>✅ MVP definition (homework, absences, messaging)</li>
+              <li>✅ Figma wireframes, regular feedback</li>
+              <li>✅ User testing with teachers</li>
+            </ul>
+            <img src="../assets/img/teacher-user-flow.png" alt="Teacher journey" />
+            <img src="../assets/img/parent-path.jpg" alt="Parent journey" />
+
+            <h2>Ideation & Prototyping</h2>
+            <p>I designed both wireframes and a high-fidelity prototype in Figma.</p>
+            <p>Every screen was created to simplify the daily life of both teachers and parents.</p>
+            </br><a href="https://www.figma.com/proto/ugSslnbKDkZlEnHUF2pMqr/Maquette-Portail-Institut?page-id=1%3A2&amp;node-id=1-3858&amp;p=f&amp;viewport=26%2C437%2C0.04&amp;t=jW9YHlDsOjOCgN3A-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=1%3A3858&amp;show-proto-sidebar=1" target="_blank" class="btn-secondary">View the Figma prototype</a>
+
+            <h2>Mockups & UI</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/1- Connexion.png" alt="Login"><div class="caption">Login</div></div>
+              <div class="carousel-item"><img src="../assets/img/2- Salle de Classe-t.png" alt="Classroom"><div class="caption">Classroom</div></div>
+              <div class="carousel-item"><img src="../assets/img/3- Devoir-t.png" alt="Homework"><div class="caption">Homework</div></div>
+              <div class="carousel-item"><img src="../assets/img/4- Piece jointe-t.png" alt="Attachment"><div class="caption">Attachment</div></div>
+              <div class="carousel-item"><img src="../assets/img/5- Devoir Arabe-p.png" alt="Arabic Homework"><div class="caption">Arabic Homework</div></div>
+              <div class="carousel-item"><img src="../assets/img/6- Absences-t.png" alt="Absences"><div class="caption">Absences</div></div>
+              <div class="carousel-item"><img src="../assets/img/7- Bilan-t.png" alt="Overview"><div class="caption">Overview</div></div>
+              <div class="carousel-item"><img src="../assets/img/8- Résultat-p.png" alt="Result"><div class="caption">Result</div></div>
+              <div class="carousel-item"><img src="../assets/img/9- Devoir en cours-p.png" alt="Ongoing Homework"><div class="caption">Ongoing Homework</div></div>
+              <div class="carousel-item"><img src="../assets/img/10- Liste élève-t.png" alt="Student List"><div class="caption">Student List</div></div>
+            </div>
+
+            <h2>Results & Feedback</h2>
+            <h3>Methodology</h3>
+            <ul>
+              <li><strong>✅ Real scenarios:</strong> tested with everyday use cases.</li>
+              <li><strong>✅ Iterative feedback:</strong> improvements based on feedback from both teachers and parents.</li>
+            </ul>
+
+            <h3>User Feedback</h3>
+            <p>
+              Both sides praised the intuitive interface and time-saving aspect. Parents loved the centralization, and teachers appreciated how easy it was to update information.
+            </p>
+
+            <h3>Challenges Faced</h3>
+            <ul>
+              <li><strong>✅ Onboarding:</strong> ensuring accessibility for non-tech-savvy users.</li>
+              <li><strong>✅ Compatibility:</strong> adapting the design for older devices.</li>
+            </ul>
+
+            <h3>Impact</h3>
+            <ul>
+              <li>✅ Fewer misunderstandings between teachers and families.</li>
+              <li>✅ Time saved for teaching staff.</li>
+              <li>✅ No more scattered or paper-based tools.</li>
+            </ul>
+
+            <h2>Tools Used</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot) for personas.</li>
+              <li>✅ Photoshop for screens and branding.</li>
+              <li>✅ Figma for wireframes and UI design.</li>
+              <li>✅ Trello for agile collaboration.</li>
+              <li>✅ Microsoft (Forms, Teams, Whiteboard) for testing and brainstorming.</li>
+            </ul>
+            <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
+          </div>
+        </section>
       </div>
     </main>
 
