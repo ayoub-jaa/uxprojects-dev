@@ -167,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const studySection = document.getElementById("full-study-panel");
 
   function openPanel() {
-    if (studySection.hidden) {
-      studySection.hidden = false;
+    if (studySection.hasAttribute("hidden")) {
+      studySection.removeAttribute("hidden");
       requestAnimationFrame(() => {
         studySection.classList.add("visible");
       });
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     studySection.addEventListener(
       "transitionend",
       () => {
-        studySection.hidden = true;
+        studySection.setAttribute("hidden", "");
       },
       { once: true }
     );
@@ -190,3 +190,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
 });
+
