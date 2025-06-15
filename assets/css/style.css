@@ -727,12 +727,11 @@
 
 /* ============= Étude UX complète (inline après bouton) ============= */
 .full-study-section {
-  background-color: #111;
   color: white;
   padding: 2rem 0;
   margin-top: 2rem;
   border-top: 2px dashed #00b5e2;
-  animation: fadeInSection 0.3s ease-out forwards;
+  animation: fadeInSection 0.1s ease-out forwards;
 }
 
 @keyframes fadeInSection {
