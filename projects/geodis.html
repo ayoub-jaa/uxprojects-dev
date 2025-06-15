@@ -224,230 +224,202 @@
           </section>
 
           <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
+          </br>
         </div>
-            <!-- BOUTON D'OUVERTURE -->
-            <button id="toggle-full-study" class="btn-secondary" data-lang="fr">Consulter l’étude UX au complet</button>
-            <button id="toggle-full-study" class="btn-secondary" data-lang="en" style="display: none;">View the full UX case study</button>
+        <!-- BOUTONS DE DÉPLOIEMENT FR/EN -->
+        <button id="toggle-full-study" class="btn-secondary" data-lang="fr">Consulter l’étude UX au complet</button>
+        <button id="toggle-full-study" class="btn-secondary" data-lang="en" style="display:none">View full UX case study</button>
 
-            <!-- PANNEAU MASQUÉ PAR DÉFAUT -->
-            <aside id="full-study-panel" class="full-study-panel" hidden>
+        <!-- PANNEAU D'ÉTUDE UX ÉTENDUE -->
+        <aside id="full-study-panel" class="full-study-panel" hidden>
+          <button id="close-full-study" class="btn-close" aria-label="Fermer">&times;</button>
 
-              <button id="close-full-study" class="btn-close" aria-label="Fermer">&times;</button>
+          <!-- VERSION FR -->
+          <div class="full-study-content" data-lang="fr">
+            <section class="fade-in-section">
+              <h2>À propos & mon rôle</h2>
+              <p>J’ai rejoint GEODIS en tant qu’Analyste IAM et Designer UX entre 2018 et 2022. Ce projet a été une étape clé dans mon parcours :</p>
+              <ul>
+                <li><strong>✅ Débutant en UX :</strong> je venais de BoursoBank, mais c'était un autre domaine.</li>
+                <li><strong>✅ Terrain inconnu :</strong> LDAP, AD, SIRH… un vrai terrain de découverte.</li>
+                <li><strong>✅ Apprentissage continu :</strong> l'interconnexion IAM/RH nécessitait rigueur et itérations.</li>
+              </ul>
+              <p>Le projet a démarré en mars 2020 et a été déployé progressivement jusqu’en 2026 dans le monde entier.</p>
+            </section>
 
-              <!-- VERSION FR -->
-              <div class="full-study-content" data-lang="fr">
-                <h2>Mon rôle et mon ressenti</h2>
-                <p>J’ai commencé chez GEODIS comme analyste L2/L3 sur l’IAM et la RH, tout en étant UX Designer (nov. 2018 à oct. 2022). Ce projet m’a confronté à plusieurs défis :</p>
-                <ul>
-                  <li><strong>✅ UX junior :</strong> après BoursoBank, ce projet m’a poussé à monter en expertise dans un nouveau secteur</li>
-                  <li><strong>✅ Nouveau domaine :</strong> LDAP, HRIS et provisioning étaient nouveaux pour moi</li>
-                  <li><strong>✅ Complexité :</strong> comprendre les flux IAM / RH a demandé des efforts d’analyse terrain</li>
-                </ul>
-                <p>Le projet a été designé pendant le COVID (mars–sept 2020), développé jusqu’en janv. 2021, déployé en France en mars 2021, puis à l’international entre 2025–2026.</p>
+            <section class="fade-in-section">
+              <h2>Problème</h2>
+              <p>Les données O365 étaient mal synchronisées. Erreurs humaines, absence de contrôle, coûts inutiles. L’objectif : automatiser tout le provisioning à partir des données RH.</p>
+              <img src="../assets/img/AD-admin-former-ui.jpg" alt="Ancienne interface Admin AD">
+            </section>
 
-                <h2>Problème identifié</h2>
-                <p>Données O365 erronées, surcoût en licences, mauvaise saisie : on a automatisé le provisioning en partant des données RH.</p>
-                <div class="problem-screenshot">
-                  <img src="img/AD-admin-former-ui.jpg" alt="Interface admin précédente">
-                </div>
+            <section class="fade-in-section">
+              <h2>Enjeux & Contexte</h2>
+              <p>Les processus manuels par mail généraient du stress, des oublis et une mauvaise traçabilité. L’objectif était de tout centraliser dans une interface unique.</p>
+            </section>
 
-                <h2>Contexte & Enjeux</h2>
-                <p>Avant, les RH et l’IT échangeaient par mail. Résultat : délais, erreurs, disparités par pays. On a centralisé les flux de création de comptes et de licences.</p>
+            <section class="fade-in-section">
+              <h2>Recherche utilisateur</h2>
+              <ul>
+                <li>✅ Entretiens RH & IT</li>
+                <li>✅ Ateliers de co-création</li>
+                <li>✅ Sondages internes</li>
+                <li>✅ Audit terrain</li>
+              </ul>
+            </section>
 
-                <h2>Recherche utilisateurs</h2>
-                <ul>
-                  <li>✅ Interviews RH, IT, managers</li>
-                  <li>✅ Ateliers de co-conception</li>
-                  <li>✅ Audit de process</li>
-                  <li>✅ Sondages en ligne</li>
-                </ul>
-                <p><strong>Constats :</strong> lenteur, erreurs humaines, absence de validation, besoin de tout automatiser.</p>
-
-                <h2>Personas</h2>
-                <div class="carousel">
-                  <div class="carousel-item"><img src="img/persona-admin.jpg" alt="Persona admin"><h4>Administrateur</h4></div>
-                  <div class="carousel-item"><img src="img/persona-hr.jpg" alt="Persona RH"><h4>Responsable RH</h4></div>
-                  <div class="carousel-item"><img src="img/persona-manager.jpg" alt="Persona manager"><h4>Manager local</h4></div>
-                </div>
-
-                <h2>Parcours utilisateur</h2>
-                <h3>Aziz – Admin AD</h3>
-                <p><em>Phase : demande de création</em></p>
-                <ul>
-                  <li>😡 Frustration – Données RH incomplètes</li>
-                  <li>✅ Opportunité : import auto + validation des champs</li>
-                </ul>
-                <p><em>Phase : fin de contrat</em></p>
-                <ul>
-                  <li>😒 Ennui – Aucune alerte</li>
-                  <li>✅ Opportunité : alertes automatiques</li>
-                </ul>
-
-                <h2>Processus de design</h2>
-                <div class="user-path"><h3>Parcours Manager</h3><img src="img/manager-user-path.jpg" alt="Parcours Manager"></div>
-                <div class="user-path"><h3>Parcours Admin AD</h3><img src="img/ad-admin-user-path.jpg" alt="Parcours Admin"></div>
-
-                <h2>Fonctionnalités clés</h2>
-                <ul>
-                  <li>✅ Création auto avec données RH préremplies</li>
-                  <li>✅ Gestion des comptes externes et partagés</li>
-                  <li>✅ Alertes d’expiration et prolongation</li>
-                  <li>✅ Rapports sur les licences</li>
-                </ul>
-
-                <h2>Prototypes & maquettes</h2>
-                <div class="carousel">
-                  <div class="carousel-item"><img src="img/10- UX Design.png" alt="Menu principal"><h4>Menu principal</h4></div>
-                  <div class="carousel-item"><img src="img/11- UX Design copie.png" alt="Mon équipe"><h4>Mon équipe</h4></div>
-                  <div class="carousel-item"><img src="img/12- UX Design copie 2.png" alt="Création"><h4>Création interne</h4></div>
-                  <div class="carousel-item"><img src="img/13- UX Design copie 3.png" alt="Suppression"><h4>Suppression</h4></div>
-                </div>
-
-                <h2>Résultats</h2>
-                <p>Réduction de 97 % des incidents, +15 pts de satisfaction (90 %), −20 % de charge de travail IT/RH.</p>
-
-                <h2>Outils utilisés</h2>
-                <ul>
-                  <li>✅ MakeMyPersona (Hubspot), Balsamiq, Photoshop, Adobe XD</li>
-                  <li>✅ Material Design, Microsoft Forms/Teams/Whiteboard</li>
-                  <li>✅ ServiceNow, Active Directory</li>
-                </ul>
+            <section class="fade-in-section">
+              <h2>Personas</h2>
+              <div class="carousel">
+                <div class="carousel-item"><img src="../assets/img/persona-admin.jpg" alt="Administrateur AD"><div class="caption">Administrateur AD</div></div>
+                <div class="carousel-item"><img src="../assets/img/persona-hr.jpg" alt="RH locale"><div class="caption">RH locale</div></div>
+                <div class="carousel-item"><img src="../assets/img/persona-manager.jpg" alt="Manager"><div class="caption">Manager</div></div>
               </div>
+            </section>
 
-              <!-- VERSION EN -->
-              <div class="full-study-content" data-lang="en" style="display: none;">
-                    <!-- 1. About & Role -->
-                    <h2>About my role in this project and my global feeling</h2>
-                    <p>I started my journey at GEODIS as both Level L2/L3 Analyst for Identity and Access Management (IAM) & HR, as well as a UX Designer between November 2018–October 2022. As the principal UX Designer, I faced various challenges:</p>
-                    <ul>
-                      <li><strong>✅ Junior UX Designer:</strong> While I had a strong foundation from BoursoBank, it was a learning curve in a new domain.</li>
-                      <li><strong>✅ New domain:</strong> I had limited experience with LDAP and HR systems before joining GEODIS.</li>
-                      <li><strong>✅ Understanding the scope:</strong> Grasping the interaction between IAM & HR data required constant learning and iteration.</li>
-                    </ul>
-                    <p>Today, I am both an expert in IAM & HR data management and a skilled UX Designer. The "Office365 Account Provisioning" project was designed during the COVID‑19 pandemic (Mar–Sept 2020), followed through dev Oct 2020–Jan 2021, first deployed in France Mar 2021 and rolled out worldwide by 2025–2026.</p>
+            <section class="fade-in-section">
+              <h2>User Journey</h2>
+              <h3>Aziz – Admin AD</h3>
+              <ul>
+                <li>😡 Frustration : les données RH arrivent par mail, sans validation.</li>
+                <li>✅ Opportunité : intégration directe des données RH, alertes automatiques.</li>
+              </ul>
+            </section>
 
-                    <!-- 2. Problem statement -->
-                    <h2 id="problem-statement">Problem Statement</h2>
-                    <p>We identified issues with data quality in Office 365 directories. Admins entered incorrect data, licensing costs were uncontrolled, and GEODIS' IT‑HR ecosystem was fragmented. Our goal: streamline Office 365 account provisioning, automate the process, and sync data directly from the HR system.</p>
-                    <p><strong>Previous Tool: AD Admin Interface</strong></p>
-                    <div class="problem-screenshot">
-                      <img src="img/AD-admin-former-ui.jpg" alt="Previous Admin Interface">
-                    </div>
+            <section class="fade-in-section">
+              <h2>Processus de Design</h2>
+              <img src="../assets/img/manager-user-path.jpg" alt="Parcours Manager">
+              <img src="../assets/img/ad-admin-user-path.jpg" alt="Parcours Admin">
+            </section>
 
-                    <!-- 3. Challenges & Context -->
-                    <h2 id="challenges">Challenges & Context</h2>
-                    <p>Before our solution, HR–IT account sync was manual via email, leading to inefficiencies and poor traceability. Processes differed by region. Our approach centralized account creation, license management, and data validation in one platform.</p>
+            <section class="fade-in-section">
+              <h2>Fonctionnalités clés</h2>
+              <ul>
+                <li>✅ Création automatisée des comptes</li>
+                <li>✅ Alertes expirations</li>
+                <li>✅ Comptes partagés gérés</li>
+                <li>✅ Statistiques personnalisées</li>
+              </ul>
+            </section>
 
-                    <!-- 4. User Research -->
-                    <h2 id="user">User Research & Needs Gathering</h2>
-                    <p>We conducted qualitative research to understand daily challenges of Office365 admins, HR managers, and team leads. Methods included one-on-one interviews, collaborative workshops, surveys, and process audits.</p>
-                    <ul>
-                      <li><strong>✅ User Interviews</strong> with admins and HR managers.</li>
-                      <li><strong>✅ Collaborative Workshops</strong> with stakeholders to co-create and prioritize features.</li>
-                      <li><strong>✅ Surveys</strong> for broader insights.</li>
-                      <li><strong>✅ Process Audit</strong> to uncover inefficiencies.</li>
-                    </ul>
-                    <p>Key takeaways:</p>
-                    <ul>
-                      <li>✅ Manual processes were long and error-prone.</li>
-                      <li>✅ Lack of HR system integration caused inconsistencies.</li>
-                      <li>✅ High error rate due to missing validation.</li>
-                      <li>✅ Clear need for automation in provisioning and license management.</li>
-                    </ul>
-
-                    <!-- 5. User Personas Carousel - intégrer ton carousel existant -->
-                    <h2>User Personas</h2>
-                    <div class="carousel">
-                      <div class="carousel-item">
-                        <img src="img/persona-admin.jpg" alt="Administrator Persona">
-                        <h4>Administrator Persona</h4>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/persona-hr.jpg" alt="HR Manager Persona">
-                        <h4>HR Manager Persona</h4>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/persona-manager.jpg" alt="Manager Persona">
-                        <h4>Manager Persona</h4>
-                      </div>
-                    </div>
-
-                    <!-- 6. User Journey -->
-                    <h2 id="user-journey-mapping">User Journey Mapping</h2>
-                    <h3>Aziz - Active Directory Admin</h3>
-                    <p><em>Phase: Receiving a request for account creation/update</em></p>
-                    <ul>
-                      <li><strong>Emotions:</strong> 😡 Frustration, 😟 Stress</li>
-                      <li><strong>Pain points:</strong> HR data not integrated, manual errors.</li>
-                      <li><strong>Opportunities:</strong> ✅ Automate data import and field validation.</li>
-                    </ul>
-                    <p><em>Phase: Managing expiring accounts</em></p>
-                    <ul>
-                      <li><strong>Emotions:</strong> 😒 Annoyance, 🙂 Relief</li>
-                      <li><strong>Pain points:</strong> No proactive alerts.</li>
-                      <li><strong>Opportunities:</strong> ✅ Automated alerts and reporting.</li>
-                    </ul>
-
-                    <!-- Similar pour Khadidja & Karim... -->
-
-                    <!-- 7. Design Process -->
-                    <h2 id="design-process">Design Process</h2>
-                    <div class="user-path">
-                      <h3>Manager User Path</h3>
-                      <img src="img/manager-user-path.jpg" alt="Manager User Path">
-                    </div>
-                    <div class="user-path">
-                      <h3>Admin AD User Path</h3>
-                      <img src="img/ad-admin-user-path.jpg" alt="Admin AD User Path">
-                    </div>
-
-                    <!-- 8. Solution & Features -->
-                    <h2 id="solution">Solution & Features</h2>
-                    <ul>
-                      <li>✅ Centralized account creation with pre-filled HR data.</li>
-                      <li>✅ External account management with licensing tracking.</li>
-                      <li>✅ Automated expiration alerts & extensions.</li>
-                      <li>✅ Shared/generic account workflows.</li>
-                      <li>✅ Custom reports for account & license metrics.</li>
-                      <li>✅ Seamless integration with HR systems.</li>
-                    </ul>
-
-                    <!-- 9. Prototypes & Mockups Carousel -->
-                    <h2 id="prototypes">Prototypes & Mockups</h2>
-                    <div class="carousel2">
-                      <!-- insère les mêmes images que le carousel final -->
-                      <div class="carousel2-item"><img src="img/10- UX Design.png" alt="Main Menu"><h4>Main Menu</h4></div>
-                      <div class="carousel2-item"><img src="img/11- UX Design copie.png" alt="My Team"><h4>My Team</h4></div>
-                      <div class="carousel2-item"><img src="img/12- UX Design copie 2.png" alt="Internal creation"><h4>Internal creation</h4></div>
-                      <div class="carousel2-item"><img src="img/13- UX Design copie 3.png" alt="Deletion screen"><h4>Deletion</h4></div>
-                    </div>
-
-                    <!-- 10. Results -->
-                    <h2 id="results">Test, Impact & Results</h2>
-                    <p>The app streamlined provisioning, improved data accuracy, and reduced incidents by 97%. User satisfaction rose from 75 % (2022) to 90 % (2024). Operational workload dropped by nearly 20 %.</p>
-
-                    <!-- 11. Tools Used -->
-                    <h2 id="tools">Tools Used</h2>
-                    <div class="tools-icons">
-                      <img src="img/hubspot-icon.png" alt="Hubspot">
-                      <img src="img/balsamiq-icon.png" alt="Balsamiq">
-                      <img src="img/photoshop-icon.png" alt="Photoshop">
-                      <img src="img/adobexd-icon.png" alt="Adobe XD">
-                      <img src="img/material-design-icon.png" alt="Material Design">
-                      <img src="img/servicenow-icon.png" alt="ServiceNow">
-                      <img src="img/ms-icon.png" alt="Microsoft">
-                    </div>
-                    <ul>
-                      <li>✅ MakeMyPersona (Hubspot)</li>
-                      <li>✅ Balsamiq Mockups</li>
-                      <li>✅ Photoshop</li>
-                      <li>✅ Adobe XD</li>
-                      <li>✅ Material Design</li>
-                      <li>✅ ServiceNow</li>
-                      <li>✅ Microsoft tools (Forms, Teams, Whiteboard)</li>
-                    </ul>
+            <section class="fade-in-section">
+              <h2>Mockups</h2>
+              <div class="carousel">
+                <div class="carousel-item"><img src="../assets/img/10- UX Design.png" alt="Menu principal"><div class="caption">Menu principal</div></div>
+                <div class="carousel-item"><img src="../assets/img/11- UX Design copie.png" alt="Mon équipe"><div class="caption">Mon équipe</div></div>
+                <div class="carousel-item"><img src="../assets/img/12- UX Design copie 2.png" alt="Création"><div class="caption">Création</div></div>
+                <div class="carousel-item"><img src="../assets/img/13- UX Design copie 3.png" alt="Suppression"><div class="caption">Suppression</div></div>
               </div>
-            </aside>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Résultats</h2>
+              <p>Processus plus rapide, taux d’erreur réduit de 97 %, satisfaction RH : +15 %, charge opérationnelle réduite.</p>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Outils utilisés</h2>
+              <ul>
+                <li>✅ Hubspot / MakeMyPersona</li>
+                <li>✅ Balsamiq / Adobe XD / Photoshop</li>
+                <li>✅ ServiceNow / Teams / Whiteboard</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- VERSION EN -->
+          <div class="full-study-content" data-lang="en" style="display:none">
+            <section class="fade-in-section">
+              <h2>About & My Role</h2>
+              <p>I worked at GEODIS as both IAM Analyst and UX Designer from 2018 to 2022. This project marked a key milestone in my journey:</p>
+              <ul>
+                <li><strong>✅ Junior in UX:</strong> coming from BoursoBank, but it was a new field.</li>
+                <li><strong>✅ New technical domain:</strong> LDAP, Active Directory, HR systems.</li>
+                <li><strong>✅ Continuous learning:</strong> integrating IAM and HR data was a challenge.</li>
+              </ul>
+              <p>Started in March 2020, deployed progressively until 2026 worldwide.</p>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Problem Statement</h2>
+              <p>Office365 data was unreliable. Manual errors, no validation, extra costs. Our goal: automate provisioning directly from HR data.</p>
+              <img src="../assets/img/AD-admin-former-ui.jpg" alt="Old Admin Interface">
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Context & Challenges</h2>
+              <p>Before the tool, IT–HR coordination was email-based. Our mission was to unify all processes in a single web app.</p>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>User Research</h2>
+              <ul>
+                <li>✅ Interviews with HR & IT</li>
+                <li>✅ Co-design workshops</li>
+                <li>✅ Internal surveys</li>
+                <li>✅ Process audit</li>
+              </ul>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>User Personas</h2>
+              <div class="carousel">
+                <div class="carousel-item"><img src="../assets/img/persona-admin.jpg" alt="Admin Persona"><div class="caption">Admin</div></div>
+                <div class="carousel-item"><img src="../assets/img/persona-hr.jpg" alt="HR Persona"><div class="caption">HR</div></div>
+                <div class="carousel-item"><img src="../assets/img/persona-manager.jpg" alt="Manager Persona"><div class="caption">Manager</div></div>
+              </div>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>User Journey</h2>
+              <h3>Aziz – AD Admin</h3>
+              <ul>
+                <li>😡 Frustration: HR data sent by email, no validation.</li>
+                <li>✅ Opportunity: direct sync, alerting.</li>
+              </ul>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Design Process</h2>
+              <img src="../assets/img/manager-user-path.jpg" alt="Manager Path">
+              <img src="../assets/img/ad-admin-user-path.jpg" alt="Admin Path">
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Key Features</h2>
+              <ul>
+                <li>✅ Automated provisioning</li>
+                <li>✅ Expiration alerts</li>
+                <li>✅ Shared account workflows</li>
+                <li>✅ Custom reporting</li>
+              </ul>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Mockups</h2>
+              <div class="carousel">
+                <div class="carousel-item"><img src="../assets/img/10- UX Design.png" alt="Main Menu"><div class="caption">Main Menu</div></div>
+                <div class="carousel-item"><img src="../assets/img/11- UX Design copie.png" alt="My Team"><div class="caption">My Team</div></div>
+                <div class="carousel-item"><img src="../assets/img/12- UX Design copie 2.png" alt="Internal creation"><div class="caption">Internal creation</div></div>
+                <div class="carousel-item"><img src="../assets/img/13- UX Design copie 3.png" alt="Deletion"><div class="caption">Deletion</div></div>
+              </div>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Results</h2>
+              <p>Provisioning was streamlined, human errors dropped by 97 %, HR satisfaction rose by 15 %, workload reduced significantly.</p>
+            </section>
+
+            <section class="fade-in-section">
+              <h2>Tools Used</h2>
+              <ul>
+                <li>✅ Hubspot / MakeMyPersona</li>
+                <li>✅ Balsamiq / Adobe XD / Photoshop</li>
+                <li>✅ ServiceNow / Teams / Whiteboard</li>
+              </ul>
+            </section>
+          </div>
+        </aside>
       </div>
     </main>
 

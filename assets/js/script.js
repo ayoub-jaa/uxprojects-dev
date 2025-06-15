@@ -147,19 +147,20 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("toggle-full-study");
+  const toggleBtns = document.querySelectorAll("#toggle-full-study");
   const closeBtn = document.getElementById("close-full-study");
   const studyPanel = document.getElementById("full-study-panel");
 
-  if (toggleBtn && studyPanel && closeBtn) {
-    toggleBtn.addEventListener("click", () => {
+  toggleBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
       studyPanel.hidden = false;
-      // for smoother animation when unhiding
       requestAnimationFrame(() => {
         studyPanel.classList.add("open");
       });
     });
+  });
 
+  if (closeBtn && studyPanel) {
     closeBtn.addEventListener("click", () => {
       studyPanel.classList.remove("open");
       studyPanel.addEventListener("transitionend", () => {
@@ -168,4 +169,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-section");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll("#full-study-panel section").forEach(section => {
+    observer.observe(section);
+  });
+});
+
 
