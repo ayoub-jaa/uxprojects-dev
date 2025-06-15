@@ -155,24 +155,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const openSection = () => {
     if (studySection.hidden) {
       studySection.hidden = false;
-      requestAnimationFrame(() => {
-        studySection.classList.add("fade-in-section", "visible");
-      });
+      // Force reflow pour permettre l’animation
+      void studySection.offsetWidth;
+      studySection.classList.add("visible");
     }
+  };
+
+  const closeSection = () => {
+    studySection.classList.remove("visible");
+    studySection.addEventListener(
+      "transitionend",
+      () => {
+        studySection.hidden = true;
+      },
+      { once: true }
+    );
   };
 
   if (toggleBtnFr) toggleBtnFr.addEventListener("click", openSection);
   if (toggleBtnEn) toggleBtnEn.addEventListener("click", openSection);
-
-  if (closeBtn && studySection) {
-    closeBtn.addEventListener("click", () => {
-      studySection.classList.remove("visible");
-      studySection.addEventListener("transitionend", () => {
-        studySection.hidden = true;
-      }, { once: true });
-    });
-  }
+  if (closeBtn) closeBtn.addEventListener("click", closeSection);
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll('.fade-in-section');
