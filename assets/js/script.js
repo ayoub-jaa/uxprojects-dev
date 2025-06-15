@@ -1,3 +1,37 @@
+// ✅ Sélecteurs des éléments
+function setupFullStudyPanel() {
+  const toggleBtnFr = document.getElementById("toggle-full-study-fr");
+  const toggleBtnEn = document.getElementById("toggle-full-study-en");
+  const studySection = document.getElementById("full-study-panel");
+  const closeBtn = document.getElementById("close-full-study");
+
+  if (!studySection) return; // sécurité
+
+  function openPanel() {
+    if (studySection.hasAttribute("hidden")) {
+      studySection.removeAttribute("hidden");
+      requestAnimationFrame(() => {
+        studySection.classList.add("visible");
+      });
+    }
+  }
+
+  function closePanel() {
+    studySection.classList.remove("visible");
+    studySection.addEventListener(
+      "transitionend",
+      () => {
+        studySection.setAttribute("hidden", "");
+      },
+      { once: true }
+    );
+  }
+
+  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
+  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
+  if (closeBtn) closeBtn.addEventListener("click", closePanel);
+}
+
 // Afficher / cacher le bouton scroll to top
 const scrollToTopBtn = document.getElementById("scrollToTop");
 
@@ -145,40 +179,6 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.currentTime = 0;
   modalVideo.src = ''; // reset
 });
-
-// ✅ Sélecteurs des éléments
-function setupFullStudyPanel() {
-  const toggleBtnFr = document.getElementById("toggle-full-study-fr");
-  const toggleBtnEn = document.getElementById("toggle-full-study-en");
-  const studySection = document.getElementById("full-study-panel");
-  const closeBtn = document.getElementById("close-full-study");
-
-  if (!studySection) return; // sécurité
-
-  function openPanel() {
-    if (studySection.hasAttribute("hidden")) {
-      studySection.removeAttribute("hidden");
-      requestAnimationFrame(() => {
-        studySection.classList.add("visible");
-      });
-    }
-  }
-
-  function closePanel() {
-    studySection.classList.remove("visible");
-    studySection.addEventListener(
-      "transitionend",
-      () => {
-        studySection.setAttribute("hidden", "");
-      },
-      { once: true }
-    );
-  }
-
-  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
-  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
-  if (closeBtn) closeBtn.addEventListener("click", closePanel);
-}
 
 // ✅ Appel différé garanti après que tout soit prêt
 window.addEventListener("load", () => {
