@@ -146,11 +146,14 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = ''; // reset
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+// ✅ Sélecteurs des éléments
+function setupFullStudyPanel() {
   const toggleBtnFr = document.getElementById("toggle-full-study-fr");
   const toggleBtnEn = document.getElementById("toggle-full-study-en");
   const studySection = document.getElementById("full-study-panel");
   const closeBtn = document.getElementById("close-full-study");
+
+  if (!studySection) return; // sécurité
 
   function openPanel() {
     if (studySection.hasAttribute("hidden")) {
@@ -175,7 +178,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
   if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
+}
+
+// ✅ Appel différé garanti après que tout soit prêt
+window.addEventListener("load", () => {
+  setTimeout(setupFullStudyPanel, 100); // léger délai pour que tout le DOM soit bien prêt
 });
+
 
 
 
