@@ -150,28 +150,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtnFr = document.getElementById("toggle-full-study-fr");
   const toggleBtnEn = document.getElementById("toggle-full-study-en");
   const closeBtn = document.getElementById("close-full-study");
-  const studyPanel = document.getElementById("full-study-panel");
+  const studySection = document.getElementById("full-study-panel");
 
-  const openPanel = () => {
-    studyPanel.hidden = false;
-    requestAnimationFrame(() => {
-      studyPanel.classList.add("open");
-    });
+  const openSection = () => {
+    if (studySection.hidden) {
+      studySection.hidden = false;
+      requestAnimationFrame(() => {
+        studySection.classList.add("fade-in-section", "visible");
+      });
+    }
   };
 
-  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
-  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
+  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openSection);
+  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openSection);
 
-  if (closeBtn && studyPanel) {
+  if (closeBtn && studySection) {
     closeBtn.addEventListener("click", () => {
-      studyPanel.classList.remove("open");
-      studyPanel.addEventListener("transitionend", () => {
-        studyPanel.hidden = true;
+      studySection.classList.remove("visible");
+      studySection.addEventListener("transitionend", () => {
+        studySection.hidden = true;
       }, { once: true });
     });
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll('.fade-in-section');
@@ -186,7 +187,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeInElements.forEach(el => observer.observe(el));
 });
-
-
-
-

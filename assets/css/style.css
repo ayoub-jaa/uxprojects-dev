@@ -725,69 +725,47 @@
   list-style: none;
 }
 
-/* ============= Étude UX complète (panel) ============= */
-.full-study-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 900px;
-  height: 100%;
+/* ============= Étude UX complète (inline après bouton) ============= */
+.full-study-section {
   background-color: #111;
   color: white;
-  overflow-y: auto;
-  box-shadow: -4px 0 10px rgba(0, 181, 226, 0.2);
-  padding: 2rem;
-  z-index: 10000;
-  transform: translateX(100%);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 2px dashed #00b5e2;
+  animation: fadeInSection 0.6s ease-out forwards;
 }
 
-.full-study-panel.open {
-  transform: translateX(0);
-   opacity: 1;
-  transform: translateY(0);
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .full-study-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.full-study-panel h2 {
-  margin-top: 2rem;
+.full-study-content h2 {
   color: #00b5e2;
+  margin-top: 2rem;
 }
 
-.full-study-panel ul {
+.full-study-content ul {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.full-study-panel img {
+.full-study-content img {
   max-width: 100%;
   border-radius: 6px;
   margin: 1rem 0;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-.full-study-panel.open .fade-in-section {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
-}
-
-.fade-in-section.visible {
-  opacity: 1;
-  transform: none;
 }
 
 .btn-close {
@@ -795,11 +773,10 @@
   border: none;
   color: #00b5e2;
   font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: relative;
+  float: right;
   cursor: pointer;
-  z-index: 10001;
+  margin-top: -1rem;
   transition: color 0.3s ease;
 }
 
@@ -807,8 +784,8 @@
   color: white;
 }
 
-/* === Carousel dans panneau UX (si doublon, ça ne cassera rien) === */
-.full-study-panel .carousel {
+/* Carousel dans l'étude (si besoin, réutilisé) */
+.full-study-section .carousel {
   display: flex;
   overflow-x: auto;
   gap: 1rem;
@@ -817,11 +794,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.full-study-panel .carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.full-study-panel .carousel-item {
+.full-study-section .carousel-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
   background: #1a1a1a;
@@ -832,9 +805,23 @@
   transition: transform 0.3s ease;
 }
 
-.full-study-panel .carousel-item:hover {
+.full-study-section .carousel-item img {
+  width: 100%;
+  border-radius: 4px;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.full-study-section .carousel-item .caption {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.full-study-section .carousel-item:hover {
   transform: scale(1.03);
 }
+
 
 .full-study-panel .carousel-item img {
   width: 100%;
