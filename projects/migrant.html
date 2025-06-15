@@ -173,6 +173,289 @@
 
           <a class="btn-secondary" href="../index.html#projects">← Back to projects</a>
         </div>
+
+        <!-- BOUTONS DE DÉPLOIEMENT FR/EN -->
+        <button id="toggle-full-study-fr" class="btn-secondary" data-lang="fr">Consulter l’étude UX au complet</button>
+        <button id="toggle-full-study-en" class="btn-secondary" data-lang="en" style="display:none">View full UX case study</button>
+
+        <!-- ÉTUDE UX COMPLÈTE INLINE, MASQUÉE PAR DÉFAUT -->
+        <section id="full-study-panel" class="full-study-section" hidden>
+          <button id="close-full-study" class="btn-close" aria-label="Fermer">&times;</button>
+
+          <!-- VERSION FR -->
+          <div class="full-study-content fade-in-section" data-lang="fr" style="display:none">
+            <h2>À propos de mon rôle et de mon ressenti global</h2>
+            <p>
+              En tant qu’étudiant UX Designer et petit-fils d’un immigré, cette cause me tient à cœur (ainsi qu’à mes deux coéquipiers). Nous voulions :
+            </p>
+            <ul>
+              <li><strong>✅ Reproduire le sentiment de “perte de repères” :</strong> Dès le début du projet, l’idée était claire : pour faire ressentir ce que vit une personne déracinée, nous devions recréer une situation de changement brutal, sans laisser à l’utilisateur le temps de s’adapter.</li>
+              <li><strong>✅ Créer un changement brutal :</strong> Dans notre application, un ou plusieurs changements soudains devaient survenir pour générer cette sensation d’anxiété.</li>
+            </ul>
+
+            <h2>Problématique</h2>
+            <p>
+              L’objectif principal du projet “Migrant Simulator” était de simuler les difficultés rencontrées par les migrants à leur arrivée dans un nouveau pays, en mettant l’accent sur les barrières linguistiques et culturelles. L’expérience proposait des tâches simples rendues progressivement plus difficiles par le passage de la gestuelle Kinect à la souris, ainsi qu’un basculement de l’anglais vers l’arabe.
+            </p>
+
+            <h2>Défis et contexte</h2>
+            <p>
+              L’un des principaux défis était de concevoir une expérience à la fois éducative et engageante. Il fallait faire ressentir la charge émotionnelle et psychologique que peut vivre un migrant, sans que l’utilisateur ait besoin de connaître le contexte au préalable. Il fallait aussi trouver un équilibre entre une expérience courte (moins de 5 minutes) et suffisamment marquante.
+            </p>
+
+            <h2>Recherche utilisateur et recueil des besoins</h2>
+            <p>
+              Nous avons mené des entretiens avec des étudiants et professeurs, et analysé la composition de notre classe pour faire des choix de langues et de niveaux de complexité. L’objectif était de permettre à n’importe quel utilisateur de comprendre et vivre l’expérience, quel que soit son profil.
+            </p>
+            <p>
+              Mon étude a aussi pris en compte la manière dont l’œil humain lit une information. L’image suivante montre comment nous lisons un contenu.
+            </p>
+
+            <h2>Ce que nous avons appris</h2>
+            <p>
+              Nous avons constaté que beaucoup de personnes n’avaient aucune idée des difficultés que rencontrent les migrants en arrivant dans un nouveau pays. Le changement soudain de langue et de mode d’interaction (Kinect → souris) a fortement amplifié le sentiment de frustration, ce qui correspondait exactement à notre intention initiale.
+            </p>
+
+            <h2>Personas</h2>
+            <p>
+              Nous avons défini plusieurs personas afin de couvrir différents profils : étudiants, enseignants, jeunes ou adultes n’ayant aucune expérience avec la migration. L’idée était de créer une expérience universelle, compréhensible même pour des collégiens ou lycéens.
+            </p>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/persona-student2.png" alt="Étudiant"><div class="caption">Étudiant</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-teacher.png" alt="Professeure"><div class="caption">Professeure</div></div>
+            </div>
+
+            <h2>Parcours utilisateur</h2>
+            <h3>Omar – Étudiant</h3>
+            <h4>Phase : Réussir la tâche en anglais</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 🙂 Confiant, 😀 Satisfait</li>
+              <li><strong>Points de friction :</strong> Aucun – la tâche est simple et compréhensible en anglais.</li>
+              <li><strong>Opportunités :</strong> ✅ Gagner en confiance dans l’expérience.</li>
+            </ul>
+            <h4>Phase : Réussir la tâche en arabe</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😟 Frustré, 😣 Anxieux</li>
+              <li><strong>Points de friction :</strong> Barrière linguistique, confusion, stress.</li>
+              <li><strong>Opportunités :</strong> ✅ Faire ressentir une frustration réaliste proche de celle que vivent de nombreux migrants.</li>
+            </ul>
+
+            <h3>Hana – Professeure</h3>
+            <h4>Phase : Réussir la tâche en anglais</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 🙂 Confiance, 😀 Satisfaite</li>
+              <li><strong>Points de friction :</strong> Aucun – la tâche est simple et intuitive.</li>
+              <li><strong>Opportunités :</strong> ✅ Être rassurée sur l’expérience utilisateur.</li>
+            </ul>
+            <h4>Phase : Réussir la tâche en arabe</h4>
+            <ul>
+              <li><strong>Émotions :</strong> 😟 Frustrée, 😣 Déstabilisée</li>
+              <li><strong>Points de friction :</strong> Difficulté à comprendre les consignes, stress face à l'inconnu.</li>
+              <li><strong>Opportunités :</strong> ✅ Susciter de l’empathie par le vécu d’un choc culturel inattendu.</li>
+            </ul>
+
+            <h2>Démarche de conception</h2>
+            <p>
+              Le processus de design a débuté par un brainstorming, suivi d’un prototypage rapide et de tests utilisateurs. L’interface devait être simple, fluide, et favoriser l’immersion. La technologie Kinect a été choisie pour son côté ludique, avant de provoquer volontairement une rupture avec la souris pour simuler une perte de repères.
+            </p>
+            <img src="../assets/img/all-user-path.jpg" alt="Chemin utilisateur">
+            <p>Ce schéma illustre le parcours attendu de l’utilisateur dans l’application.</p>
+
+            <h2>Solution et fonctionnalités</h2>
+            <p>
+              Lors de l’exposition, 16 participants ont tenté l’expérience. Seuls 5 ont réussi les tâches, dont 2 personnes arabophones. La difficulté liée au changement de langue et de mode d’interaction a clairement influencé ce faible taux de réussite. Mais cette difficulté a aussi favorisé la discussion et permis de développer une empathie réelle.
+            </p>
+            <p>
+              La solution permet une meilleure compréhension des enjeux de migration, tout en restant accessible sur mobile.
+            </p>
+
+            <h2>Idéation & Prototypage</h2>
+            <p>
+              Découvrez le prototype interactif réalisé avec Axure, qui simule le parcours utilisateur (uniquement souris/tactile).
+            </p>
+            <p>Quand il est indiqué “Say Start”, cliquez une fois. Puis, au “3/2/1 Go”, cliquez deux fois pour valider une réponse.</p>
+            <br><a href="https://ksjvx9.axshare.com/?id=za15t4" target="_blank" class="btn-secondary">Voir le prototype Axure</a>
+
+            <h2>Maquettes UI</h2>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/mig-1.PNG" alt="Début"><div class="caption">Début</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-2.PNG" alt="Tâches faciles"><div class="caption">Tâches faciles</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-3.PNG" alt="Bug ?"><div class="caption">Bug ?</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-4.PNG" alt="Tout a changé ?"><div class="caption">Tout a changé ?</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-5.PNG" alt="Tout en arabe maintenant"><div class="caption">Tout en arabe maintenant</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-6.PNG" alt="Surprise passée, temps écoulé"><div class="caption">Surprise passée, temps écoulé</div></div>
+              <div class="carousel-item"><img src="../assets/img/mig-7.PNG" alt="Temps d'apprentissage"><div class="caption">Temps d'apprentissage</div></div>
+            </div>
+
+            <h2>Tests, impact et résultats</h2>
+            <p>
+              L'expérience a permis de sensibiliser de manière forte aux réalités de la migration. L’impact émotionnel était réel, et les échanges avec les visiteurs l’ont confirmé.
+            </p>
+            <h3>Méthodologie de test</h3>
+            <p>
+              Le design a été testé sur différents profils, en conditions réalistes, avec un suivi des réactions face aux changements brusques.
+            </p>
+            <h3>Retours utilisateurs & défis</h3>
+            <p>
+              Les participants ont exprimé une vraie empathie. Le faible taux de réussite a ouvert le débat. Un journaliste a même rédigé un <a href="https://epa-paris-saclay.fr/actualites-et-decryptages/toutes-nos-publications/dans-la-peau-dun-migrant-rencontre-avec-ayoub-ifthihar-et-abdelkrim/" target="_blank" class="btn-secondary"><i class="fa-solid fa-newspaper"></i> article</a> pour saluer la démarche.
+            </p>
+            <h3>Impact</h3>
+            <ul>
+              <li>✅ Seulement 5 participants sur 16 ont terminé l’expérience, ce qui a favorisé l’empathie.</li>
+              <li>✅ 2 participants arabophones ont réussi, ce qui a mis en lumière la barrière linguistique.</li>
+              <li>✅ Une reconnaissance médiatique via un article sur l’impact social du projet.</li>
+            </ul>
+
+            <h2>Outils utilisés</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot) pour les personas</li>
+              <li>✅ Photoshop pour les écrans et la cohérence graphique</li>
+              <li>✅ Kinect pour l’interaction</li>
+              <li>✅ Axure pour le prototypage</li>
+              <li>✅ Microsoft (Forms, Teams, Whiteboard) pour la réflexion et les tests</li>
+            </ul>
+          </div>
+
+
+          <!-- VERSION EN -->
+          <div class="full-study-content fade-in-section" data-lang="en" style="display:none">
+            <h2>About my role in this project and my global feeling</h2>
+            <p>
+              As both a student UX Designer and grandson of an immigrant, this cause is important to me (and also my 2 other teammates). We wanted to :
+            </p>
+            <ul>
+              <li><strong>✅ Reproduce the "lost" feeling : </strong> From the beggining of the homework, the idea was crystal clear : to make other people feeling the same uncomfortable situation, we have to reproduce a similar situation of brutal changement, and try to not let them adapt to the situation.</li>
+              <li>
+                <strong>✅ To make a brutal change : </strong> In our app we have to make one or several brutal change during the experience to create this anxious feeling.
+                <strong><br /></strong>
+              </li>
+            </ul>
+
+            <h2>Problem Statement</h2>
+            <p>The primary objective of the "Migrant Simulator" project was to simulate the challenges faced by migrants when arriving in a new country, with an emphasis on language and cultural barriers. The project aimed to raise awareness and foster empathy for migrants by putting the user in a simulated scenario that mirrored some of the difficulties they might encounter. The experience involved performing simple tasks that would become increasingly difficult as the user’s interaction mode changed from Kinect gestures to mouse-based control, alongside a sudden language shift from English to Arabic.</p>
+
+            <h2>Challenges and Context</h2>
+            <p>One of the main challenges was creating an experience that was both educational and engaging. The task was to design a simulation that would highlight the emotional and psychological strain faced by migrants, including language barriers and changes in technology. We faced the difficulty of balancing a quick, yet impactful experience with providing enough time for users to process the sudden changes they encountered during the simulation. Additionally, we needed to ensure that the design was accessible and that users could understand the task without prior knowledge of the context.</p>
+
+            <h2>User Research and Needs Gathering</h2>
+            <p>We conducted interviews with students and professors, along with analyzing our class demographics to make decisions about language and task complexity. The goal was to ensure that the tasks were brief (less than 5 minutes) while still managing to capture the user's attention. We wanted to make sure that users, regardless of background, could engage with the experience and understand its purpose.</p>
+            <p>
+              My study also take in consideration the way that the eye read information, the following picture show how a human being consult an information.
+            </p>
+            
+            <h2>What We Learned</h2>
+            <p>From our research, we learned that most people do not have an understanding of the challenges migrants face when forced to move to a new country. Many were unaware of how difficult it could be to adapt to a new culture and language. We also learned that the sudden shift from one interaction mode to another (from Kinect to mouse) heightened the difficulty of the tasks and added to the feeling of frustration, which closely mirrored the migrant experience.</p>
+
+            <h2>User Personas</h2>
+            <p>We based our user personas on a diverse range of potential users, aiming to cover different age groups and backgrounds. The personas represented users who might have little to no knowledge about migration issues, which allowed us to tailor the experience for maximum impact. The goal was to create a universally relatable experience that would help anyone, even younger audiences like middle and high school students, understand the emotional toll of migration.</p>
+            <div class="carousel">
+              <div class="carousel-item"><img src="../assets/img/persona-student2.png" alt="Student"><div class="caption">Student</div></div>
+              <div class="carousel-item"><img src="../assets/img/persona-teacher.png" alt="Teacher"><div class="caption">Teacher</div></div>
+            </div>
+
+            <h2>User Journey Mapping</h2>
+            <h3>Omar - Student</h3>
+            <h4>Phase: Complete the English task</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 🙂 Confident, 😀 Satisfied</li>
+              <li><strong>Pain points:</strong> None – the task is easy and understandable in English.</li>
+              <li><strong>Opportunities:</strong> ✅ Successfully complete the task, gain confidence in the experience.</li>
+            </ul>
+            <h4>Phase: Complete the Arabic task</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😟 Frustrated, 😣 Anxious</li>
+              <li><strong>Pain points:</strong> Difficulty navigating the task due to the language barrier, confusion, and stress.</li>
+              <li><strong>Opportunities:</strong> ✅ Provide a moment of frustration that mimics the real-world challenge migrants face when dealing with a new language.</li>
+            </ul>
+
+            <h3>Hana - Teacher</h3>
+            <h4>Phase: Complete the English task</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 🙂 Confident, 😀 Satisfied</li>
+              <li><strong>Pain points:</strong> None – the task is easy and understandable in English.</li>
+              <li><strong>Opportunities:</strong> ✅ Successfully complete the task, feel reassured about the user experience.</li>
+            </ul>
+            <h4>Phase: Complete the Arabic task</h4>
+            <ul>
+              <li><strong>Emotions:</strong> 😟 Frustrated, 😣 Anxious</li>
+              <li><strong>Pain points:</strong> Difficulty navigating the task due to the language barrier, confusion, and stress.</li>
+              <li><strong>Opportunities:</strong> ✅ Create empathy through a simulated experience of migration challenges, emphasizing the barriers migrants face in an unfamiliar environment.</li>
+            </ul>
+
+            <h2>Design Process</h2>
+            <p>The design process for "Migrant Simulator" involved several phases: from initial brainstorming and concept development to rapid prototyping and user testing. We focused on creating a simple and intuitive interface to guide the user through the tasks. The Kinect technology was chosen for its ability to create an interactive and playful experience, while the sudden switch to mouse-based control was used to introduce a feeling of alienation, symbolizing the challenge of adapting to a new culture. Throughout the process, we constantly iterated on the design to ensure the user experience was both effective and engaging.</p>
+            <!-- User Path for Client PC -->
+            <img src="../assets/img/all-user-path.jpg" alt="All User Path PC">
+            <p>This diagram illustrates the (expected) journey of the users using the app.</p>
+
+            <h2>Solution & Features</h2>
+            <p>During the exhibition, 16 participants attempted the experience. Only 5 participants successfully completed the tasks, including 2 Arabic speakers. The design's challenge, particularly the sudden language switch and change in interaction method, contributed to this low success rate. The experience generated a lot of discussion and empathy, especially from those who struggled to complete the tasks, who expressed an increased awareness of the difficulties migrants face. A journalist even wrote an article about our work, recognizing its significance in raising awareness about the migrant crisis.</p>
+            <p>
+              This solution simplifies access, enhances comprehension, and significantly improves usability, particularly for mobile users.
+            </p>
+
+            <h2>Ideation & Prototyping</h2>
+            <p>Explore the interactive prototype created with Axure, which simulates the full user journey (here only with mouse/touch)</p>
+				    <p>When it say "Say Start", click/tap once, then click/tap double when it say "3/2/1 Go, to select an answer, double click" </p>
+            </br><a href="https://ksjvx9.axshare.com/?id=za15t4" target="_blank" class="btn-secondary">View the Adobe XD prototype</a>
+
+
+            <h2>UI Mockups</h2>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="../assets/img/mig-1.PNG" alt="Start" />
+                <div class="caption">Start</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-2.PNG" alt="Easy tasks" />
+                <div class="caption">Easy tasks</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-3.PNG" alt="Bug ?" />
+                <div class="caption">Bug ?</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-4.PNG" alt="Everything changed ?" />
+                <div class="caption">Everything changed ?</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-5.PNG" alt="All in arabic now" />
+                <div class="caption">All in arabic now</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-6.PNG" alt="The surprise passed but almost no time remained" />
+                <div class="caption">The surprise passed but almost no time remained</div>
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/img/mig-7.PNG" alt="Time to learn" />
+                <div class="caption">Time to learn</div>
+              </div>
+            </div>
+
+            <h2>Test, Impact and Results</h2>
+            <p>
+              The new calendar solution significantly improved user engagement, offering a more accessible and intuitive display, particularly on mobile devices. It addressed prior navigation issues, especially for older clients, and made the process of consulting the payment dates more streamlined. Marketing teams appreciated the flexibility for content management and prioritization.
+            </p>
+            <h3>Test Methodology</h3>
+            <p>
+              The design was evaluated using real-world scenarios tailored to different user personas, ensuring usability across demographics.
+            </p>
+            <h3>User Feedback & Challenges</h3>
+            <p>The "Migrant Simulator" project was a success in raising awareness about the challenges of migration. The immersive experience had a significant emotional impact on participants, with only 5 out of 16 completing the tasks. Notably, 2 Arabic speakers were among the winners, showing the complexity of the task. The project received recognition, including an article by a journalist who highlighted the project’s ability to evoke empathy and understanding. The exhibition was a success, with positive feedback from both participants and visitors. This project has reinforced the importance of using design and technology to address complex social issues.</p>
+            <h3>Impact</h3>
+            <p>During the exhibition, 16 participants attempted the experience. Only 5 participants successfully completed the tasks, including 2 Arabic speakers. The design's challenge, particularly the sudden language switch and change in interaction method, contributed to this low success rate. The experience generated a lot of discussion and empathy, especially from those who struggled to complete the tasks, who expressed an increased awareness of the difficulties migrants face. A journalist even wrote (in french) an <i class="fa-solid fa-newspaper"></i><a href="https://epa-paris-saclay.fr/actualites-et-decryptages/toutes-nos-publications/dans-la-peau-dun-migrant-rencontre-avec-ayoub-ifthihar-et-abdelkrim/" class="btn-secondary"> article</a> about our work, recognizing its significance in raising awareness about the migrant crisis (French)</p>
+
+            <h2>Tools Used</h2>
+            <ul>
+              <li>✅ MakeMyPersona (Hubspot) for personas design.</li>
+              <li>✅ Photoshop for screen design and branding adherence.</li>
+              <li>✅ Kinect for support and technology used.</li>
+              <li>✅ Axure for interactive prototyping and design.</li>
+              <li>✅ Microsoft tools for tests/reflection (Forms, Teams, Whiteboard).</li>
+            </ul>
+          </div>
+        </section>
+
       </div>
     </main>
 
