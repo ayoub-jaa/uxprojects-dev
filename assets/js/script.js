@@ -191,3 +191,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeInElements.forEach(el => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtnFr = document.getElementById("toggle-full-study-fr");
+  const toggleBtnEn = document.getElementById("toggle-full-study-en");
+  const closeBtn = document.getElementById("close-full-study");
+  const studySection = document.getElementById("full-study-panel");
+
+  function openPanel() {
+    if (studySection.hidden) {
+      studySection.hidden = false;
+      requestAnimationFrame(() => {
+        studySection.classList.add("visible");
+      });
+    }
+  }
+
+  function closePanel() {
+    studySection.classList.remove("visible");
+    studySection.addEventListener(
+      "transitionend",
+      () => {
+        studySection.hidden = true;
+      },
+      { once: true }
+    );
+  }
+
+  if (toggleBtnFr) toggleBtnFr.addEventListener("click", openPanel);
+  if (toggleBtnEn) toggleBtnEn.addEventListener("click", openPanel);
+  if (closeBtn) closeBtn.addEventListener("click", closePanel);
+});
