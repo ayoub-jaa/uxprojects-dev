@@ -187,30 +187,14 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 
-function setupToggleProjects() {
-  const extraProjects = document.getElementById("extra-projects");
-  const frBtn = document.getElementById("toggle-projects");
-  const enBtn = document.getElementById("toggle-projects-en");
+function toggleProjects(lang) {
+  const isVisible = extraProjects.classList.contains("visible");
+  extraProjects.classList.toggle("visible");
 
-  function toggleProjects(lang) {
-    const isVisible = extraProjects.style.display === "block";
-    extraProjects.style.display = isVisible ? "none" : "block";
-
-    if (lang === "fr") {
-      frBtn.textContent = isVisible ? "Voir tous les projets" : "Masquer";
-    } else {
-      enBtn.textContent = isVisible ? "See all projects" : "Hide";
-    }
-  }
-
-  // (Ré)attache le bon listener selon la langue active
-  const lang = document.documentElement.getAttribute("lang") || "fr";
-
-  if (lang === "fr" && frBtn) {
-    frBtn.addEventListener("click", () => toggleProjects("fr"));
-  }
-
-  if (lang === "en" && enBtn) {
-    enBtn.addEventListener("click", () => toggleProjects("en"));
+  if (lang === "fr") {
+    frBtn.textContent = isVisible ? "Voir tous les projets" : "Masquer";
+  } else {
+    enBtn.textContent = isVisible ? "See all projects" : "Hide";
   }
 }
+
