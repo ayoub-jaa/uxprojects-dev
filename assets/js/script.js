@@ -38,15 +38,15 @@ function setupToggleProjects() {
   const enBtn = document.getElementById("toggle-projects-en");
   const extraProjects = document.getElementById("extra-projects");
 
-  if (!extraProjects) return;
-
   function toggleProjects(lang) {
     const isHidden = extraProjects.classList.contains("hidden-projects");
 
-    // Toggle la visibilité
-    extraProjects.classList.toggle("hidden-projects");
+    if (isHidden) {
+      extraProjects.classList.remove("hidden-projects");
+    } else {
+      extraProjects.classList.add("hidden-projects");
+    }
 
-    // Met à jour le texte du bouton selon la langue et l'état
     if (lang === "fr") {
       frBtn.textContent = isHidden ? "Masquer" : "Voir tous les projets";
     } else {
@@ -54,32 +54,16 @@ function setupToggleProjects() {
     }
   }
 
-  // Ajoute les écouteurs d’événement
-  if (frBtn) {
+  const lang = document.documentElement.getAttribute("lang") || "fr";
+
+  if (lang === "fr" && frBtn) {
     frBtn.addEventListener("click", () => toggleProjects("fr"));
   }
 
-  if (enBtn) {
+  if (lang === "en" && enBtn) {
     enBtn.addEventListener("click", () => toggleProjects("en"));
   }
 }
-
-
-  const lang = document.documentElement.getAttribute("lang") || "fr";
-
-  // Supprimer les anciens listeners si jamais ils sont doublés
-  if (frBtn) {
-    frBtn.onclick = () => toggleProjects("fr");
-  }
-
-  if (enBtn) {
-    enBtn.onclick = () => toggleProjects("en");
-  }
-
-  // Masquer au premier chargement
-  extraProjects.classList.add("hidden-projects");
-}
-
 
 // Afficher / cacher le bouton scroll to top
 const scrollToTopBtn = document.getElementById("scrollToTop");
@@ -203,10 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    setupFullStudyPanel();
-    setupToggleProjects();
-  }, 100);
+  setTimeout(setupFullStudyPanel, 100);
 });
 
 document.querySelectorAll('.video-thumbnail').forEach(item => {
