@@ -187,14 +187,27 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 
-function toggleProjects(lang) {
-  const isVisible = extraProjects.classList.contains("visible");
-  extraProjects.classList.toggle("visible");
+document.addEventListener("DOMContentLoaded", function () {
+  const frBtn = document.getElementById("toggle-projects");
+  const enBtn = document.getElementById("toggle-projects-en");
+  const extraProjects = document.getElementById("extra-projects");
 
-  if (lang === "fr") {
-    frBtn.textContent = isVisible ? "Voir tous les projets" : "Masquer";
-  } else {
-    enBtn.textContent = isVisible ? "See all projects" : "Hide";
+  function toggleProjects(lang) {
+    const isVisible = extraProjects.style.display === "block";
+    extraProjects.style.display = isVisible ? "none" : "block";
+
+    if (lang === "fr") {
+      frBtn.textContent = isVisible ? "Voir tous les projets" : "Masquer";
+    } else {
+      enBtn.textContent = isVisible ? "See all projects" : "Hide";
+    }
   }
-}
 
+  if (frBtn) {
+    frBtn.addEventListener("click", () => toggleProjects("fr"));
+  }
+
+  if (enBtn) {
+    enBtn.addEventListener("click", () => toggleProjects("en"));
+  }
+});
