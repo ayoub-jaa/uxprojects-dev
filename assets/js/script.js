@@ -43,18 +43,27 @@ function setupToggleProjects() {
   function toggleProjects(lang) {
     const isHidden = extraProjects.classList.contains("hidden-projects");
 
-    if (isHidden) {
-      extraProjects.classList.remove("hidden-projects");
-    } else {
-      extraProjects.classList.add("hidden-projects");
-    }
+    // Toggle la visibilité
+    extraProjects.classList.toggle("hidden-projects");
 
+    // Met à jour le texte du bouton selon la langue et l'état
     if (lang === "fr") {
       frBtn.textContent = isHidden ? "Masquer" : "Voir tous les projets";
     } else {
       enBtn.textContent = isHidden ? "Hide" : "See all projects";
     }
   }
+
+  // Ajoute les écouteurs d’événement
+  if (frBtn) {
+    frBtn.addEventListener("click", () => toggleProjects("fr"));
+  }
+
+  if (enBtn) {
+    enBtn.addEventListener("click", () => toggleProjects("en"));
+  }
+}
+
 
   const lang = document.documentElement.getAttribute("lang") || "fr";
 
@@ -194,7 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-  setTimeout(setupFullStudyPanel, 100);
+  setTimeout(() => {
+    setupFullStudyPanel();
+    setupToggleProjects();
+  }, 100);
 });
 
 document.querySelectorAll('.video-thumbnail').forEach(item => {
