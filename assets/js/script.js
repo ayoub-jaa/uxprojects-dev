@@ -210,20 +210,16 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const timelineEvents = document.querySelectorAll(".timeline-event");
-
+  const items = document.querySelectorAll(".timeline-item");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // Une seule fois
+        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.2
-  });
+  }, { threshold: 0.15 });
 
-  timelineEvents.forEach(event => {
-    observer.observe(event);
-  });
+  items.forEach(item => observer.observe(item));
 });
+
