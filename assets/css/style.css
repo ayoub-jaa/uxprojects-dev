@@ -882,6 +882,9 @@
   margin-top: 2rem;
 }
 
+.hidden-projects {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .full-study-panel {

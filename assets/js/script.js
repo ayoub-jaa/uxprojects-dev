@@ -32,6 +32,39 @@ function setupFullStudyPanel() {
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
 }
 
+// ✅ Toggle projets supplémentaires selon la langue
+function setupToggleProjects() {
+  const frBtn = document.getElementById("toggle-projects");
+  const enBtn = document.getElementById("toggle-projects-en");
+  const extraProjects = document.getElementById("extra-projects");
+
+  function toggleProjects(lang) {
+    const isHidden = extraProjects.classList.contains("hidden-projects");
+
+    if (isHidden) {
+      extraProjects.classList.remove("hidden-projects");
+    } else {
+      extraProjects.classList.add("hidden-projects");
+    }
+
+    if (lang === "fr") {
+      frBtn.textContent = isHidden ? "Masquer" : "Voir tous les projets";
+    } else {
+      enBtn.textContent = isHidden ? "Hide" : "See all projects";
+    }
+  }
+
+  const lang = document.documentElement.getAttribute("lang") || "fr";
+
+  if (lang === "fr" && frBtn) {
+    frBtn.addEventListener("click", () => toggleProjects("fr"));
+  }
+
+  if (lang === "en" && enBtn) {
+    enBtn.addEventListener("click", () => toggleProjects("en"));
+  }
+}
+
 // Afficher / cacher le bouton scroll to top
 const scrollToTopBtn = document.getElementById("scrollToTop");
 
@@ -98,25 +131,21 @@ document.addEventListener("DOMContentLoaded", () => {
       el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
     });
     document.documentElement.setAttribute("lang", lang);
-    setupToggleProjects(); // 🔁 pour rebind le bon bouton selon la langue
+    setupToggleProjects(); // 🔁 rebinde les bons boutons selon la langue
   }
 });
 
-
-// Animation d'apparition de la photo de profil quand elle entre dans la vue
+// Animation d'apparition de la photo de profil
 const portrait = document.querySelector(".portrait");
-
 if (portrait) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         portrait.classList.add("visible");
-        observer.unobserve(portrait); // ne l'observe plus une fois visible
+        observer.unobserve(portrait);
       }
     });
-  }, {
-    threshold: 0.3
-  });
+  }, { threshold: 0.3 });
 
   observer.observe(portrait);
 }
@@ -128,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", () => {
     burger.classList.toggle("open");
     nav.classList.toggle("open");
-
     const isOpen = burger.classList.contains("open");
     burger.setAttribute("aria-expanded", isOpen);
   });
@@ -139,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalImg = document.getElementById("modalImg");
   const closeModal = document.getElementById("closeModal");
 
-  // Clic sur image du carrousel
   document.querySelectorAll(".carousel-item img").forEach(img => {
     img.addEventListener("click", () => {
       modal.style.display = "flex";
@@ -148,12 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Fermeture de la modale
   closeModal.addEventListener("click", () => {
     modal.style.display = "none";
   });
 
-  // Clic à l'extérieur de l'image = fermer
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.style.display = "none";
@@ -161,12 +186,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ✅ Appel différé garanti après que tout soit prêt
 window.addEventListener("load", () => {
-  setTimeout(setupFullStudyPanel, 100); // léger délai pour que tout le DOM soit bien prêt
+  setTimeout(setupFullStudyPanel, 100);
 });
 
-// Vidéo Lightbox
 document.querySelectorAll('.video-thumbnail').forEach(item => {
   item.addEventListener('click', () => {
     const videoSrc = item.getAttribute('data-video');
@@ -183,31 +206,5 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modal.style.display = 'none';
   modalVideo.pause();
   modalVideo.currentTime = 0;
-  modalVideo.src = ''; // reset
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const frBtn = document.getElementById("toggle-projects");
-  const enBtn = document.getElementById("toggle-projects-en");
-  const extraProjects = document.getElementById("extra-projects");
-
-  function toggleProjects(lang) {
-    const isVisible = extraProjects.style.display === "block";
-    extraProjects.style.display = isVisible ? "none" : "block";
-
-    if (lang === "fr") {
-      frBtn.textContent = isVisible ? "Voir tous les projets" : "Masquer";
-    } else {
-      enBtn.textContent = isVisible ? "See all projects" : "Hide";
-    }
-  }
-
-  if (frBtn) {
-    frBtn.addEventListener("click", () => toggleProjects("fr"));
-  }
-
-  if (enBtn) {
-    enBtn.addEventListener("click", () => toggleProjects("en"));
-  }
+  modalVideo.src = '';
 });
