@@ -877,6 +877,11 @@
   font-weight: 600;
 }
 
+.project-toggle {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   .full-study-panel {
     width: 100%;
