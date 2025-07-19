@@ -208,3 +208,22 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.currentTime = 0;
   modalVideo.src = '';
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineEvents = document.querySelectorAll(".timeline-event");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Une seule fois
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  timelineEvents.forEach(event => {
+    observer.observe(event);
+  });
+});
