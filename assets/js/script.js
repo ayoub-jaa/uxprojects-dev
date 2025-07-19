@@ -38,6 +38,8 @@ function setupToggleProjects() {
   const enBtn = document.getElementById("toggle-projects-en");
   const extraProjects = document.getElementById("extra-projects");
 
+  if (!extraProjects) return;
+
   function toggleProjects(lang) {
     const isHidden = extraProjects.classList.contains("hidden-projects");
 
@@ -56,14 +58,19 @@ function setupToggleProjects() {
 
   const lang = document.documentElement.getAttribute("lang") || "fr";
 
-  if (lang === "fr" && frBtn) {
-    frBtn.addEventListener("click", () => toggleProjects("fr"));
+  // Supprimer les anciens listeners si jamais ils sont doublés
+  if (frBtn) {
+    frBtn.onclick = () => toggleProjects("fr");
   }
 
-  if (lang === "en" && enBtn) {
-    enBtn.addEventListener("click", () => toggleProjects("en"));
+  if (enBtn) {
+    enBtn.onclick = () => toggleProjects("en");
   }
+
+  // Masquer au premier chargement
+  extraProjects.classList.add("hidden-projects");
 }
+
 
 // Afficher / cacher le bouton scroll to top
 const scrollToTopBtn = document.getElementById("scrollToTop");
