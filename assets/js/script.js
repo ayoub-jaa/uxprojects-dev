@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
     });
     document.documentElement.setAttribute("lang", lang);
+    setupToggleProjects(); // 🔁 pour rebind le bon bouton selon la langue
   }
 });
 
@@ -185,10 +186,11 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = ''; // reset
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+
+function setupToggleProjects() {
+  const extraProjects = document.getElementById("extra-projects");
   const frBtn = document.getElementById("toggle-projects");
   const enBtn = document.getElementById("toggle-projects-en");
-  const extraProjects = document.getElementById("extra-projects");
 
   function toggleProjects(lang) {
     const isVisible = extraProjects.style.display === "block";
@@ -201,11 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  if (frBtn) {
+  // (Ré)attache le bon listener selon la langue active
+  const lang = document.documentElement.getAttribute("lang") || "fr";
+
+  if (lang === "fr" && frBtn) {
     frBtn.addEventListener("click", () => toggleProjects("fr"));
   }
 
-  if (enBtn) {
+  if (lang === "en" && enBtn) {
     enBtn.addEventListener("click", () => toggleProjects("en"));
   }
-});
+}
