@@ -888,9 +888,9 @@
 }
 
 .timeline-section {
-  padding: 4rem 0;
+  overflow: visible; /* important pour voir le SVG qui dépasse */
+  padding-top: 100px; /* pour éviter que le SVG masque les items */
   position: relative;
-  overflow: hidden;
 }
 
 .timeline {
@@ -920,19 +920,19 @@
 
 .timeline-path {
   position: absolute;
-  top: 150px; /* Démarre après le premier item */
-  left: 0;
-  width: 100%;
-  height: 3000px;
-  transform: translateY(150px); /* ajuste la valeur selon ton layout */
+  top: 150px;  /* décalé pour ne pas démarrer au-dessus du 1er item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2000px;
   z-index: 0;
   pointer-events: none;
 }
-
 .timeline-path path {
-  stroke-dasharray: 8000;
-  stroke-dashoffset: 8000;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
 }
+
 
 [data-aos] {
   opacity: 0;

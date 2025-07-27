@@ -225,6 +225,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("scroll", () => {
   const path = document.querySelector(".timeline-path path");
+  if (!path) return;
+
   const pathLength = path.getTotalLength();
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
