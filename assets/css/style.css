@@ -900,8 +900,8 @@
 
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
-  z-index: 1;
+  margin-bottom: 100px;
+  z-index: 2;
 }
 
 .timeline-date {

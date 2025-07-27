@@ -225,13 +225,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("scroll", () => {
   const path = document.querySelector(".timeline-path path");
-  if (!path) return;
+  const timeline = document.querySelector(".timeline");
+  if (!path || !timeline) return;
 
   const pathLength = path.getTotalLength();
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = scrollTop / docHeight;
 
-  const drawLength = pathLength * scrollPercent;
+  const timelineTop = timeline.offsetTop;
+  const timelineHeight = timeline.offsetHeight;
+  const scrollY = window.scrollY + window.innerHeight;
+
+  // Calcul du pourcentage de scroll dans la timeline SEULEMENT
+  const scrollProgress = Math.min(1, Math.max(0, (scrollY - timelineTop) / timelineHeight));
+
+  const drawLength = pathLength * scrollProgress;
   path.style.strokeDashoffset = pathLength - drawLength;
 });
