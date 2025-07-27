@@ -223,3 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
   items.forEach(item => observer.observe(item));
 });
 
+window.addEventListener("scroll", () => {
+  const path = document.querySelector(".timeline-path path");
+  const pathLength = path.getTotalLength();
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = scrollTop / docHeight;
+
+  const drawLength = pathLength * scrollPercent;
+  path.style.strokeDashoffset = pathLength - drawLength;
+});
