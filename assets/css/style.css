@@ -928,11 +928,18 @@
   z-index: 0;
   pointer-events: none;
 }
+
 .timeline-path path {
   stroke-dasharray: 5000;
   stroke-dashoffset: 5000;
+  transition: stroke-dashoffset 0.2s ease-out;
 }
 
+.timeline-path svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 [data-aos] {
   opacity: 0;
