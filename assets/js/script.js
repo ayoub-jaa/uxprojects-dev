@@ -209,24 +209,29 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = '';
 });
 
+let ticking = false;
+
 window.addEventListener("scroll", () => {
-  const path = document.querySelector(".timeline-path path");
-  const timeline = document.querySelector(".timeline");
-  if (!path || !timeline) return;
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const path = document.querySelector(".timeline-path path");
+      const timeline = document.querySelector(".timeline");
+      if (!path || !timeline) return;
 
-  const pathLength = path.getTotalLength();
+      const pathLength = path.getTotalLength();
 
-  // Calcul des positions réelles du haut et du bas de la timeline
-  const timelineTop = timeline.offsetTop;
-  const timelineBottom = timelineTop + timeline.scrollHeight;
+      const timelineTop = timeline.offsetTop;
+      const timelineBottom = timelineTop + timeline.scrollHeight;
+      const scrollBottom = window.scrollY + window.innerHeight;
 
-  // Position actuelle du bas de l'écran
-  const scrollBottom = window.scrollY + window.innerHeight;
+      const scrollProgress = Math.min(1, Math.max(0, (scrollBottom - timelineTop) / (timelineBottom - timelineTop)));
+      const drawLength = pathLength * scrollProgress;
+      path.style.strokeDashoffset = pathLength - drawLength;
 
-  // Calcul du pourcentage de scroll dans la timeline uniquement
-  const scrollProgress = Math.min(1, Math.max(0, (scrollBottom - timelineTop) / (timelineBottom - timelineTop)));
+      ticking = false;
+    });
 
-  const drawLength = pathLength * scrollProgress;
-  path.style.strokeDashoffset = pathLength - drawLength;
+    ticking = true;
+  }
 });
 
