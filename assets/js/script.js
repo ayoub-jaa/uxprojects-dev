@@ -209,20 +209,6 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = '';
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".timeline-item");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  items.forEach(item => observer.observe(item));
-});
-
 window.addEventListener("scroll", () => {
   const path = document.querySelector(".timeline-path path");
   const timeline = document.querySelector(".timeline");
@@ -234,9 +220,8 @@ window.addEventListener("scroll", () => {
   const timelineHeight = timeline.offsetHeight;
   const scrollY = window.scrollY + window.innerHeight;
 
-  // Calcul du pourcentage de scroll dans la timeline SEULEMENT
   const scrollProgress = Math.min(1, Math.max(0, (scrollY - timelineTop) / timelineHeight));
-
   const drawLength = pathLength * scrollProgress;
+
   path.style.strokeDashoffset = pathLength - drawLength;
 });
