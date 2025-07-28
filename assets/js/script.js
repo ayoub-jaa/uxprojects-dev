@@ -216,12 +216,17 @@ window.addEventListener("scroll", () => {
 
   const pathLength = path.getTotalLength();
 
+  // Calcul des positions réelles du haut et du bas de la timeline
   const timelineTop = timeline.offsetTop;
-  const timelineHeight = timeline.offsetHeight;
-  const scrollY = window.scrollY + window.innerHeight;
+  const timelineBottom = timelineTop + timeline.scrollHeight;
 
-  const scrollProgress = Math.min(1, Math.max(0, (scrollY - timelineTop) / timelineHeight));
+  // Position actuelle du bas de l'écran
+  const scrollBottom = window.scrollY + window.innerHeight;
+
+  // Calcul du pourcentage de scroll dans la timeline uniquement
+  const scrollProgress = Math.min(1, Math.max(0, (scrollBottom - timelineTop) / (timelineBottom - timelineTop)));
+
   const drawLength = pathLength * scrollProgress;
-
   path.style.strokeDashoffset = pathLength - drawLength;
 });
+
