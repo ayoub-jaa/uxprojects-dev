@@ -52,7 +52,7 @@
   .logo {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #1b3da1;
+    color: #00b5e2;
     text-decoration: none;
   }
 
@@ -77,7 +77,7 @@
   
   .nav a:hover,
   .nav a.active {
-    color: #1b3da1;
+    color: #00b5e2;
   }
   
   .lang-switch {
@@ -93,7 +93,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: #1b3da1;
+  background: #00b5e2;
   border-radius: 20px;
   cursor: pointer;
   width: 60px;
@@ -142,7 +142,7 @@
 }
 
 .recommendations h2 {
-  color: #1b3da1;
+  color: #00b5e2;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -160,7 +160,7 @@
   .hero-project h1,
   .hero-contact h1 {
     font-size: 2.2rem;
-    color: #1b3da1;
+    color: #00b5e2;
   }
 
   .buttons-hero {
@@ -179,8 +179,8 @@
     height: 100%;
     background-image: repeating-linear-gradient(
       135deg,
-      #1b3da111,
-      #1b3da111 2px,
+      #00b5e211,
+      #00b5e211 2px,
       transparent 2px,
       transparent 6px
     );
@@ -250,7 +250,7 @@
   .section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #1b3da1;
+    color: #00b5e2;
   }
   
   .section p {
@@ -310,7 +310,7 @@
   nav.breadcrumb {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    background-color: #1b3da1;
+    background-color: #00b5e2;
     padding: 0.6rem 1rem;
     border-radius: 6px;
     display: inline-block;
@@ -337,7 +337,7 @@
   
   .project-section h2 {
     margin-bottom: 0.5rem;
-    color: #1b3da1;
+    color: #00b5e2;
   }
   
   .project-section ul {
@@ -440,7 +440,7 @@
     position: absolute;
     top: 20px;
     right: 30px;
-    color: #1b3da1;
+    color: #00b5e2;
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
@@ -513,8 +513,8 @@
   .btn-secondary {
     display: inline-block;
     background-color: transparent;
-    color: #1b3da1;
-    border: 2px solid #1b3da1;
+    color: #00b5e2;
+    border: 2px solid #00b5e2;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -523,7 +523,7 @@
   }
 
   .btn-secondary:hover {
-    background-color: #1b3da1;
+    background-color: #00b5e2;
     color: #111;
   }
 
@@ -535,7 +535,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #1b3da1;
+    background-color: #00b5e2;
     color: #111;
     border: none;
     border-radius: 50%;
@@ -576,7 +576,7 @@
   }
 
   .container-connect a:hover i {
-    color: #1b3da1;
+    color: #00b5e2;
     transition: color 0.3s ease;
   }
 
@@ -593,7 +593,7 @@
     height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #1b3da1;
+    border: 2px solid #00b5e2;
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
@@ -626,7 +626,7 @@
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #1b3da1;
+  border: 2px solid #00b5e2;
   opacity: 0;
   transform: scale(0.9);
   animation: fadeInZoom 0.8s ease-out forwards;
@@ -732,7 +732,7 @@
   color: black;
   padding: 2rem 0;
   margin-top: 2rem;
-  border-top: 2px dashed #1b3da1;
+  border-top: 2px dashed #00b5e2;
   animation: fadeInSection 0.1s ease-out forwards;
 }
 
@@ -753,7 +753,7 @@
 }
 
 .full-study-content h2 {
-  color: #1b3da1;
+  color: #00b5e2;
   margin-top: 2rem;
 }
 
@@ -772,7 +772,7 @@
 .btn-close {
   background: none;
   border: none;
-  color: #1b3da1;
+  color: #00b5e2;
   font-size: 2rem;
   position: relative;
   float: right;
@@ -850,14 +850,14 @@
 
 .impact-box {
   background-color: #1a1a1a;
-  border-left: 4px solid #1b3da1;
+  border-left: 4px solid #00b5e2;
   padding: 1.5rem;
   margin: 2.5rem 0;
   border-radius: 8px;
 }
 
 .impact-box h2 {
-  color: #1b3da1;
+  color: #00b5e2;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -874,7 +874,7 @@
 }
 
 .impact-box li strong {
-  color: #1b3da1;
+  color: #00b5e2;
   font-weight: 600;
 }
 
