@@ -920,7 +920,7 @@
 
 .timeline-path {
   position: absolute;
-  top: 150px;  /* décalé pour ne pas démarrer au-dessus du 1er item */
+  top: 0; /* ✅ Aligné avec le haut de .timeline */
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
