@@ -209,29 +209,22 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = '';
 });
 
-let ticking = false;
-
 window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const path = document.querySelector(".timeline-path path");
-      const timeline = document.querySelector(".timeline");
-      if (!path || !timeline) return;
+  const path = document.querySelector(".timeline-path path");
+  const timeline = document.querySelector(".timeline");
+  if (!path || !timeline) return;
 
-      const pathLength = path.getTotalLength();
+  const pathLength = path.getTotalLength();
+  const timelineTop = timeline.offsetTop;
+  const timelineHeight = timeline.scrollHeight;
+  const scrollBottom = window.scrollY + window.innerHeight;
 
-      const timelineTop = timeline.offsetTop;
-      const timelineBottom = timelineTop + timeline.scrollHeight;
-      const scrollBottom = window.scrollY + window.innerHeight;
+  const scrollProgress = Math.min(
+    1,
+    Math.max(0, (scrollBottom - timelineTop) / timelineHeight)
+  );
 
-      const scrollProgress = Math.min(1, Math.max(0, (scrollBottom - timelineTop) / (timelineBottom - timelineTop)));
-      const drawLength = pathLength * scrollProgress;
-      path.style.strokeDashoffset = pathLength - drawLength;
-
-      ticking = false;
-    });
-
-    ticking = true;
-  }
+  const drawLength = pathLength * scrollProgress;
+  path.style.strokeDashoffset = pathLength - drawLength;
 });
 
