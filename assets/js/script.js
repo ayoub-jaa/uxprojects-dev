@@ -1,5 +1,5 @@
 // Pour débugger
-// console.log("JS chargé");
+ console.log("JS chargé");
 
 // ✅ Sélecteurs des éléments
 function setupFullStudyPanel() {
@@ -35,6 +35,8 @@ function setupFullStudyPanel() {
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
 }
 
+console.log("JS chargé 2 !")
+
 // ✅ Toggle projets supplémentaires selon la langue
 function setupToggleProjects() {
   const frBtn = document.getElementById("toggle-projects");
@@ -68,6 +70,8 @@ function setupToggleProjects() {
   }
 }
 
+console.log("JS chargé 3 !")
+
 // Afficher / cacher le bouton scroll to top
 const scrollToTopBtn = document.getElementById("scrollToTop");
 
@@ -78,6 +82,8 @@ window.addEventListener("scroll", () => {
     scrollToTopBtn.style.display = "none";
   }
 });
+
+console.log("JS chargé 4 !")
 
 // Remonter en haut de la page en douceur
 scrollToTopBtn.addEventListener("click", () => {
@@ -105,6 +111,7 @@ function setActiveLink() {
   });
 }
 
+console.log("JS chargé 5 !")
 window.addEventListener("scroll", setActiveLink);
 
 // -------------------------
@@ -137,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupToggleProjects(); // 🔁 rebinde les bons boutons selon la langue
   }
 });
-
+console.log("JS chargé 6 !")
 // Animation d'apparition de la photo de profil
 const portrait = document.querySelector(".portrait");
 if (portrait) {
@@ -164,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.setAttribute("aria-expanded", isOpen);
   });
 });
-
+console.log("JS chargé 7 !")
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
@@ -192,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
   setTimeout(setupFullStudyPanel, 100);
 });
-
+console.log("JS chargé 8 !")
 document.querySelectorAll('.video-thumbnail').forEach(item => {
   item.addEventListener('click', () => {
     const videoSrc = item.getAttribute('data-video');
@@ -202,7 +209,7 @@ document.querySelectorAll('.video-thumbnail').forEach(item => {
     modal.style.display = 'block';
   });
 });
-
+console.log("JS chargé 9 !")
 document.getElementById('closeVideoModal').addEventListener('click', () => {
   const modal = document.getElementById('videoModal');
   const modalVideo = document.getElementById('modalVideo');
@@ -211,10 +218,12 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.currentTime = 0;
   modalVideo.src = '';
 });
-
+console.log("JS chargé 10 !")
 document.addEventListener("DOMContentLoaded", function () {
     const path = document.querySelector(".timeline-path path");
     const timeline = document.querySelector(".timeline");
+    console.log("JS chargé max !")
+
 
     if (!path || !timeline) {
       console.warn("Path or timeline not found");
