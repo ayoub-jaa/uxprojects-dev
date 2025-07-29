@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
   const pathLength = path.getTotalLength();
-  path.style.strokeDasharray = `${pathLength}`;
+  //path.style.strokeDasharray = `${pathLength}`;
   path.style.strokeDashoffset = pathLength;
   path.style.transition = 'stroke-dashoffset 0.2s ease-out';
   path.style.strokeLinecap = 'round';
