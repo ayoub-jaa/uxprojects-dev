@@ -914,9 +914,12 @@
 
 .timeline-content {
   background: #f7f7f7;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background-color: #1a1a1a;
+  border-left: 4px solid #00b5e2;
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+  border-radius: 8px;
 }
 
 .timeline-path {
