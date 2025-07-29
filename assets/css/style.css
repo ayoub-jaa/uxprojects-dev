@@ -930,6 +930,14 @@
   pointer-events: none;
 }
 
+.timeline-path path {
+  fill: none;
+  stroke: #00bcd4;
+  stroke-width: 2;
+  stroke-dasharray: "5 5";
+  stroke-linecap: round;
+}
+
 .timeline-path svg {
   display: block;
   width: 100%;
