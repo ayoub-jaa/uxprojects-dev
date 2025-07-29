@@ -211,29 +211,28 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("Path or timeline not found");
     return;
   }
-
   const pathLength = path.getTotalLength();
-
-  // ✅ Ne pas écraser les pointillés définis dans le HTML
+  //path.style.strokeDasharray = `${pathLength}`;
   path.style.strokeDashoffset = pathLength;
   path.style.transition = 'stroke-dashoffset 0.2s ease-out';
+  path.style.strokeLinecap = 'round';
 
+  // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
   function updatePathOnScroll() {
-    const scrollY = window.scrollY + window.innerHeight;
-    const timelineTop = timeline.offsetTop;
-    const timelineHeight = timeline.offsetHeight;
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-    const progress = Math.min(
-      1,
-      Math.max(0, (scrollY - timelineTop) / timelineHeight)
-    );
+    if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
 
-    const drawLength = pathLength * progress;
+    const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+    const scrollRatio = visibleHeight / rect.height;
+
+    const drawLength = pathLength * scrollRatio;
     path.style.strokeDashoffset = pathLength - drawLength;
   }
 
   window.addEventListener("scroll", updatePathOnScroll);
-  updatePathOnScroll(); // Initialiser
+  updatePathOnScroll(); // init
 });
 
 document.getElementById('closeVideoModal').addEventListener('click', () => {
