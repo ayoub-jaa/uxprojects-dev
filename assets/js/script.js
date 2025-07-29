@@ -1,5 +1,5 @@
 // Pour débugger
-console.log("JS chargé");
+// console.log("JS chargé");
 
 // ✅ Sélecteurs des éléments
 function setupFullStudyPanel() {
@@ -35,6 +35,7 @@ function setupFullStudyPanel() {
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
 }
 
+// ✅ Toggle projets supplémentaires selon la langue
 function setupToggleProjects() {
   const frBtn = document.getElementById("toggle-projects");
   const enBtn = document.getElementById("toggle-projects-en");
@@ -67,9 +68,27 @@ function setupToggleProjects() {
   }
 }
 
+// Afficher / cacher le bouton scroll to top
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
+// Remonter en haut de la page en douceur
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Gestion de la sticky nav (highlight du menu actif)
+const navLinks = document.querySelectorAll(".nav a");
+const sections = document.querySelectorAll("section");
+
 function setActiveLink() {
-  const navLinks = document.querySelectorAll(".nav a");
-  const sections = document.querySelectorAll("section");
   let current = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
@@ -86,10 +105,16 @@ function setActiveLink() {
   });
 }
 
-function setupLangSwitch() {
+window.addEventListener("scroll", setActiveLink);
+
+// -------------------------
+// Gestion de la langue FR/EN avec switch animé
+// -------------------------
+document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("lang-toggle");
   const langElements = document.querySelectorAll("[data-lang]");
 
+  // Détection de la langue stockée
   const storedLang = localStorage.getItem("lang");
   const isEnglish = storedLang === "en";
 
@@ -109,41 +134,38 @@ function setupLangSwitch() {
       el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
     });
     document.documentElement.setAttribute("lang", lang);
-    setupToggleProjects();
+    setupToggleProjects(); // 🔁 rebinde les bons boutons selon la langue
   }
+});
+
+// Animation d'apparition de la photo de profil
+const portrait = document.querySelector(".portrait");
+if (portrait) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        portrait.classList.add("visible");
+        observer.unobserve(portrait);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(portrait);
 }
 
-function setupPortraitObserver() {
-  const portrait = document.querySelector(".portrait");
-  if (portrait) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          portrait.classList.add("visible");
-          observer.unobserve(portrait);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    observer.observe(portrait);
-  }
-}
-
-function setupBurgerMenu() {
+document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burgerMenu");
   const nav = document.getElementById("navMenu");
 
-  if (burger && nav) {
-    burger.addEventListener("click", () => {
-      burger.classList.toggle("open");
-      nav.classList.toggle("open");
-      const isOpen = burger.classList.contains("open");
-      burger.setAttribute("aria-expanded", isOpen);
-    });
-  }
-}
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("open");
+    nav.classList.toggle("open");
+    const isOpen = burger.classList.contains("open");
+    burger.setAttribute("aria-expanded", isOpen);
+  });
+});
 
-function setupImageModal() {
+document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
   const closeModal = document.getElementById("closeModal");
@@ -156,59 +178,32 @@ function setupImageModal() {
     });
   });
 
-  if (closeModal) {
-    closeModal.addEventListener("click", () => {
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
       modal.style.display = "none";
-    });
-  }
-
-  if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-}
-
-function setupScrollToTop() {
-  const scrollToTopBtn = document.getElementById("scrollToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      scrollToTopBtn.style.display = "block";
-    } else {
-      scrollToTopBtn.style.display = "none";
     }
   });
+});
 
-  scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
+window.addEventListener("load", () => {
+  setTimeout(setupFullStudyPanel, 100);
+});
 
-function setupVideoModal() {
-  document.querySelectorAll('.video-thumbnail').forEach(item => {
-    item.addEventListener('click', () => {
-      const videoSrc = item.getAttribute('data-video');
-      const modal = document.getElementById('videoModal');
-      const modalVideo = document.getElementById('modalVideo');
-      modalVideo.src = videoSrc;
-      modal.style.display = 'block';
-    });
-  });
-
-  document.getElementById('closeVideoModal').addEventListener('click', () => {
+document.querySelectorAll('.video-thumbnail').forEach(item => {
+  item.addEventListener('click', () => {
+    const videoSrc = item.getAttribute('data-video');
     const modal = document.getElementById('videoModal');
     const modalVideo = document.getElementById('modalVideo');
-    modal.style.display = 'none';
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-    modalVideo.src = '';
+    modalVideo.src = videoSrc;
+    modal.style.display = 'block';
   });
-}
+});
 
-function setupTimelineScroll() {
+document.addEventListener("DOMContentLoaded", function () {
   const path = document.querySelector(".timeline-path path");
   const timeline = document.querySelector(".timeline");
 
@@ -223,11 +218,12 @@ function setupTimelineScroll() {
   path.style.transition = 'stroke-dashoffset 0.2s ease-out';
   path.style.strokeLinecap = 'round';
 
+  // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
   function updatePathOnScroll() {
     const rect = timeline.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top >= windowHeight || rect.bottom <= 0) return;
+    if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
 
     const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
     const scrollRatio = visibleHeight / rect.height;
@@ -237,21 +233,14 @@ function setupTimelineScroll() {
   }
 
   window.addEventListener("scroll", updatePathOnScroll);
-  updatePathOnScroll();
-}
+  updatePathOnScroll(); // init
+});
 
-function init() {
-  console.log("🚀 JS initialisé");
-  setupFullStudyPanel();
-  setupToggleProjects();
-  setupLangSwitch();
-  setupPortraitObserver();
-  setupBurgerMenu();
-  setupImageModal();
-  setupScrollToTop();
-  setActiveLink();
-  setupTimelineScroll();
-  setupVideoModal();
-}
-
-window.addEventListener("load", init);
+document.getElementById('closeVideoModal').addEventListener('click', () => {
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  modal.style.display = 'none';
+  modalVideo.pause();
+  modalVideo.currentTime = 0;
+  modalVideo.src = '';
+});

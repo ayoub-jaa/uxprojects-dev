@@ -256,40 +256,6 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-    <script>
-      AOS.init();
-      /*document.addEventListener("DOMContentLoaded", function () {
-        const path = document.querySelector(".timeline-path path");
-        const timeline = document.querySelector(".timeline");
-
-        if (!path || !timeline) {
-          console.warn("Path or timeline not found");
-          return;
-        }
-
-        const pathLength = path.getTotalLength();
-        path.style.strokeDasharray = `${pathLength}`;
-        path.style.strokeDashoffset = pathLength;
-        path.style.transition = 'stroke-dashoffset 0.2s ease-out';
-        path.style.strokeLinecap = 'round';
-
-        // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
-        function updatePathOnScroll() {
-          const rect = timeline.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-
-          if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
-
-          const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
-          const scrollRatio = visibleHeight / rect.height;
-
-          const drawLength = pathLength * scrollRatio;
-          path.style.strokeDashoffset = pathLength - drawLength;
-        }
-
-        window.addEventListener("scroll", updatePathOnScroll);
-        updatePathOnScroll(); // init
-      });*/
-    </script>
+    <script> AOS.init();</script>
   </body>
 </html>
