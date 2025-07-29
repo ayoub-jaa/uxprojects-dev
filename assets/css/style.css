@@ -925,7 +925,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
-  height: 2000px;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
 }
