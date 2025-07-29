@@ -1,3 +1,5 @@
+console.log("JS chargé");
+
 // ✅ Sélecteurs des éléments
 function setupFullStudyPanel() {
   const toggleBtnFr = document.getElementById("toggle-full-study-fr");
