@@ -933,11 +933,10 @@
 .timeline-path path {
   stroke: #00bcd4;
   stroke-width: 2;
-  fill: none;
-  stroke-dasharray: 10 15; /* 10px plein, 15px vide */
+  stroke-linecap: round;
+  stroke-dasharray: 10 20; /* 10px plein, 20px vide */
   stroke-dashoffset: 1000;
   transition: stroke-dashoffset 0.2s ease-out;
-  stroke-linecap: round;
 }
 
 .timeline-path svg {
