@@ -211,76 +211,28 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("Path or timeline not found");
     return;
   }
-
   const pathLength = path.getTotalLength();
+  //path.style.strokeDasharray = `${pathLength}`;
   path.style.strokeDashoffset = pathLength;
   path.style.transition = 'stroke-dashoffset 0.2s ease-out';
+  path.style.strokeLinecap = 'round';
 
+  // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
   function updatePathOnScroll() {
-    const scrollTop = window.scrollY;
+    const rect = timeline.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    const timelineTop = timeline.offsetTop;
-    const timelineHeight = timeline.offsetHeight;
 
-    // Calcul du scroll dans la timeline uniquement
-    const distanceScrolled = scrollTop + windowHeight - timelineTop;
-    const totalScrollable = timelineHeight + windowHeight;
+    if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
 
-    const progress = Math.min(Math.max(distanceScrolled / totalScrollable, 0), 1);
+    const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+    const scrollRatio = visibleHeight / rect.height;
 
-    const drawLength = pathLength * progress;
+    const drawLength = pathLength * scrollRatio;
     path.style.strokeDashoffset = pathLength - drawLength;
   }
 
   window.addEventListener("scroll", updatePathOnScroll);
-  updatePathOnScroll();
-});
-
-function generateRandomPath(segmentCount = 12) {
-  let d = "M50,0"; // Point de départ centré
-  let y = 0;
-
-  for (let i = 0; i < segmentCount; i++) {
-    const x1 = 20 + Math.random() * 60; // Point de contrôle 1
-    const y1 = y + 50 + Math.random() * 100;
-    const x2 = 20 + Math.random() * 60; // Point de contrôle 2
-    const y2 = y1 + 50 + Math.random() * 100;
-    const x = 50; // Point final (on reste centré sur la ligne)
-    y = y2;
-
-    d += ` C${x1},${y1} ${x2},${y2} ${x},${y}`;
-  }
-
-  return d;
-}
-
-const path = document.querySelector(".timeline-path path");
-const pathLength = path.getTotalLength();
-path.style.strokeDasharray = pathLength;
-path.style.strokeDashoffset = pathLength;
-
-function updatePathOnScroll() {
-  const timeline = document.querySelector(".timeline");
-  const rect = timeline.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-
-  if (rect.top >= windowHeight || rect.bottom <= 0) return;
-
-  const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
-  const scrollRatio = visibleHeight / rect.height;
-  const drawLength = pathLength * scrollRatio;
-
-  path.style.strokeDashoffset = pathLength - drawLength;
-}
-
-window.addEventListener("scroll", updatePathOnScroll);
-updatePathOnScroll();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const path = document.querySelector(".timeline-path path");
-  if (path) {
-    path.setAttribute("d", generateRandomPath(12)); // Change 12 si tu veux + ou - de segments
-  }
+  updatePathOnScroll(); // init
 });
 
 document.getElementById('closeVideoModal').addEventListener('click', () => {
