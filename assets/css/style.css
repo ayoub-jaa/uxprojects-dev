@@ -922,6 +922,14 @@
   border-radius: 8px;
 }
 
+.timeline-content h3 {
+  color: #00b5e2;
+}
+
+.timeline-content p {
+  color: #f7f7f7;
+}
+
 .timeline-path {
   position: absolute;
   top: 0;
