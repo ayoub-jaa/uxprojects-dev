@@ -220,20 +220,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
   function updatePathOnScroll() {
-  const scrollTop = window.scrollY;
-  const timelineTop = timeline.offsetTop;
-  const timelineHeight = timeline.offsetHeight;
-  const scrollBottom = scrollTop + window.innerHeight;
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  // Ratio de scroll dans la timeline (entre 0 et 1)
-  const scrollRatio = Math.min(
-    1,
-    Math.max(0, (scrollBottom - timelineTop) / timelineHeight)
-  );
+    if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
 
-  const drawLength = pathLength * scrollRatio;
-  path.style.strokeDashoffset = pathLength - drawLength;
-}
+    const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+    const scrollRatio = visibleHeight / rect.height;
+
+    const drawLength = pathLength * scrollRatio;
+    path.style.strokeDashoffset = pathLength - drawLength;
+  }
 
   window.addEventListener("scroll", updatePathOnScroll);
   updatePathOnScroll(); // init
