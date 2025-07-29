@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
   path.style.strokeDashoffset = pathLength;
 
   window.addEventListener("scroll", () => {
+    console.log("scroll"); // DEBUG
     const timelineTop = timeline.offsetTop;
     const timelineHeight = timeline.scrollHeight;
     const scrollBottom = window.scrollY + window.innerHeight;
