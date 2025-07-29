@@ -209,22 +209,32 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
   modalVideo.src = '';
 });
 
-window.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const path = document.querySelector(".timeline-path path");
   const timeline = document.querySelector(".timeline");
-  if (!path || !timeline) return;
+
+  if (!path || !timeline) {
+    console.warn("Path or timeline not found");
+    return;
+  }
 
   const pathLength = path.getTotalLength();
-  const timelineTop = timeline.offsetTop;
-  const timelineHeight = timeline.scrollHeight;
-  const scrollBottom = window.scrollY + window.innerHeight;
+  path.style.strokeDasharray = pathLength;
+  path.style.strokeDashoffset = pathLength;
 
-  const scrollProgress = Math.min(
-    1,
-    Math.max(0, (scrollBottom - timelineTop) / timelineHeight)
-  );
+  window.addEventListener("scroll", () => {
+    const timelineTop = timeline.offsetTop;
+    const timelineHeight = timeline.scrollHeight;
+    const scrollBottom = window.scrollY + window.innerHeight;
 
-  const drawLength = pathLength * scrollProgress;
-  path.style.strokeDashoffset = pathLength - drawLength;
+    const scrollProgress = Math.min(
+      1,
+      Math.max(0, (scrollBottom - timelineTop) / timelineHeight)
+    );
+
+    const drawLength = pathLength * scrollProgress;
+    path.style.strokeDashoffset = pathLength - drawLength;
+  });
 });
+
 
