@@ -254,6 +254,28 @@ function generateRandomPath(segmentCount = 12) {
   return d;
 }
 
+const path = document.querySelector(".timeline-path path");
+const pathLength = path.getTotalLength();
+path.style.strokeDasharray = pathLength;
+path.style.strokeDashoffset = pathLength;
+
+function updatePathOnScroll() {
+  const timeline = document.querySelector(".timeline");
+  const rect = timeline.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (rect.top >= windowHeight || rect.bottom <= 0) return;
+
+  const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+  const scrollRatio = visibleHeight / rect.height;
+  const drawLength = pathLength * scrollRatio;
+
+  path.style.strokeDashoffset = pathLength - drawLength;
+}
+
+window.addEventListener("scroll", updatePathOnScroll);
+updatePathOnScroll();
+
 document.addEventListener("DOMContentLoaded", () => {
   const path = document.querySelector(".timeline-path path");
   if (path) {
