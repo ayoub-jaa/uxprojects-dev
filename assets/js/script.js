@@ -1,4 +1,5 @@
-console.log("JS chargé");
+// Pour débugger
+// console.log("JS chargé");
 
 // ✅ Sélecteurs des éléments
 function setupFullStudyPanel() {
@@ -212,6 +213,7 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("début fonction"); // DEBUG
   const path = document.querySelector(".timeline-path path");
   const timeline = document.querySelector(".timeline");
 
