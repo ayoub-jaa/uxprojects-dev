@@ -930,15 +930,6 @@
   pointer-events: none;
 }
 
-.timeline-path path {
-  stroke: #00bcd4;
-  stroke-width: 2;
-  /*stroke-linecap: round;
-  stroke-dasharray: 6 12;
-  stroke-dashoffset: 1000;
-  transition: stroke-dashoffset 0.2s ease-out;*/
-}
-
 .timeline-path svg {
   display: block;
   width: 100%;
