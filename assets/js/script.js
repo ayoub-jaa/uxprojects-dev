@@ -236,6 +236,31 @@ document.addEventListener("DOMContentLoaded", function () {
   updatePathOnScroll();
 });
 
+function generateRandomPath(segmentCount = 12) {
+  let d = "M50,0"; // Point de départ centré
+  let y = 0;
+
+  for (let i = 0; i < segmentCount; i++) {
+    const x1 = 20 + Math.random() * 60; // Point de contrôle 1
+    const y1 = y + 50 + Math.random() * 100;
+    const x2 = 20 + Math.random() * 60; // Point de contrôle 2
+    const y2 = y1 + 50 + Math.random() * 100;
+    const x = 50; // Point final (on reste centré sur la ligne)
+    y = y2;
+
+    d += ` C${x1},${y1} ${x2},${y2} ${x},${y}`;
+  }
+
+  return d;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const path = document.querySelector(".timeline-path path");
+  if (path) {
+    path.setAttribute("d", generateRandomPath(12)); // Change 12 si tu veux + ou - de segments
+  }
+});
+
 document.getElementById('closeVideoModal').addEventListener('click', () => {
   const modal = document.getElementById('videoModal');
   const modalVideo = document.getElementById('modalVideo');
