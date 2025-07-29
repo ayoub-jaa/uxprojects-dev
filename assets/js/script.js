@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("Path or timeline not found");
     return;
   }
-
   const pathLength = path.getTotalLength();
   path.style.strokeDasharray = `${pathLength}`;
   path.style.strokeDashoffset = pathLength;
