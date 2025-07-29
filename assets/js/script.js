@@ -213,33 +213,36 @@ document.getElementById('closeVideoModal').addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("début fonction"); // DEBUG
-  const path = document.querySelector(".timeline-path path");
-  const timeline = document.querySelector(".timeline");
+    const path = document.querySelector(".timeline-path path");
+    const timeline = document.querySelector(".timeline");
 
-  if (!path || !timeline) {
-    console.warn("Path or timeline not found");
-    return;
-  }
+    if (!path || !timeline) {
+      console.warn("Path or timeline not found");
+      return;
+    }
 
-  const pathLength = path.getTotalLength();
-  path.style.strokeDasharray = pathLength;
-  path.style.strokeDashoffset = pathLength;
+    const pathLength = path.getTotalLength();
+    path.style.strokeDasharray = `${pathLength}`;
+    path.style.strokeDashoffset = pathLength;
+    path.style.transition = 'stroke-dashoffset 0.2s ease-out';
+    path.style.strokeLinecap = 'round';
 
-  window.addEventListener("scroll", () => {
-    console.log("scroll"); // DEBUG
-    const timelineTop = timeline.offsetTop;
-    const timelineHeight = timeline.scrollHeight;
-    const scrollBottom = window.scrollY + window.innerHeight;
+    // Fonction de mise à jour selon le scroll DANS LA TIMELINE uniquement
+    function updatePathOnScroll() {
+      const rect = timeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-    const scrollProgress = Math.min(
-      1,
-      Math.max(0, (scrollBottom - timelineTop) / timelineHeight)
-    );
+      if (rect.top >= windowHeight || rect.bottom <= 0) return; // hors écran
 
-    const drawLength = pathLength * scrollProgress;
-    path.style.strokeDashoffset = pathLength - drawLength;
+      const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
+      const scrollRatio = visibleHeight / rect.height;
+
+      const drawLength = pathLength * scrollRatio;
+      path.style.strokeDashoffset = pathLength - drawLength;
+    }
+
+    window.addEventListener("scroll", updatePathOnScroll);
+    updatePathOnScroll(); // init
   });
-});
 
 
