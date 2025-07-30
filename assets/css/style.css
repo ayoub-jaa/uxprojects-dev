@@ -20,6 +20,10 @@
     background: linear-gradient(to bottom right, #fff 60%, #0a2c3c 100%);
   }
   
+  h3 {
+    color: #00b5e2;
+  }
+
   /* ===============================
      Layout container
   ================================= */
@@ -740,6 +744,7 @@
 .full-study-section .project-section.impact-box{
   color: white;
 }
+
 
 @keyframes fadeInSection {
   from {
