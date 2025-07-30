@@ -728,12 +728,17 @@
 }
 
 /* ============= Étude UX complète (inline après bouton) ============= */
+
 .full-study-section {
   color: black;
   padding: 2rem 0;
   margin-top: 2rem;
   border-top: 2px dashed #00b5e2;
   animation: fadeInSection 0.1s ease-out forwards;
+}
+
+.full-study-section .project-section.impact-box{
+  color: white;
 }
 
 @keyframes fadeInSection {
