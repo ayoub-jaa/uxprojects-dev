@@ -1003,8 +1003,18 @@
 
 @media (max-width: 768px) {
   .burger-menu {
-    display: flex;
-  }
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
   .nav {
     position: absolute;
