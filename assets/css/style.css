@@ -731,7 +731,7 @@
   width: 28px;
   height: 3px;
   margin: 4px 0;
-  background: #333; /* ou la couleur de ton thème */
+  background: #00bcd4; /* ou la couleur de ton thème */
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -1052,7 +1052,7 @@
 
 /* Animate burger icon when open */
 .burger-menu.open span:nth-child(1) {
-  transform: translateY(7.5px) rotate(45deg);
+  transform: translateY(14.5px) rotate(45deg);
 }
 
 .burger-menu.open span:nth-child(2) {
