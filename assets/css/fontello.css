@@ -67,3 +67,10 @@
 .fas.fa-file-alt, .fa-solid.fa-file-alt, .icon-file-alt { &:before { content: "\f15c"; } }
 .fas.fa-arrow-left, .fa-solid.fa-arrow-left, .icon-arrow-left { &:before { content: "\f060"; } }
 .fa-solid.fa-newspaper, .icon-newspaper { &:before { content: "\f1ea"; } }
+
+.fab.fa-linkedin:before, .fa-brands.fa-linkedin:before, .icon-linkedin:before { content: "\f0e1"; }
+.fab.fa-github:before, .fa-brands.fa-github:before, .icon-github:before { content: "\f09b"; }
+.fas.fa-envelope:before, .fa-solid.fa-envelope:before, .icon-envelope:before { content: "\f0e0"; }
+.fas.fa-file-alt:before, .fa-solid.fa-file-alt:before, .icon-file-alt:before { content: "\f15c"; }
+.fas.fa-arrow-left:before, .fa-solid.fa-arrow-left:before, .icon-arrow-left:before { content: "\f060"; }
+.fa-solid.fa-newspaper:before, .icon-newspaper:before { content: "\f1ea"; }
