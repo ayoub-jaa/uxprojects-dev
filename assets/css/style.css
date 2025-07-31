@@ -708,13 +708,17 @@
 
   /* ======= Burger Menu (Mobile) ======= */
 .burger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
   cursor: pointer;
-  margin-left: auto; /* pousse à droite */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 
@@ -726,7 +730,7 @@
 }
 
 .burger-menu:focus {
-  outline: 2px solid #00bcd4;
+  outline: 2px solid #00bcd4; /* ou une couleur douce, ou même outline: none; si tu veux rien */
   outline-offset: 2px;
 }
 
