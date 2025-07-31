@@ -725,6 +725,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+.burger-menu:focus {
+  outline: 2px solid #00bcd4;
+  outline-offset: 2px;
+}
+
 .nav ul {
   display: flex;
   gap: 1.5rem;
