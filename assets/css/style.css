@@ -297,7 +297,7 @@
   /* ===============================
      Simply UX cards
   ================================= */
-  .simplyux .grid {
+  .simplyux/ .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
@@ -684,7 +684,7 @@
       grid-template-columns: 1fr;
     }
 
-    .simplyux .grid {
+    .simplyux/ .grid {
       grid-template-columns: 1fr;
     }
   
