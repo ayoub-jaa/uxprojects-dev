@@ -263,6 +263,19 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-    <script> AOS.init();</script>
+    <script> 
+      AOS.init();
+      function adjustTimelineSVG() {
+        const timeline = document.querySelector('.timeline');
+        const svg = document.querySelector('.timeline-path svg');
+        if (timeline && svg) {
+          const timelineHeight = timeline.scrollHeight;
+          svg.setAttribute('height', timelineHeight);
+          svg.setAttribute('viewBox', `0 0 200 ${timelineHeight}`);
+        }
+      }
+      window.addEventListener('DOMContentLoaded', adjustTimelineSVG);
+      window.addEventListener('resize', adjustTimelineSVG);
+    </script>
   </body>
 </html>
