@@ -607,6 +607,22 @@
     margin-top: 1rem;
   }
 
+ /* About – évite le débordement en flex (desktop/tablette) */
+  .about-content > .portrait{
+    flex: 0 0 160px;    /* colonne fixe pour la photo */
+  }
+
+  .about-content > div{
+    flex: 1 1 320px;    /* le texte prend la place restante */
+    min-width: 0;       /* <<< clé anti-overflow en flex */
+  }
+
+  /* About – empilage propre en mobile */
+  @media (max-width: 767.98px){
+    .about-content{ display: block; }   /* on quitte le flex en mobile */
+    .about-content > .portrait{ margin-bottom: 1rem; }
+  }
+
   .portrait {
     opacity: 0;
     transform: scale(0.9);
@@ -726,6 +742,9 @@
 .recommendations .reco-dot{ width:8px; height:8px; border-radius:999px; background:#c9dbe0; border:none; cursor:pointer; }
 .recommendations .reco-dot[aria-selected="true"]{ background: var(--reco-accent); }
 
+/* Recos – coupe toute fuite horizontale */
+.recommendations{ overflow-x: clip; }
+
 /* ===== Breakpoints ===== */
 
 /* >= 900px : 2 cartes */
@@ -830,7 +849,7 @@
       grid-template-columns: 1fr;
     }
 
-    .simplyux/ .grid {
+    .simplyux .grid {
       grid-template-columns: 1fr;
     }
   
