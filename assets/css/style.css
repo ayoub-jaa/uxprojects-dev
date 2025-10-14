@@ -732,8 +732,8 @@
   display:grid; place-items:center; font-size:22px; cursor:pointer;
   box-shadow: var(--reco-shadow); z-index:2;
 }
-.recommendations .reco-prev{ left:8px; }
-.recommendations .reco-next{ right:8px; }
+.recommendations .reco-prev{ left:8px; background:#00b5e2; }
+.recommendations .reco-next{ right:8px; background:#00b5e2; }
 .recommendations .reco-nav:hover{ box-shadow: 0 6px 18px rgba(0,0,0,.08); }
 .recommendations .reco-nav:disabled{ opacity:.35; cursor:not-allowed; box-shadow:none; }
 
