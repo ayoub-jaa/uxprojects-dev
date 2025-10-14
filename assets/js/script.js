@@ -324,7 +324,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabs = dotsEl.querySelectorAll('.reco-dot');
     const page = Math.floor(index / perView);
     tabs.forEach((t, k) => t.setAttribute('aria-selected', k === page ? 'true' : 'false'));
+
+    // désactiver / activer les flèches
+    if (prevBtn) prevBtn.disabled = (index === 0);
+    if (nextBtn) nextBtn.disabled = (index === maxIndex);
   };
+
 
   // nav
   prevBtn?.addEventListener('click', () => goTo(index - perView));

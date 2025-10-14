@@ -765,6 +765,32 @@
   .recommendations .reco-track { grid-auto-columns: calc(100%/3 - .84rem); }
 }
 
+/* Fades aux bords pour éviter les coupes nettes */
+.recommendations .reco-slider{ position: relative; }
+.recommendations .reco-slider::before,
+.recommendations .reco-slider::after{
+  content:""; position:absolute; top:0; height:100%; width:24px; z-index:1;
+  pointer-events:none;
+}
+.recommendations .reco-slider::before{
+  left:0;
+  background:linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
+}
+.recommendations .reco-slider::after{
+  right:0;
+  background:linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Légère marge interne pour que la 1re carte ne colle pas au bord */
+.recommendations .reco-track{ padding-inline: 8px; }
+
+/* Flèches à l'intérieur, au-dessus du fade */
+.recommendations .reco-nav{ z-index:2; }
+.recommendations .reco-prev{ left:8px; }
+.recommendations .reco-next{ right:8px; }
+
+/* État désactivé en début/fin */
+.recommendations .reco-nav:disabled{ opacity:.35; cursor:not-allowed; box-shadow:none; }
 
   /* ===============================
      Responsive
