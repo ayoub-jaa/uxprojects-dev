@@ -760,6 +760,11 @@
   .recommendations .reco-cta{ margin-top: 18px; }
 }
 
+@media (min-width: 950px) {
+  /* 3 cartes visibles en desktop */
+  .recommendations .reco-track { grid-auto-columns: calc(100%/2 - .84rem); }
+}
+
 @media (min-width: 860px) {
   /* 3 cartes visibles en desktop */
   .recommendations .reco-track { grid-auto-columns: calc(100%/3 - .84rem); }
