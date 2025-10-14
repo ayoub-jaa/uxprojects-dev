@@ -249,9 +249,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = 0;      // premier slide visible
   let perView = 1;    // nombre de cartes visibles
 
-  // calc perView selon largeur (1 mobile, 3 desktop)
+  // calc perView selon largeur (1 mobile, 2 tablette, 3 desktop large)
   const calcPerView = () => {
-    perView = window.matchMedia('(min-width: 860px)').matches ? 3 : 1;
+    const w = window.innerWidth;
+    if (w >= 1200) perView = 3;
+    else if (w >= 900) perView = 2;
+    else perView = 1;
   };
 
   const render = () => {
