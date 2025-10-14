@@ -642,150 +642,121 @@
 }
 
 
-/* === Recommendations Slider === */
-.recommendations .reco-slider { position: relative; }
-.recommendations .reco-viewport { overflow: hidden; }
-.recommendations .reco-track {
-  display: grid; grid-auto-flow: column; grid-auto-columns: 100%;
-  gap: 1.25rem; padding: 0; margin: 0; list-style: none;
-  transition: transform 280ms ease;
-}
-.recommendations .reco-card {
-  background: #fff; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.06);
-  padding: 18px 18px 14px; display: grid; gap: .6rem; align-content: start;
-}
-.recommendations .reco-badge { font-size: .75rem; color: #0aaad6; font-weight: 700; }
-.recommendations .reco-text { font-size: .95rem; line-height: 1.45; color: #1b1b1b; }
-.recommendations .reco-readmore { color: #0aaad6; font-weight: 600; font-size: .9rem; }
-.recommendations .reco-author {
-  display: grid; grid-template-columns: 40px 1fr; gap: .6rem; align-items: center; margin-top: .4rem;
-}
-.recommendations .reco-avatar {
-  width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background:#eef6f8;
-}
-.recommendations .reco-meta { font-size: .83rem; color: #5a6a73; }
-.recommendations .reco-name { font-weight: 700; color: #0f1c22; }
+/* === Recommendations Slider (consolidated) === */
 
-.recommendations .reco-nav {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  width: 40px; height: 40px; border-radius: 999px; border: 1px solid #e2eef2; background: #fff;
-  display: grid; place-items: center; font-size: 22px; color: #0f1c22; cursor: pointer;
-  transition: background .2s ease, box-shadow .2s ease;
+/* Variables utiles (optionnel) */
+:root{
+  --reco-bg: #fff;          /* fond de la section Recommandations */
+  --reco-accent: #0aaad6;   /* bleu accent */
+  --reco-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
-.recommendations .reco-prev { left: -10px; }
-.recommendations .reco-next { right: -10px; }
-.recommendations .reco-nav:hover { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
 
-.recommendations .reco-dots { display:flex; gap:.5rem; justify-content:center; margin-top: 10px; }
-.recommendations .reco-dot {
-  width:8px; height:8px; border-radius:999px; background:#c9dbe0; border:none; cursor:pointer;
-}
-.recommendations .reco-dot[aria-selected="true"] { background:#0aaad6; }
-
-
-/* ----- Layout & spacing ----- */
+/* Wrapper */
 .recommendations .reco-slider { position: relative; margin-top: .75rem; }
 .recommendations .reco-viewport { overflow: hidden; padding: .25rem 0; }
-.recommendations .reco-track {
+
+/* Track */
+.recommendations .reco-track{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 100%;            /* 1 carte en mobile par défaut */
+  grid-auto-columns: 100%;          /* mobile: 1 carte */
   gap: 1rem;
   padding: 0;
   margin: 0;
   list-style: none;
   transition: transform 260ms ease;
+  padding-inline: 8px;              /* petit recul bord gauche/droit */
 }
 
-/* 2 cartes en >= 900px, 3 cartes en >= 1200px */
-@media (min-width: 900px) {
-  .recommendations .reco-track { grid-auto-columns: calc(50% - .5rem); }
-}
-@media (min-width: 1200px) {
-  .recommendations .reco-track { grid-auto-columns: calc(33.333% - .67rem); }
-}
-
-/* ----- Card ----- */
+/* Cards */
 .recommendations .reco-card{
-  background:#fff;
-  border-radius:14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: var(--reco-shadow);
   padding: 16px 18px 14px;
-  display:grid;
-  gap:.55rem;
-  align-content:start;
-  min-height: 180px;                   /* homogénéité */
+  display: grid;
+  gap: .55rem;
+  align-content: start;
+  min-height: 180px;
 }
-.recommendations .reco-badge{ font-size:.75rem; color:#0aaad6; font-weight:700; }
-.recommendations .reco-text {
-  font-size: .95rem;
-  line-height: 1.45;
-  color: #1b1b1b;
-
+.recommendations .reco-badge{ font-size: .75rem; color: var(--reco-accent); font-weight: 700; }
+.recommendations .reco-text{
+  font-size: .95rem; line-height: 1.45; color: #1b1b1b;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;   /* Safari/Chrome/Edge */
-  line-clamp: 3;           /* standard, pour Firefox 120+ */
+  line-clamp: 3;           /* standard (Firefox 120+) */
   overflow: hidden;
 }
-.recommendations .reco-readmore{ color:#0aaad6; font-weight:600; font-size:.9rem; }
-.recommendations .reco-author{ display:grid; grid-template-columns:40px 1fr; gap:.6rem; align-items:center; margin-top:.2rem; }
-.recommendations .reco-avatar{ width:40px; height:40px; border-radius:50%; object-fit:cover; background:#eef6f8; }
-.recommendations .reco-name{ font-weight:700; color:#0f1c22; }
-.recommendations .reco-meta{ font-size:.83rem; color:#5a6a73; }
+.recommendations .reco-readmore{ color: var(--reco-accent); font-weight: 600; font-size: .9rem; }
+.recommendations .reco-author{ display: grid; grid-template-columns: 40px 1fr; gap: .6rem; align-items: center; margin-top: .2rem; }
+.recommendations .reco-avatar{ width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background:#eef6f8; }
+.recommendations .reco-name{ font-weight: 700; color: #0f1c22; }
+.recommendations .reco-meta{ font-size: .83rem; color: #5a6a73; }
 
-/* ----- Arrows ----- */
+/* Fades aux bords (masque propre sur fond blanc) */
+.recommendations .reco-slider::before,
+.recommendations .reco-slider::after{
+  content:""; position:absolute; top:0; height:100%; width:24px; z-index:1; pointer-events:none;
+}
+.recommendations .reco-slider::before{
+  left:0;
+  background:linear-gradient(to right, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);
+}
+.recommendations .reco-slider::after{
+  right:0;
+  background:linear-gradient(to left, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Flèches (desktop/tablette seulement) */
 .recommendations .reco-nav{
   position:absolute; top:50%; transform:translateY(-50%);
   width:40px; height:40px; border-radius:999px;
   border:1px solid #e2eef2; background:#fff; color:#0f1c22;
   display:grid; place-items:center; font-size:22px; cursor:pointer;
-  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  box-shadow: var(--reco-shadow); z-index:2;
 }
-.recommendations .reco-prev{ left:-12px; }
-.recommendations .reco-next{ right:-12px; }
-@media (max-width: 899.98px){
-  .recommendations .reco-prev{ left:4px; }
-  .recommendations .reco-next{ right:4px; }
-}
-
-/* ----- Dots ----- */
-.recommendations .reco-dots{ display:flex; gap:.5rem; justify-content:center; margin:10px 0 0; }
-.recommendations .reco-dot{ width:8px; height:8px; border-radius:999px; background:#c9dbe0; border:none; }
-.recommendations .reco-dot[aria-selected="true"]{ background:#0aaad6; }
-
-/* ----- Spacing CTA sous le slider ----- */
-.recommendations .reco-cta{ margin-top: 14px; }
-@media (max-width: 599.98px){
-  .recommendations .reco-cta{ margin-top: 18px; }
-}
-
-/* Fades aux bords pour éviter les coupes nettes */
-.recommendations .reco-slider{ position: relative; }
-.recommendations .reco-slider::before,
-.recommendations .reco-slider::after{
-  content:""; position:absolute; top:0; height:100%; width:24px; z-index:1;
-  pointer-events:none;
-}
-.recommendations .reco-slider::before{
-  left:0;
-  background:linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
-}
-.recommendations .reco-slider::after{
-  right:0;
-  background:linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%);
-}
-
-/* Légère marge interne pour que la 1re carte ne colle pas au bord */
-.recommendations .reco-track{ padding-inline: 8px; }
-
-/* Flèches à l'intérieur, au-dessus du fade */
-.recommendations .reco-nav{ z-index:2; }
 .recommendations .reco-prev{ left:8px; }
 .recommendations .reco-next{ right:8px; }
-
-/* État désactivé en début/fin */
+.recommendations .reco-nav:hover{ box-shadow: 0 6px 18px rgba(0,0,0,.08); }
 .recommendations .reco-nav:disabled{ opacity:.35; cursor:not-allowed; box-shadow:none; }
+
+/* Dots */
+.recommendations .reco-dots{ display:flex; gap:.5rem; justify-content:center; margin:10px 0 0; }
+.recommendations .reco-dot{ width:8px; height:8px; border-radius:999px; background:#c9dbe0; border:none; cursor:pointer; }
+.recommendations .reco-dot[aria-selected="true"]{ background: var(--reco-accent); }
+
+/* ===== Breakpoints ===== */
+
+/* >= 900px : 2 cartes */
+@media (min-width: 900px){
+  .recommendations .reco-track { grid-auto-columns: calc(50% - .5rem); }
+}
+
+/* >= 1200px : 3 cartes */
+@media (min-width: 1200px){
+  .recommendations .reco-track { grid-auto-columns: calc(33.333% - .67rem); }
+}
+
+/* ===== Mobile (≤ 899px) ===== */
+@media (max-width: 899.98px){
+  /* largeur utile = 100% - gouttières */
+  .recommendations .reco-track{
+    grid-auto-columns: calc(100% - 32px);
+    gap: 12px;
+    padding-inline: 16px;
+  }
+  .recommendations .reco-card{ padding:16px; min-height:auto; }
+  /* plus de lignes de texte autorisées en mobile (pour éviter coupure abrupte) */
+  .recommendations .reco-text{ -webkit-line-clamp: 4; line-clamp: 4; }
+  /* flèches masquées en mobile (swipe suffit) */
+  .recommendations .reco-prev, .recommendations .reco-next{ display:none; }
+  /* fades plus fins (ou désactiver si tu préfères) */
+  .recommendations .reco-slider::before, .recommendations .reco-slider::after{ width:12px; }
+  /* espace sous le slider */
+  .recommendations .reco-cta{ margin-top:16px; }
+}
+
 
   /* ===============================
      Responsive
