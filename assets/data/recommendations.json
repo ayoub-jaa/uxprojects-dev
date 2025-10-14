@@ -1,0 +1,35 @@
+[
+  {
+    "lang": "fr",
+    "badge": "Recommandé",
+    "excerpt": "Je travaille aux côtés d’Ayoub depuis 2021. Son approche structurée et orientée résultats a permis de fiabiliser notre production...",
+    "fullText": "Je travaille aux côtés d’Ayoub JAA depuis août 2021... (texte complet si tu veux ouvrir un modal)",
+    "author": "Toufik ABDELMALLEK",
+    "title": "HR Digital Transformation & HRIS Manager",
+    "date": "25 mai",
+    "avatar": "assets/img/reco-toufik.jpg",
+    "linkedin": "https://www.linkedin.com/in/.../"
+  },
+  {
+    "lang": "fr",
+    "badge": "Recommandé",
+    "excerpt": "Ayoub a structuré l’expérience et réduit les erreurs sur des processus sensibles. Très bon partenaire produit/tech...",
+    "fullText": "",
+    "author": "Adrien Feuillet",
+    "title": "Architecte IAM",
+    "date": "29 mars",
+    "avatar": "assets/img/reco-adrien.jpg",
+    "linkedin": "https://www.linkedin.com/in/.../"
+  },
+  {
+    "lang": "en",
+    "badge": "Recommended",
+    "excerpt": "I had the privilege of being mentored by Ayoub during my apprenticeship. His clarity and product thinking made a real difference...",
+    "fullText": "",
+    "author": "Thierry XU",
+    "title": "ITHR Support Analyst",
+    "date": "Mar 10",
+    "avatar": "assets/img/reco-thierry.jpg",
+    "linkedin": "https://www.linkedin.com/in/.../"
+  }
+]

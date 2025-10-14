@@ -145,9 +145,25 @@
             <section id="recommendations" class="section recommendations">
               <div class="container">
                 <h2 data-lang="fr">Recommandations</h2>
-                <h2 data-lang="en" style="display: none">Recommendations</h2>
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-5bdf72b9-7529-4a4d-bba6-e65166b408f0" data-elfsight-app-lazy></div>
+                <h2 data-lang="en" style="display:none">Recommendations</h2>
+
+                <div class="reco-slider" role="region" aria-label="LinkedIn recommendations">
+                  <button class="reco-nav reco-prev" aria-label="Précédent" type="button">‹</button>
+
+                  <div class="reco-viewport">
+                    <ul class="reco-track" id="recoTrack" aria-live="polite">
+                      <!-- Les cartes seront injectées via JS depuis recommendations.json -->
+                    </ul>
+                  </div>
+
+                  <button class="reco-nav reco-next" aria-label="Suivant" type="button">›</button>
+                  <div class="reco-dots" id="recoDots" role="tablist" aria-label="Sélecteur de slide"></div>
+                </div>
+
+                <div class="reco-cta">
+                  <a href="https://www.linkedin.com/in/ayoub-j/" target="_blank" class="btn-secondary" data-lang="fr">Voir le profil LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/ayoub-j/" target="_blank" class="btn-secondary" data-lang="en" style="display:none">View LinkedIn profile</a>
+                </div>
               </div>
             </section>
 
