@@ -738,24 +738,49 @@
   .recommendations .reco-track { grid-auto-columns: calc(33.333% - .67rem); }
 }
 
-/* ===== Mobile (≤ 899px) ===== */
+/* ===== Mobile (≤ 899px) — FIX ===== */
 @media (max-width: 899.98px){
-  /* largeur utile = 100% - gouttières */
-  .recommendations .reco-track{
-    grid-auto-columns: calc(100% - 32px);
-    gap: 12px;
-    padding-inline: 16px;
+
+  /* 1) coupe les fades (la grande bande claire) */
+  .recommendations .reco-slider::before,
+  .recommendations .reco-slider::after{
+    display: none;
   }
-  .recommendations .reco-card{ padding:16px; min-height:auto; }
-  /* plus de lignes de texte autorisées en mobile (pour éviter coupure abrupte) */
-  .recommendations .reco-text{ -webkit-line-clamp: 4; line-clamp: 4; }
-  /* flèches masquées en mobile (swipe suffit) */
-  .recommendations .reco-prev, .recommendations .reco-next{ display:none; }
-  /* fades plus fins (ou désactiver si tu préfères) */
-  .recommendations .reco-slider::before, .recommendations .reco-slider::after{ width:12px; }
-  /* espace sous le slider */
-  .recommendations .reco-cta{ margin-top:16px; }
+
+  /* 2) gouttières sur le viewport (16px) */
+  .recommendations .reco-viewport{
+    overflow: hidden;
+    padding: 0 16px;
+  }
+
+  /* 3) carte = 100% de largeur utile (plus de peek) */
+  .recommendations .reco-track{
+    grid-auto-columns: 100%;
+    gap: 12px;
+    padding-inline: 0;   /* annule le padding 8/16px défini plus haut */
+  }
+
+  /* 4) flèches masquées en mobile : swipe uniquement */
+  .recommendations .reco-prev,
+  .recommendations .reco-next{
+    display: none;
+  }
+
+  /* 5) carte compacte + clamp 4 lignes */
+  .recommendations .reco-card{
+    padding: 16px;
+    min-height: auto;
+  }
+  .recommendations .reco-text{
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+
+  /* 6) un peu d’air sous le slider */
+  .recommendations .reco-dots{ margin-top: 12px; }
+  .recommendations .reco-cta{ margin-top: 16px; }
 }
+
 
 
   /* ===============================
