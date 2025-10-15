@@ -316,6 +316,12 @@
     margin-bottom: 1.5rem;
   }
 
+  .mission {
+    text-align: center;
+    color: white !important;
+    z-index: 2;
+  }
+
   nav.breadcrumb {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
