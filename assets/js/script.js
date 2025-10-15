@@ -257,6 +257,23 @@ document.addEventListener("DOMContentLoaded", function () {
     else perView = 1;
   };
 
+  // --- Fallback avatar (initiales en SVG) ---
+  function placeholderFromInitials(name){
+    const initials = String(name || '')
+      .trim()
+      .split(/\s+/)
+      .slice(0,2)
+      .map(s => s[0])
+      .join('')
+      .toUpperCase() || '?';
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'>
+      <rect width='100%' height='100%' rx='40' fill='#e6f7fc'/>
+      <text x='50%' y='54%' font-family='Inter,Segoe UI,Arial' font-size='32' font-weight='700'
+        text-anchor='middle' fill='#0aaad6'>${initials}</text>
+    </svg>`;
+    return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+  }
+
   const render = () => {
     track.innerHTML = '';
     const currentLangIsEN = document.querySelector('html')?.lang === 'en' ||
@@ -273,7 +290,12 @@ document.addEventListener("DOMContentLoaded", function () {
       li.setAttribute('aria-roledescription', 'slide');
       li.setAttribute('aria-label', `${i+1} / ${data.length}`);
 
-      const avatar = it.avatar ? it.avatar : 'assets/img/avatar-placeholder.png';
+      // Choix source avatar (vide => initiales)
+      const avatarSrc = (it.avatar && it.avatar.trim())
+        ? it.avatar
+        : placeholderFromInitials(it.author);
+
+      // Construction via template + onerror pour fallback si image cassée
       li.innerHTML = `
         <div class="reco-badge">${it.badge || (visibleLang==='fr' ? 'Recommandé' : 'Recommended')}</div>
         <p class="reco-text">${it.excerpt}</p>
@@ -281,13 +303,18 @@ document.addEventListener("DOMContentLoaded", function () {
           ${visibleLang==='fr' ? 'Lire la suite' : 'Read more'}
         </a>
         <div class="reco-author">
-          <img class="reco-avatar" src="${avatar}" alt="">
+          <img class="reco-avatar" referrerpolicy="no-referrer" src="${avatarSrc}" alt="">
           <div>
             <div class="reco-name">${it.author}</div>
             <div class="reco-meta">${it.title} · ${it.date}</div>
           </div>
         </div>
       `;
+
+      // Si l'URL image distante échoue, on repasse aux initiales
+      const imgEl = li.querySelector('.reco-avatar');
+      imgEl.onerror = () => { imgEl.onerror = null; imgEl.src = placeholderFromInitials(it.author); };
+
       track.appendChild(li);
     });
 
