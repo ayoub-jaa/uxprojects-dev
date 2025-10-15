@@ -354,8 +354,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // charge JSON
-  fetch('assets/data/recommendations.json')
-    .then(r => r.json())
+  const rootEl = document.querySelector('.recommendations');
+  const hinted = rootEl?.dataset.json;   // priorité au data-attr
+  const candidates = [
+    hinted,
+    '/assets/data/recommendations.json',   // absolu (si site à la racine)
+    'assets/data/recommendations.json',    // relatif à la page
+    '../assets/data/recommendations.json',
+    '../../assets/data/recommendations.json'
+  ].filter(Boolean);
+
+  async function fetchFirst(paths){
+    for (const p of paths){
+      try {
+        const url = new URL(p, document.baseURI).toString();
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        return await res.json();
+      } catch { /* try next */ }
+    }
+    throw new Error('No JSON path worked');
+  }
+
+  fetchFirst(candidates)
     .then(json => { items = json; calcPerView(); render(); })
-    .catch(() => { items = []; });
+    .catch(err => { console.error('Unable to load recommendations JSON:', err); items = []; });
 })();
