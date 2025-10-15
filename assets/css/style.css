@@ -729,11 +729,11 @@
 }
 .recommendations .reco-slider::before{
   left:0;
-  background:linear-gradient(to right, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);
+  /*background:linear-gradient(to right, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);*/
 }
 .recommendations .reco-slider::after{
   right:0;
-  background:linear-gradient(to left, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);
+  /*background:linear-gradient(to left, var(--reco-bg) 0%, rgba(255,255,255,0) 100%);*/
 }
 
 /* Flèches (desktop/tablette seulement) */
