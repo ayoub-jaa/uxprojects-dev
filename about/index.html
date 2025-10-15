@@ -72,8 +72,9 @@
             <p>
               <br /><strong>Envie d’en discuter ?</strong><br />
               <div class="buttons-hero">
-                <a href="https://www.linkedin.com/in/ayoub-j/" class="btn-secondary" data-lang="fr">Voir mon profil LinkedIn <i class="fab fa-linkedin"></i></a>
-                <a href="mailto:ayoub.jaa11@gmail.com" class="btn-secondary">Me contacter <i class="fas fa-envelope"></i></a>
+                <a href="https://calendar.app.google/JGaxrLbzwvPjCnZP6" class="btn-secondary">Réserver un audit UX <i class="fa-solid fa-calendar"></i></a>
+                <a href="https://www.linkedin.com/in/ayoub-jaa/" class="btn-secondary">Voir mon profil LinkedIn <i class="fab fa-linkedin"></i></a>
+                <a href="https://www.malt.fr/profile/ayoubjaa" class="btn-secondary">Voir mon profil Malt <i class="fa-brands fa-slack" style="transform: rotate(45deg);"></i></a>
                 <a href="../assets/files/Ayoub_JAA_CV-fr.pdf" class="btn-secondary" target="_blank">Voir mon CV <i class="fas fa-file-alt"></i></a>
               </div>
             </p>
@@ -109,8 +110,9 @@
             <p>
               <br /><strong>Want to connect?</strong><br />
               <div class="buttons-hero">
-                <a href="https://www.linkedin.com/in/ayoub-j/" class="btn-secondary">See my LinkedIn profilte <i class="fab fa-linkedin"></i></a>
-                <a href="mailto:ayoub.jaa11@gmail.com" class="btn-secondary">Contact me <i class="fas fa-envelope"></i></a>
+                <a href="https://calendar.app.google/JGaxrLbzwvPjCnZP6" class="btn-secondary">Book an UX audit <i class="fa-solid fa-calendar"></i></a>
+                <a href="https://www.linkedin.com/in/ayoub-jaa/" class="btn-secondary">See my LinkedIn profile  <i class="fab fa-linkedin"></i></a>
+                <a href="https://www.malt.fr/profile/ayoubjaa" class="btn-secondary">See my Malt profile  <i class="fa-brands fa-slack" style="transform: rotate(45deg);"></i></a>
                 <a href="../assets/files/Ayoub_JAA_CV.pdf" target="_blank" class="btn-secondary">See my resume <i class="fas fa-file-alt"></i></a>
               </div>
             </p>
@@ -128,7 +130,7 @@
       <iframe width="100%" height="434" src="https://www.youtube-nocookie.com/embed/tEtyRY9qlio?si=lz1yjuFopka5UQ8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
       <section class="timeline-section">
-        <div class="container">
+        <div class="timeline-container">
           <h2 data-lang="fr">Mon parcours, étape par étape</h2>
           <h2 data-lang="en" style="display: none">My Journey, Step by Step</h2>
           <br/>
@@ -196,15 +198,15 @@
               </div>
             </div>
 
-            <!-- <div class="timeline-item" data-aos="fade-up">
-              <div class="timeline-date">2025</div>
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-date">fin 2025</div>
               <div class="timeline-content">
                 <h3 data-lang="fr">Nouvelle étape, nouvelles ambitions</h3>
                 <h3 data-lang="en" style="display:none">New Chapter, New Ambitions</h3>
                 <p data-lang="fr">Après plusieurs années riches chez GEODIS, je me lance dans une nouvelle phase : accompagner des équipes produit en freelance. Objectif : apporter un design clair, humain et stratégique là où il a un vrai impact. En parallèle, je partage mes réflexions sur l’UX, l’histoire, les jeux vidéo… pour transmettre ce que j’ai appris et continuer à apprendre. Une nouvelle aventure, fidèle à mes valeurs.</p>
                 <p data-lang="en" style="display:none">After several impactful years at GEODIS, I’m opening a new chapter: working as a freelance product designer. My goal: bring clear, human, and strategic design where it truly matters. At the same time, I share insights on UX, history, video games… passing on what I’ve learned while staying curious. A new adventure — still driven by my core values.</p>
               </div>
-            </div> -->
+            </div>
 
             <!-- SVG PATH moved to the bottom for layering -->
             <div class="timeline-path">
@@ -224,20 +226,36 @@
           </div>
         </div>
       </section>
-    
-    <a data-lang="fr" class="btn-secondary" href="../">← Menu principal</a>
-    <a div data-lang="en" style="display: none;" class="btn-secondary" href="../">← Main Menu</a>
+      
+      <nav class="breadcrumb">
+        <a data-lang="fr" href="../">← Menu principal</a>
+        <a div data-lang="en" style="display: none;" href="../">← Main Menu</a>
+      </nav><br />
     </main>
 
     
 
     <!-- RECOMMANDATIONS LINKEDIN -->
     <section id="recommendations" class="section recommendations">
+      <h2 data-lang="fr">Recommandations</h2>
+      <h2 data-lang="en" style="display:none">Recommendations</h2>
+      <!-- Teaser Recommendations -->
+      <p data-lang="fr">Mes clients en parlent mieux que moi :</p>
+      <p data-lang="en" style="display:none">Let my clients tell you more:</p>
+
       <div class="container">
-        <h2 data-lang="fr">Recommandations</h2>
-        <h2 data-lang="en" style="display: none">Recommendations</h2>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-5bdf72b9-7529-4a4d-bba6-e65166b408f0" data-elfsight-app-lazy></div>
+        <div class="reco-slider" role="region" aria-label="LinkedIn recommendations">
+          <button class="reco-nav reco-prev" aria-label="Précédent" type="button">‹</button>
+
+          <div class="reco-viewport">
+            <ul class="reco-track" id="recoTrack" aria-live="polite">
+              <!-- Les cartes seront injectées via JS depuis recommendations.json -->
+            </ul>
+          </div>
+
+          <button class="reco-nav reco-next" aria-label="Suivant" type="button">›</button>
+          <div class="reco-dots" id="recoDots" role="tablist" aria-label="Sélecteur de slide"></div>
+        </div>
       </div>
     </section>
 

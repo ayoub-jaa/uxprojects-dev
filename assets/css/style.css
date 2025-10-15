@@ -252,9 +252,6 @@
   /* ===============================
      Sections génériques
   ================================= */
-  .section {
-    padding: 4rem 0;
-  }
   
   .section h2 {
     font-size: 2rem;
@@ -1067,6 +1064,13 @@
   padding-top: 100px; /* pour éviter que le SVG masque les items */
   position: relative;
 }
+
+.timeline-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
 
 .timeline {
   position: relative;
