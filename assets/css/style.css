@@ -705,6 +705,7 @@
   gap: .55rem;
   align-content: start;
   min-height: 180px;
+  border: 1px solid rgba(0,181,226,0.35); /* bleu doux et translucide */
 }
 .recommendations .reco-badge{ font-size: .75rem; color: var(--reco-accent); font-weight: 700; }
 .recommendations .reco-text{
