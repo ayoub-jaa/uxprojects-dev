@@ -597,6 +597,14 @@
     flex-wrap: wrap;
   }
 
+  @media (min-width: 768px){
+    .about-content{
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+  }
+
+
   .about-content .portrait {
     width: 160px;
     height: 160px;
