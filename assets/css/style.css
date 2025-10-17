@@ -88,6 +88,17 @@
   .nav a.active {
     color: #00b5e2;
   }
+
+  .nav aBook {
+    text-decoration: none;
+    color: #00b5e2;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav aBook:hover,
+  .nav aBook.active {
+    color: #fff;
+  }
   
   .lang-switch {
   display: flex;
