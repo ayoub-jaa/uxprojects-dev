@@ -129,6 +129,30 @@
       <br />
       <iframe width="100%" height="434" src="https://www.youtube-nocookie.com/embed/tEtyRY9qlio?si=lz1yjuFopka5UQ8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+      <!-- RECOMMANDATIONS LINKEDIN -->
+      <section id="recommendations" class="section recommendations" data-json="../assets/data/recommendations.json">
+        <div class="container">
+          <h2 data-lang="fr">Recommandations</h2>
+          <h2 data-lang="en" style="display:none">Recommendations</h2>
+          <!-- Teaser Recommendations -->
+          <p data-lang="fr">Mes clients en parlent mieux que moi :</p>
+          <p data-lang="en" style="display:none">Let my clients tell you more:</p>
+
+          <div class="reco-slider" role="region" aria-label="LinkedIn recommendations">
+            <button class="reco-nav reco-prev" aria-label="Précédent" type="button">‹</button>
+
+            <div class="reco-viewport">
+              <ul class="reco-track" id="recoTrack" aria-live="polite">
+                <!-- Les cartes seront injectées via JS depuis recommendations.json -->
+              </ul>
+            </div>
+
+            <button class="reco-nav reco-next" aria-label="Suivant" type="button">›</button>
+            <div class="reco-dots" id="recoDots" role="tablist" aria-label="Sélecteur de slide"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="timeline-section">
         <div class="timeline-container">
           <h2 data-lang="fr">Mon parcours, étape par étape</h2>
@@ -232,32 +256,6 @@
         <a div data-lang="en" style="display: none;" href="../">← Main Menu</a>
       </nav><br />
     </main>
-
-    
-
-    <!-- RECOMMANDATIONS LINKEDIN -->
-    <section id="recommendations" class="section recommendations" data-json="../assets/data/recommendations.json">
-      <div class="container">
-        <h2 data-lang="fr">Recommandations</h2>
-        <h2 data-lang="en" style="display:none">Recommendations</h2>
-        <!-- Teaser Recommendations -->
-        <p data-lang="fr">Mes clients en parlent mieux que moi :</p>
-        <p data-lang="en" style="display:none">Let my clients tell you more:</p>
-
-        <div class="reco-slider" role="region" aria-label="LinkedIn recommendations">
-          <button class="reco-nav reco-prev" aria-label="Précédent" type="button">‹</button>
-
-          <div class="reco-viewport">
-            <ul class="reco-track" id="recoTrack" aria-live="polite">
-              <!-- Les cartes seront injectées via JS depuis recommendations.json -->
-            </ul>
-          </div>
-
-          <button class="reco-nav reco-next" aria-label="Suivant" type="button">›</button>
-          <div class="reco-dots" id="recoDots" role="tablist" aria-label="Sélecteur de slide"></div>
-        </div>
-      </div>
-    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
