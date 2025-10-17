@@ -359,38 +359,67 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Revenir en haut">
       <img src="../assets/img/icon-arrow-up.svg" alt="Scroll to top" />
     </button>
-    <script> 
-      AOS.init();
-      function createWavyPath(svgHeight, amplitude = 100, cycles = 8) {
+    <script>
+      // Initialise AOS dès que possible
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.AOS) {
+          AOS.init({ once: true, duration: 500, offset: 80 });
+        }
+      });
+
+      function createWavyPath(svgHeight, cycles = 8) {
         const step = svgHeight / cycles;
-        let d = `M100,0`;
+        let d = "M100,0";
         for (let i = 0; i < cycles; i++) {
           const y = (i + 1) * step;
-          if (i % 2 === 0) {
-            d += ` C0,${y - step/2} 200,${y - step/2} 100,${y}`;
-          } else {
-            d += ` C200,${y - step/2} 0,${y - step/2} 100,${y}`;
-          }
+          d += (i % 2 === 0)
+            ? ` C0,${y - step/2} 200,${y - step/2} 100,${y}`
+            : ` C200,${y - step/2} 0,${y - step/2} 100,${y}`;
         }
         return d;
       }
 
-      function adjustTimelineSVG() {
+      const adjustTimelineSVG = () => {
         const timeline = document.querySelector('.timeline');
         const svg = document.querySelector('.timeline-path svg');
         const path = document.getElementById('timelineMainPath');
-        if (timeline && svg && path) {
-          const timelineHeight = timeline.scrollHeight;
-          svg.setAttribute('height', timelineHeight);
-          svg.setAttribute('viewBox', `0 0 200 ${timelineHeight}`);
+        if (!timeline || !svg || !path) return;
 
-          // Le nombre de cycles est adapté à la hauteur de la timeline :
-          const cycles = Math.max(6, Math.ceil(timelineHeight / 200));
-          path.setAttribute('d', createWavyPath(timelineHeight, 100, cycles));
+        const rect = timeline.getBoundingClientRect();
+        const timelineHeight = Math.max(200, Math.ceil(rect.height));
+
+        svg.setAttribute('height', timelineHeight);
+        svg.setAttribute('viewBox', `0 0 200 ${timelineHeight}`);
+
+        const cycles = Math.max(6, Math.round(timelineHeight / 180));
+        path.setAttribute('d', createWavyPath(timelineHeight, cycles));
+      };
+
+      // Debounce
+      let t;
+      const onResize = () => { clearTimeout(t); t = setTimeout(adjustTimelineSVG, 120); };
+
+      // Recalculs aux bons moments
+      window.addEventListener('load', adjustTimelineSVG);
+      window.addEventListener('resize', onResize);
+      document.addEventListener('DOMContentLoaded', () => {
+        adjustTimelineSVG();
+
+        const timeline = document.querySelector('.timeline');
+        if (timeline && 'ResizeObserver' in window) {
+          new ResizeObserver(adjustTimelineSVG).observe(timeline);
         }
-      }
-      window.addEventListener('DOMContentLoaded', adjustTimelineSVG);
-      window.addEventListener('resize', adjustTimelineSVG);
+        document.querySelectorAll('.timeline img').forEach(img => {
+          if (!img.complete) img.addEventListener('load', adjustTimelineSVG, { once: true });
+        });
+
+        const langToggle = document.getElementById('lang-toggle');
+        if (langToggle) {
+          langToggle.addEventListener('change', () => {
+            requestAnimationFrame(() => requestAnimationFrame(adjustTimelineSVG));
+          });
+        }
+      });
     </script>
   </body>
 </html>

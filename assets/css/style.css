@@ -1060,9 +1060,6 @@
   display: none !important;
 }
 
-.timeline-section {
-  padding-top: 0;
-}
 
 @media (prefers-reduced-motion: reduce){
   .timeline-path path{ stroke-dasharray: none; }
@@ -1078,13 +1075,11 @@
 
 .timeline {
   position: relative;
-  margin: 2rem 0;
   z-index: 1;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 100px;
   z-index: 1;
 }
 
@@ -1115,8 +1110,8 @@
 .timeline-path{
   position: absolute;
   inset: 0;
-  display: flex;              /* centre le SVG horizontalement */
-  justify-content: center;
+  display: flex;
+  justify-content: center;    /* centre le SVG */
   pointer-events: none;
   z-index: 0;
 }
@@ -1140,6 +1135,9 @@
   transition-property: transform, opacity;
 }
 
+/* Fallback si AOS n'a pas encore appliqué .aos-animate */
+[data-aos] { opacity: 1; transform: none; }
+.aos-animate { opacity: 1 !important; transform: none !important; }
 
 @media screen and (max-width: 768px) {
   .timeline-date {
