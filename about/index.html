@@ -1,16 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>À propos – Ayoub JAA</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href="../assets/img/logo-ajux.png" type="image/svg+xml" />
-    <script src="https://kit.fontawesome.com/0907ec9013.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>À propos – Ayoub JAA | UX & Product Designer</title>
+    <meta name="description" content="Je suis UX & Product Designer. Parcours, valeurs et expériences. J’aide les équipes produit à simplifier des outils complexes et à améliorer la performance. Disponible en freelance et remote.">
+    <meta name="keywords" content="UX Designer, UX/UI, Product Designer, freelance, Paris, remote, B2B, SaaS, RH, IT">
+
+    <!-- Canonical + Langues -->
+    <link rel="canonical" href="https://ayoubj.com/about/">
+    <link rel="alternate" href="https://ayoubj.com/about/" hreflang="fr">
+    <link rel="alternate" href="https://ayoubj.com/about/" hreflang="en">
+    <link rel="alternate" href="https://ayoubj.com/about/" hreflang="x-default">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Ayoub JAA">
+    <meta property="og:title" content="À propos – Ayoub JAA | UX & Product Designer">
+    <meta property="og:description" content="Parcours et approche. Design utile, mesurable, humain.">
+    <meta property="og:url" content="https://ayoubj.com/about/">
+    <meta property="og:image" content="https://ayoubj.com/assets/og/about-1200x630.jpg"><!-- remplace par ton visuel -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="À propos – Ayoub JAA | UX & Product Designer">
+    <meta name="twitter:description" content="Parcours et approche. Design utile, mesurable, humain.">
+    <meta name="twitter:image" content="https://ayoubj.com/assets/og/about-1200x630.jpg">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="../assets/img/logo-ajux.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/0907ec9013.js" crossorigin="anonymous" defer></script>
     <script src="../assets/js/script.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {
+          "@type":"AboutPage",
+          "name":"À propos – Ayoub JAA",
+          "url":"https://ayoubj.com/about/",
+          "inLanguage":"fr",
+          "primaryImageOfPage":"https://ayoubj.com/assets/og/about-1200x630.jpg",
+          "isPartOf":{"@type":"WebSite","url":"https://ayoubj.com"}
+        },
+        {
+          "@type":"Person",
+          "name":"Ayoub JAA",
+          "jobTitle":"UX & Product Designer",
+          "url":"https://ayoubj.com",
+          "image":"https://ayoubj.com/assets/img/logo-ajux.png",
+          "sameAs":[
+            "https://www.linkedin.com/in/ayoub-jaa/",
+            "https://github.com/ayoub-jaa",
+            "https://www.malt.fr/profile/ayoubjaa"
+          ]
+        },
+        {
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Accueil","item":"https://ayoubj.com/"},
+            {"@type":"ListItem","position":2,"name":"À propos","item":"https://ayoubj.com/about/"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics (option) -->
+    <!-- <script defer data-domain="ayoubj.com" src="https://plausible.io/js/script.js"></script> -->
   </head>
+
+
   <body>
     <!-- NAVIGATION STICKY -->
     <header class="header sticky">
@@ -26,7 +101,7 @@
         <nav class="nav" id="navMenu">
           <ul>
             <li><a href="../#projects" data-lang="fr">Projets</a><a href="../#projects" data-lang="en" style="display:none">Projects</a></li>
-            <li><a href="/" data-lang="fr">À propos</a><a href="/" data-lang="en" style="display:none">About</a></li>
+            <li><a href="/about/" data-lang="fr">À propos</a><a href="/about/" data-lang="en" style="display:none">About</a></li>
             <li><a href="https://calendar.app.google/JGaxrLbzwvPjCnZP6" data-lang="fr">Réserver un audit UX</a><a href="https://calendar.app.google/JGaxrLbzwvPjCnZP6" data-lang="en" style="display:none">Book an UX audit</a></li>
             <li class="lang-mobile">
               <div class="lang-switch">
@@ -46,7 +121,7 @@
       <!-- VERSION FR -->
       <div data-lang="fr">
         <nav class="breadcrumb">
-            <a href="../#about">← Menu Principale </a> / À propos de moi
+            <a href="../#about">← Menu principal </a> / À propos de moi
         </nav><br />
         <h1 class="page-title">À propos de moi</h1>
         <section class="about-section">

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayoubj.com/sitemap.xml
